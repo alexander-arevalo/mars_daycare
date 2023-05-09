@@ -1,0 +1,79 @@
+/* ========== BODY ========== */
+
+body {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat ;
+  background-size: auto;
+}
+
+/* ========== MAIN CSS========== */
+
+.daily__container {
+  background: var(--color-bg1);
+  overflow: hidden;
+  padding: 4rem;
+  height: 60rem;
+  width: 80rem;
+  margin: 7rem auto;
+  border-radius: 1rem;
+}
+
+.title{
+  padding: 0;
+  text-align: center;
+  color: var(--color-black);
+  background-color: var(--color-bg3);
+  width: 50rem;
+  margin-left: 11.5rem;
+  border-radius: 1rem;
+}
+
+.daily__container ::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========== IMAGE  ========== */ 
+
+.slider{
+  height: 70%;
+  width: 70%;
+  margin-left: 11rem;
+  margin-top: 2rem;
+}
+
+/* ========== ACTIYITY  ========== */ 
+
+.activity {
+  text-align: center;
+  text-decoration: solid;
+  text-decoration-line: underline;
+}
+.activity__description {
+  text-align: center;
+}
+
+
+/* ========== BUTTON  ========== */ 
+
+.prev__btn,
+.nxt__btn {
+  border: none;
+  width: 6rem;
+  position: absolute;
+  top: 40rem;
+  background:none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev__btn {
+  left: 15rem;
+}
+
+.nxt__btn {
+  right: 15rem;
+}
+
+.footer__container {
+  padding-top: 0rem;
+}

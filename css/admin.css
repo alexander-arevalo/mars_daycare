@@ -1,0 +1,15 @@
+/* ========== ADMIN CONTAINER ========== */
+
+.admin__container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    gap: 2rem;
+    height: 40rem;
+    width: 50rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+h1 {
+    text-align: center;
+}

@@ -1,0 +1,45 @@
+/* ========== TEXT ADJUSTMENTS ========== */
+
+h5{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-success);
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
+  
+
+/* ========== FORM CONTAINER ========== */
+
+.form__container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    gap: 2rem;
+    height: 30rem;
+    width: 45rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+
+
+form {
+    width: 60%;
+    margin: auto;
+  }
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 1rem 0.9rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    width: 100%;
+    align-self: center;
+    margin-top: 1.4rem;
+    cursor: pointer;
+    background: var(--color-success);
+  }
+  

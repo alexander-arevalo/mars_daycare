@@ -1,0 +1,40 @@
+/* Style the file input button */
+body {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat ;
+  background-size: auto;
+}
+.upload__container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    gap: 2rem;
+    height: 30rem;
+    width: 45rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+
+
+  .custom-file-input {
+    content: 'Select files';
+    display: inline-block;
+    align-items: center;
+    background: var(--color-bg3);
+    border: .1rem solid var(--color-black);
+    color: var(--color-black);
+    margin-left: 9rem;
+    border-radius: 1rem;
+    padding: 1rem  0rem 1rem 2rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .btn-submit {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    margin-left: 12.5rem;
+    background: var(--color-success);
+  }
