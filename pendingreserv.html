@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/pendingreserv.css">
 
 
 </head>
@@ -47,18 +47,67 @@
     
         <div class="container sidenav__container">
            <div class="sidenav__left"><a><h2 class="side__title1">Admin Access</h2></a>
-            <div><ul class="sidenav__menu">
-                <li><a  href="admin.html">Announcements</a></li><br>           
-                <li><a  href="pendingreserv.html">Pending Reservation</a></li><br>
-                <li><a  href="admingallery.html">Mars Daycare Gallery Activity</a></li><br>
-                <li><a  href="uploaded_docu.html">Uploaded Documents</a></li><br>
-                <li><a  href="adminabout.html">About</a></li>
+            <div><ul class="sidenav__menu"> 
+              <li><a  href="admin.html">Announcements</a></li><br>           
+              <li><a  href="pendingreserv.html">Pending Reservation</a></li><br>
+              <li><a  href="admingallery.html">Mars Daycare Gallery Activity</a></li><br>
+              <li><a  href="uploaded_docu.html">Uploaded Documents</a></li><br>
+              <li><a  href="adminabout.html">About</a></li>
            </ul>
         </div>
         </div>
             <div class="sidenav__right">
-                        <div class="sidenav__announcement"><h2 class="side__title2"> ANNOUNCEMENTS:</h2>
-                            <P class="side__desc">The Mars Daycare Will have short announcements shortly for now this will be an example of the announcement board</P>
+                        <div class="sidenav__announcement"><h2 class="side__title2"> Pending Reservation:</h2>
+                            <input type="text" id="students__table" class="students__table" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
+
+                            <table id="table" class="table">
+                              <tr class="header">
+                                <th style="width:55%;">Name</th>
+                                <th style="width:25%;">Status</th>
+                                <th style="width:10%;">Accept</th>
+                                <th style="width:10%;">Decline</th>
+
+                              </tr>
+                              <tr>
+                                <td>Sample  Student1</td>
+                                <td>Successful</td>
+                                <td><button class="btn btn-accept">Accept</button></td>
+                                <td><button class="btn btn-decline">Decline</button></td>
+
+                              </tr>
+                              <tr>
+                                <td>Sample  Student2</td>
+                                <td>Successful</td>
+                                <td><button class="btn btn-accept">Accept</button></td>
+                                <td><button class="btn btn-decline">Decline</button></td>
+
+                              </tr>
+                              <tr>
+                                <td>Sample  Student3</td>
+                                <td>Pending</td>
+                                <td><button class="btn btn-accept">Accept</button></td>
+                                <td><button class="btn btn-decline">Decline</button></td>
+
+                              </tr>
+                              <tr>
+                                <td>Sample  Student4</td>
+                                <td>Pending</td>
+                                <td><button class="btn btn-accept">Accept</button></td>
+                                <td><button class="btn btn-decline">Decline</button></td>
+
+                              </tr>
+
+                              <tr>
+                                <td>Sample  Student5</td>
+                                <td>Pending</td>
+                                <td><button class="btn btn-accept">Accept</button></td>
+                                <td><button class="btn btn-decline">Decline</button></td>
+
+                              </tr>
+                            
+                            </table>
+                            
+                            
                         </div>
                 </div>
             </div>
@@ -293,5 +342,7 @@
 
      <script src="./js/main.js"></script>
      <script src="./js/admin.js"></script>
+     <script src="./js/pendingreserv.js"></script>
+
 </body>
 </html>

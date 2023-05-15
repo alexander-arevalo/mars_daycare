@@ -5,6 +5,11 @@ window.addEventListener('scroll', () => {
     ('window-scroll', window.scrollY > 0)
 })
 
+function uploadinfo (){
+    axios
+}
+
+
 //reservation value
 
 function reservation () {

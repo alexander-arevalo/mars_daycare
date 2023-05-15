@@ -39,3 +39,4 @@ if (savedUsername && savedPassword) {
   document.getElementById("password").value = savedPassword;
   document.getElementById("remember").checked = true;
 }
+

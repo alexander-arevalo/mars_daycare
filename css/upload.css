@@ -1,4 +1,4 @@
-/* Style the file input button */
+/* ========== BODY CONTAINER ========== */
 body {
   background-image: url("../images/background.png");
   background-repeat: no-repeat ;
@@ -14,9 +14,10 @@ body {
     border-radius: 1rem;
 }
 
+/* ========== UPLOAD CONTAINER ========== */
 
 
-  .custom-file-input {
+  .fileupload {
     content: 'Select files';
     display: inline-block;
     align-items: center;
