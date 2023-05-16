@@ -44,13 +44,17 @@
             <img src="./images/reservation.png">
         </div>
         <form id="myForm"class="contact__form">
+            <p>Your Child's Info</p>
             <div class="form__name">
                 <input type="text" id="firstname"name="First Name" placeholder="First Name" required>
                 <input type="text" id="lastname"name="Last Name"   placeholder="Last Name" required>
             </div>
-            <input type="email"     id="email"    name="Email Address"    placeholder="Your Email Address">
-            <input type="contact"   id="contact" number="Mobile Number"  placeholder="Your Phone Number*"required>
-            <textarea name="Message"id="message" rows="2" placeholder="Message"></textarea>
+            <p>Email Address</p>
+            <input type="email"     id="email"    name="Email Address"    placeholder="sample@gmail.com">
+            <p>Parents/Guardian Mobile Number</p>
+            <input type="contact"   id="contact" number="Mobile Number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"  placeholder="example: 09XX-XXX-XXXX"required >
+            <p>Birthday</p>
+            <input type="date" id="birthday"  name="birthday" min="2000-01-01" max="2023-05-31" required>      
             <button type="submit" class="btn btn-primary" > Submit </button>
         </form>
 

@@ -16,3 +16,44 @@ function tableHandler() {
       }       
     }
   }
+
+  async function getEnrollees(){
+   await axios.get("http://localhost:3001/api/enrollees").then((res)=>{
+    console.log(`getting enrollees ${res.data}`)
+    const enrolleesTableBody = document.getElementById("enrolleesTableBody");
+
+    const data =res.data
+    // Clear the existing content
+    enrolleesTableBody.innerHTML = "";
+
+    // Loop through the data and create table rows with table data cells to display it
+    data.forEach((enrollee) => {
+      const row = document.createElement("tr");
+      const firstNameCell = document.createElement("td");
+      firstNameCell.textContent = enrollee.firstName;
+      const lastNameCell = document.createElement("td");
+      lastNameCell.textContent = enrollee.lastName;
+      const status = document.createElement("td");
+      status.textContent = "pending";
+      const actionCell = document.createElement("td");
+            const button = document.createElement("button");
+            button.textContent = "Details";
+            actionCell.appendChild(button);
+      row.appendChild(firstNameCell);
+      row.appendChild(lastNameCell);
+      row.appendChild(status)
+      row.appendChild(actionCell)
+      enrolleesTableBody.appendChild(row);
+    });
+    }).catch((err)=>{
+      console.log(err)
+    })
+
+    
+
+}
+
+// Call the function to fetch and display enrollees
+getEnrollees();
+
+  

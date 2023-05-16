@@ -60,51 +60,18 @@
                         <div class="sidenav__announcement"><h2 class="side__title2"> Pending Reservation:</h2>
                             <input type="text" id="students__table" class="students__table" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
 
-                            <table id="table" class="table">
+                            <table id="enrolleesTable" class="table">
                               <tr class="header">
-                                <th style="width:55%;">Name</th>
-                                <th style="width:25%;">Status</th>
-                                <th style="width:10%;">Accept</th>
-                                <th style="width:10%;">Decline</th>
+                                <th style="width:35%;">First Name</th>
+                                <th style="width:35%;">Last Name</th>
+                                <th style="width:15%;">Status</th>
+                                <th style="width:15%;">Action</th>
 
                               </tr>
-                              <tr>
-                                <td>Sample  Student1</td>
-                                <td>Successful</td>
-                                <td><button class="btn btn-accept">Accept</button></td>
-                                <td><button class="btn btn-decline">Decline</button></td>
+                             <tbody id="enrolleesTableBody">
 
-                              </tr>
-                              <tr>
-                                <td>Sample  Student2</td>
-                                <td>Successful</td>
-                                <td><button class="btn btn-accept">Accept</button></td>
-                                <td><button class="btn btn-decline">Decline</button></td>
-
-                              </tr>
-                              <tr>
-                                <td>Sample  Student3</td>
-                                <td>Pending</td>
-                                <td><button class="btn btn-accept">Accept</button></td>
-                                <td><button class="btn btn-decline">Decline</button></td>
-
-                              </tr>
-                              <tr>
-                                <td>Sample  Student4</td>
-                                <td>Pending</td>
-                                <td><button class="btn btn-accept">Accept</button></td>
-                                <td><button class="btn btn-decline">Decline</button></td>
-
-                              </tr>
-
-                              <tr>
-                                <td>Sample  Student5</td>
-                                <td>Pending</td>
-                                <td><button class="btn btn-accept">Accept</button></td>
-                                <td><button class="btn btn-decline">Decline</button></td>
-
-                              </tr>
-                            
+                             </tbody>
+                          
                             </table>
                             
                             
@@ -339,7 +306,7 @@
 
 
 
-
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="./js/main.js"></script>
      <script src="./js/admin.js"></script>
      <script src="./js/pendingreserv.js"></script>

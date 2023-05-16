@@ -1,5 +1,7 @@
 //  to freeze na navbar 
-const axios = require('axios');
+
+
+
 
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle
@@ -8,23 +10,28 @@ window.addEventListener('scroll', () => {
 
 
 // Define your function
-const myForm = document.getElementById('myForm');
+async function handleSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    var firstName = document.getElementById('firstname').value;
+    var lastName = document.getElementById('lastname').value;
+    var phoneNumber = document.getElementById('contact').value;
+    var email = document.getElementById('email').value;
+    var birthdate = document.getElementById('birthday').value;
+    var birthday = birthdate.toString()
+    
+    // Get the values from the form inputs
+    console.log("TESTINGG")
+    console.log(`for testing ${firstName} ${lastName} ${phoneNumber}s ${email} ${birthday}`)
+   await axios.post("http://localhost:3001/api/enrollees",{firstName,lastName,email,phoneNumber,birthday}).then(function (res){
+    console.log("enrolled successfully")
+    console.log(res.data)
+   }).catch(function(err){
+    console.log(err)
+   })
+    
+   
+    document.getElementById('myForm').reset();
+  }
 
-// Define your submit event handler function
-myForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+  document.getElementById('myForm').addEventListener('submit', handleSubmit);
   
-    // Access form input values using their names
-    const firstName = myForm.elements['First Name'].value;
-    const lastName = myForm.elements['Last Name'].value;
-    const email = myForm.elements['Email Address'].value;
-    const contact = myForm.elements['Mobile Number'].value;
-    const message = myForm.elements['Message'].value;
-  
-    // Perform desired actions with the form data
-    console.log('Form submitted!');
-    console.log(message + ' ' + lastName);
-  });
-
-// Attach the submit event listener to the form
-myForm.addEventListener('submit', handleSubmit);

@@ -19,6 +19,9 @@ h5{
   margin-top: 1rem;
 }
 
+p {
+  text-decoration: underline;
+}
 /* ========== ADMISSION ========== */
 
 
@@ -26,7 +29,7 @@ h5{
     background: var(--color-bg1);
     padding: 4rem;
     gap: 2rem;
-    height: 40rem;
+    height: 50rem;
     width: 50rem;
     margin: 7rem auto;
     border-radius: 1rem;
