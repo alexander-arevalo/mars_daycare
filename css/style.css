@@ -179,7 +179,7 @@ header {
     margin-bottom: 5rem;
     background-image: url("../images/background.png");
     background-repeat: no-repeat ;
-    background-size: 106rem 39rem;
+    background-size: cover ;
     opacity: 90%;
 }
 
