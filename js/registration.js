@@ -39,6 +39,7 @@ document
       .then((res) => {
         console.log("Registered successfully");
         console.log("DATAAA " + res.data);
+        alert("Successfully Registered")
       })
       .catch((err) => {
         console.log(err);

@@ -45,12 +45,14 @@ async function handleSubmit(event) {
     .then(function (res) {
       console.log("enrolled successfully");
       console.log(res.data);
+      alert('Successfully Reservered')
     })
     .catch(function (err) {
       console.log(err);
     });
 
-  //   document.getElementById("myForm").reset();
+   document.getElementById("myForm").reset();
+   
 }
 
 document.getElementById("myForm").addEventListener("submit", handleSubmit);

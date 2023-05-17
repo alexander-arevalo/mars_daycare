@@ -27,9 +27,10 @@ async function login() {
       // Apply the token to all subsequent Axios requests
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     })
-    .catch((err, res) => {
+    .catch((err,) => {
       console.log(err);
-      console.log(res.data);
+      alert("Invalid username or password.");
+
     });
 
   // Check username and password against database
@@ -62,7 +63,7 @@ async function login() {
 // Event listener for form submission
 document
   .getElementById("login-form")
-  .addEventListener("submit", async function (event) {
+  .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
-    await login(); // Call the login function when the form is submitted
+    login(); // Call the login function when the form is submitted
   });
