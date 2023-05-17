@@ -1,0 +1,41 @@
+.registration__container {
+    height: auto; 
+    width: 50rem;
+    background: var(--color-bg1);
+    padding: 4rem;
+    gap: 2rem;
+    margin: 7rem auto;    
+    border-radius: 1rem;
+
+}
+
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+    cursor: default;
+    margin-bottom: 5rem;
+  }
+
+.login{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-success);
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
+
+form {
+    gap: 2rem;
+    line-height: 5rem;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 1rem 0.9rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+  }
+
+  .btn {
+    margin-left: 17rem;
+}

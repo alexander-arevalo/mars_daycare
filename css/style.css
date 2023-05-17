@@ -167,7 +167,13 @@ nav button{
  }
 
 
-
+.btn-login{
+    width: auto;
+    cursor: pointer;
+    margin-right:-10rem ;
+    background-color: var(--color-success);
+    border-radius: 2rem;
+}
 
 /* ========== HEADER ========== */
 

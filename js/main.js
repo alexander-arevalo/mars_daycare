@@ -5,6 +5,13 @@ window.addEventListener('scroll', () => {
     ('window-scroll', window.scrollY > 0)
 })
 
+//  Proceed to log In
+
+const logininterface = document.getElementById("login")
+
+logininterface.addEventListener("click",()=> {
+    window.location.replace("login.html")
+})
 //  show/hide the answer for faqs
 
 const faqs = document.querySelectorAll('.faq');

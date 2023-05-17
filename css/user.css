@@ -4,27 +4,26 @@
     margin-right: -10rem ;
     background-color: var(--color-light);
     border-radius: 2rem;
-    cursor: pointer;
     padding: .8rem;
 }
 /* ========== ADMIN CONTAINER ========== */
 
-.sidenav__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.status__container {
     align-items: center;
-    height: 100%; 
+    height: auto; 
     background: var(--color-bg1);
-    padding: 4rem;
+    padding: 1rem 4rem 1rem 4rem;
+    width: 50rem;
     gap: 2rem;
     margin: 7rem auto;    
     border-radius: 1rem;
+    
 }
 
 
 /* ========== LEFT SIDE CONTAINER ========== */
 .sidenav__left{
-    margin-top: 1rem;
+    margin-top: -20rem;
 }
 .sidenav__left a {
     background:  var(--transition);
@@ -56,27 +55,48 @@
 
 
 /* ========== RIGHT SIDE CONTAINER ========== */
-.sidenav__announcement{
+.history{
     padding: 1rem;
     width: 100%;
     height: 20rem;
     text-align: center;
-    background-color: var(--color-white);
-    color: var(--color-black);
     border-radius: 1rem;
 }
-.side__title2{
+.history__title{
     text-align: center;
-    width: max-content;
-    border-radius: .8rem; 
-    margin-left: 8rem;
+    margin-bottom: 2rem;
 }
 
-.sidenav__right {
-    margin-top: 1rem;
+
+* {
+  box-sizing: border-box;
 }
 
-.side__desc{
-    margin-top: 2rem;
-    padding: 2rem;
+.students__table {
+  background-image: url('../images/search.png');
+  background-position: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 1rem 0 1rem 4rem;
+  border: .5rem solid var(--color-bg3);
+  margin-bottom: 12px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: .2rem solid var(--color-bg3);
+}
+
+.table th, .table td {
+  text-align: center;
+  padding: .8rem;
+}
+
+.table tr {
+  border-bottom: .2rem solid var(--color-bg3);
+}
+
+.table tr.header, .table tr:hover {
+  background-color: var(--color-bg);
 }

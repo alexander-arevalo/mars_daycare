@@ -23,7 +23,7 @@
     <nav>
         <div class="container nav__container">
             <img src="./images/logo.png" class="logo"> 
-            <a href="./login.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+            <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
             <ul class="nav__menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
@@ -39,6 +39,8 @@
     <!--=========== END OF NAVBAR ===========-->
 
     <div class="container form__container">
+            <div class="admin">
+                <h2 class="title__left">Admin Login</h2>
         <form>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username"><br>
@@ -50,14 +52,36 @@
                 <input type="checkbox" id="remember" name="remember"><br>
           
             <button type="button" class="btn btn-primary" onclick="login()">Log in</button>
-          
+            <ul><a href="recovery.html"><h5>Forgot Password?</h5></a></ul>
+
         
         </form>
-
-          <ul><a href="recovery.html"><h5>Forgot Password?</h5></a></ul>
-
-    
     </div>
+            <div class="parents">
+                <h2 class="title__right">Parents/Guardian Login</h2>    
+                <form>
+              
+                        <label for="user">Username:</label>
+                        <input type="text" id="user" name="user"><br>
+                  
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass" name="pass"><br>
+                  
+                        <label for="rem">Remember me:</label>
+                        <input type="checkbox" id="rem" name="rem"><br>
+                  
+                    <button type="button" class="btn btn-primary" onclick="userHandler()">Log in</button>
+                        
+                    <ul>
+                        <li><a href="#"><h5>Forgot Password?</h5></a></li>
+                        <li><a href="registration.html"><h5>Register</h5></a></li>
+                    </ul>
+        
+                
+                </form>
+            </div>
+    </div>
+
        
    
 

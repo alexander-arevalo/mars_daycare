@@ -12,16 +12,26 @@ h5{
 /* ========== FORM CONTAINER ========== */
 
 .form__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
     background: var(--color-bg1);
     padding: 4rem;
-    gap: 2rem;
-    height: 30rem;
-    width: 45rem;
+    height: auto;
     margin: 7rem auto;
     border-radius: 1rem;
 }
 
+.admin{
+  padding: 1rem;
+  line-height: 2rem;
+}
 
+.title__left {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 3rem;
+}
 
 form {
     width: 60%;
@@ -43,3 +53,13 @@ form {
     background: var(--color-success);
   }
   
+  .parents{
+    padding: 1rem;
+    line-height: 2rem;
+  }
+
+  .title__right {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 3rem;
+  }
