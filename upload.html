@@ -29,17 +29,38 @@
                 <li><a href="status.html">Status</a></li>
                 <li><a href="admission.html">Admission</a></li>
                 <li><a href="upload.html">Upload Documents</a></li>
-                <span><button class="btn btn-signout" id="signout">Sign Out</button></span>
             </ul>
+            
+            <img src="images/profile.png" class="user__profile" id ="myImage" onclick="openProfile()" >
+
+            <div class="sub__menu__wrap" id="subMenu">
+                <div class="sub__menu">
+                    <div class="user__info">
+                        <img src="images/profile.png">
+                        <h3>Zero Two</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub__menu__link">
+                        <img src="images/profile.png">
+                        <p>Edit Profile</p>
+                        <span>></span>
+
+                    <a href="#" class="sub__menu__link" id="sub__menu__link">
+                        <img src="images/signout.png " onclick="signout()" >
+                        <p>Sign Out</p>
+                        <span>></span>
+                    </a>
          </div>
     </nav>
     <!--=========== END OF NAVBAR ===========-->
 
             <div class="container upload__container"> 
 
-   
-                <input class="fileupload" type="file">                
+                <label for="birthcert"><h4 class="names">Birth Certificate Of Child</h4></label>
                 <input class="fileupload" type="file">
+                <label for="valid id "><h4 class="names">Valid Id of Parents/Guardian</h4></label>              
+                <input class="fileupload" type="file">
+                <label for="certificate"><h4 class="names">Child's Health Record</h4></label>
                 <input class="fileupload" type="file">
 
                 <button type="submit" class="btn btn-submit"> Submit Documents</button>
@@ -269,7 +290,7 @@
 
 
 
-
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="./js/main.js"></script>
      <script src="./js/upload.js"></script>     
 

@@ -1,12 +1,3 @@
-/* ========== BUTTON ========== */
-
-.btn-signout {
-    margin-right: -10rem ;
-    background-color: var(--color-light);
-    border-radius: 2rem;
-    padding: .8rem;
-}
-
 /* ========== PROFILE ========== */
 .nav__menu{
     margin-left: 45rem;

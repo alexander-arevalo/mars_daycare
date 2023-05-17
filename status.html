@@ -31,8 +31,27 @@
                 <li><a href="status.html">Status</a></li>
                 <li><a href="admission.html">Admission</a></li>
                 <li><a href="upload.html">Upload Documents</a></li>
-                <span><button class="btn btn-signout" id="signout">Sign Out</button></span>
             </ul>
+            
+            <img src="images/profile.png" class="user__profile" id ="myImage" onclick="openProfile()" >
+
+            <div class="sub__menu__wrap" id="subMenu">
+                <div class="sub__menu">
+                    <div class="user__info">
+                        <img src="images/profile.png">
+                        <h3>Zero Two</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub__menu__link">
+                        <img src="images/profile.png">
+                        <p>Edit Profile</p>
+                        <span>></span>
+
+                    <a href="#" class="sub__menu__link" id="sub__menu__link">
+                        <img src="images/signout.png " onclick="signout()" >
+                        <p>Sign Out</p>
+                        <span>></span>
+                    </a>
          </div>
    </nav>
 

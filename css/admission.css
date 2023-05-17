@@ -1,11 +1,94 @@
-/* ========== BUTTON ========== */
-
-.btn-signout {
-  margin-right: -10rem ;
-  background-color: var(--color-light);
-  border-radius: 2rem;
-  padding: .8rem;
+/* ========== PROFILE ========== */
+.nav__menu{
+  margin-left: 45rem;
 }
+
+img {
+  width: 2.5rem;
+}
+
+.user__profile {
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: -5rem;
+  background-color: var(--color-bg3);
+}
+
+.sub__menu__wrap{
+  position: absolute; 
+  top: 100%;
+  right: 6%;
+  width: 16rem;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.sub__menu__wrap.open__menu{
+  max-height: 40rem;  
+}
+
+.sub__menu {
+  background: var(--color-bg3);
+  padding: 1rem;
+  margin: .2rem;
+}
+
+.user__info {
+  display: flex;
+  align-items: center;
+}
+
+.user__info h3{
+  font-weight: 500;
+}
+
+.user__info img {
+  border-radius: 50%;
+  margin-right: 1.4rem;
+}
+
+hr {
+  border: 0;
+  height: .3rem;
+  width: 100%;
+  background:var(--color-light);
+  margin: 1.5rem 0 1rem;
+}
+
+.sub__menu__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-black);
+  margin: 1.2rem 0;
+}
+
+.sub__menu__link p {
+  width: 100%;
+
+}
+
+.sub__menu__link img {
+  background: var(--color-light);
+  border-radius: 50%;
+  padding: .5rem;
+  margin-right: 1rem;
+}
+
+.sub__menu__link span {
+  font-size: 1rem;
+  transition: transform 0.5s;
+}
+
+.sub__menu__link:hover span {
+  transform: translateX(5px);
+}
+
+.sub__menu__link:hover p {
+  color: var(--color-light);
+}
+
 /* ========== TEXT ADJUSTMENTS ========== */
 
 h1  {
