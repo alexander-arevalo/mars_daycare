@@ -20,7 +20,7 @@ h5{
   margin-top: 1rem;
 }
 
-p {
+label {
   text-decoration: underline;
 }
 /* ========== ADMISSION ========== */
@@ -30,7 +30,7 @@ p {
     background: var(--color-bg1);
     padding: 4rem;
     gap: 2rem;
-    height: 50rem;
+    height: auto;
     width: 50rem;
     margin: 7rem auto;
     border-radius: 1rem;
@@ -50,8 +50,7 @@ form {
   max-width: 40rem;
 }
 
-
-.contact__form{
+.contact__form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -63,15 +62,15 @@ form {
   gap: 1.2rem;
 }
 
-.contact__form input[type="text"]{
-  width: 60%;
+.contact__form input[type="text"] {
+  width: 100%; /* Change the width to 100% */
 }
 
-input, textarea {
+input {
   width: 100%;
   padding: 1rem;
-  background:var(--color-bg3);
-  color:var(--color-black);
+  background: var(--color-bg3);
+  color: var(--color-black);
 }
 
 .contact__form .btn {
@@ -80,4 +79,52 @@ input, textarea {
   margin-top: 1.4rem;
   cursor: pointer;
   background: var(--color-success);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 60%;
+}
+
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+select {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-bg3);
+  color: var(--color-black);
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+/* Custom Select Styling */
+.custom-select {
+  position: relative;
+}
+
+.custom-select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 1rem;
 }
