@@ -1,13 +1,17 @@
 //  to freeze na navbar 
 
-
-
-
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle
     ('window-scroll', window.scrollY > 0)
 })
 
+//  to signout
+
+const Signout = document.getElementById("signout")
+
+Signout.addEventListener("click",()=> {
+    window.location.replace("index.html")
+})
 
 // Define your function
 async function handleSubmit(event) {

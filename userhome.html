@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,51 +17,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/status.css">
+    <link rel="stylesheet" href="./css/userhome.css">
 
 
 </head>
 <body>
     <nav>
         <div class="container nav__container">
-           <img src="./images/logo.png" class="logo"> 
-           <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
-           <ul class="nav__menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
-              <li><a href="admission.html">Admission</a></li>
-              <li><a href="upload.html">Upload Documents</a></li>
-              <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           </ul>
-        </div>
+            <img src="./images/logo.png" class="logo"> 
+            <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+            <ul class="nav__menu">
+                <li><a href="userhome.html">Home</a></li>
+                <li><a href="user.html">Status</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="upload.html">Upload Documents</a></li>
+                <span><button class="btn btn-signout" id="signout">Sign Out</button></span>
+            </ul>
+         </div>
    </nav>
 
 
     <!--=========== END OF NAVBAR ===========-->
 
-
-       
-            <div class="conainer status__container">
-                <h2>Your Children's Reservation Status</h2>
-                <form class="search__form" action="#" method="get">
-                    <input type="text" placeholder="Check your reservation status here">
-                    <button type="submit" id="search" onclick="search()"><img src="./images/search.png"></button>
-                  </form>                  
-                  </form>
-                  
+    <header>
+        <div class="container user__container"> 
+            <div class="user__left">
+                <h1> Become a part of Mars Daycare Center</h1>
+                <p> 
+                    Are you looking for a unique and exciting childcare experience for your little ones? 
+                    Look no further than Mars Daycare! Our facility is specifically designed to cater to the needs and interests of young explorers, 
+                    with a range of educational and fun activities that are sure to capture their imagination.
+                </p>
+                <a href="admission.html" class="btn btn-primary"> Get Started</a>
             </div>
+            <div class="user__right">
+                <div class="announcements"><h1> ANNOUNCEMENTS:</h1>
+                    <P>The Mars Daycare Will have short announcements shortly for now this will be an example of the announcement board</P>
 
-           
+                    
+                </div>
+
+                
+            </div>
+        
+        
+        </div>
+
+    </header>
+
+    <!--=========== END OF INTRODUCTION ===========-->
 
 
-
-
-    
-    
-    
-    
-    <!--=========== END OF STATUS ===========-->
 
 
 	<footer>
@@ -74,12 +82,10 @@
             <div class="footer__2">
                 <h4>Permalinks</h4>
                 <ul class="permalinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
+                    <li><a href="userhome.html">Home</a></li>
+                    <li><a href="user.html">Status</a></li>
                     <li><a href="admission.html">Admission</a></li>
                     <li><a href="upload.html">Upload Documents</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -278,8 +284,6 @@
 
 
      <script src="./js/main.js"></script>
-     <script src="./js/status.js"></script>
-     <php include '.php';?>
-
+     <script src="./js/userhome.js"></script>
 </body>
 </html>

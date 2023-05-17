@@ -1,9 +1,10 @@
-/* ========== BODY ========== */
+/* ========== BUTTON ========== */
 
-body {
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat ;
-  background-size: auto;
+.btn-signout {
+  margin-right: -10rem ;
+  background-color: var(--color-light);
+  border-radius: 2rem;
+  padding: .8rem;
 }
 /* ========== TEXT ADJUSTMENTS ========== */
 

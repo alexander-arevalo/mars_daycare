@@ -1,0 +1,43 @@
+/* ========== BUTTON ========== */
+
+.btn-signout {
+    margin-right: -10rem ;
+    background-color: var(--color-light);
+    border-radius: 2rem;
+    padding: .8rem;
+}
+
+/* ========== HEADER ========== */
+
+
+
+.user__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%; 
+}
+
+.user__left {
+    padding: 0;
+
+
+}
+
+
+.user__left p {
+    margin: 1rem 0 2.4rem;
+}
+
+.user__right {
+    width: auto;
+    height: 25rem;
+    text-align: center;
+    background-color: var(--color-bg1);
+    border-radius: 1rem;
+}
+
+.user__right p {
+    margin: 5rem 2rem 0 2rem;
+}

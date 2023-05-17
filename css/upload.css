@@ -1,9 +1,5 @@
 /* ========== BODY CONTAINER ========== */
-body {
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat ;
-  background-size: auto;
-}
+
 .upload__container {
     background: var(--color-bg1);
     padding: 4rem;
@@ -13,7 +9,12 @@ body {
     margin: 7rem auto;
     border-radius: 1rem;
 }
-
+.btn-signout {
+  margin-right: -10rem ;
+  background-color: var(--color-light);
+  border-radius: 2rem;
+  padding: .8rem;
+}
 /* ========== UPLOAD CONTAINER ========== */
 
 
