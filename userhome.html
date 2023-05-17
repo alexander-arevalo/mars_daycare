@@ -30,30 +30,41 @@
                 <li><a href="admission.html">Admission</a></li>
                 <li><a href="upload.html">Upload Documents</a></li>
             </ul>
-
-            <img src="images/profile.png" class="user__profile" id ="myImage" onclick="openProfile()" >
+            <img src="images/profile.png" class="user__profile" id="myImage" onclick="openProfile()">
 
             <div class="sub__menu__wrap" id="subMenu">
-                <div class="sub__menu">
-                    <div class="user__info">
-                        <img src="images/profile.png">
-                        <h3>Zero Two</h3>
-                    </div>
-                    <hr>
-                    <a href="#" class="sub__menu__link">
-                        <img src="images/profile.png">
-                        <p>Edit Profile</p>
-                        <span>></span>
-
-                    <a href="#" class="sub__menu__link" id="sub__menu__link">
-                        <img src="images/signout.png " onclick="signout()" >
-                        <p>Sign Out</p>
-                        <span>></span>
-                    </a>
+              <div class="sub__menu">
+                <div class="user__info">
+                  <img src="images/profile.png">
+                  <h3 id="userName">Zero Two</h3>
                 </div>
+                <hr>
+                <a href="#" class="sub__menu__link" onclick="openEditForm()">
+                  <img src="images/profile.png">
+                  <p>Edit Profile</p>
+                  <span>></span>
+                </a>
+                <a href="#" class="sub__menu__link" id="sub__menu__link" onclick="signout()">
+                  <img src="images/signout.png">
+                  <p>Sign Out</p>
+                  <span>></span>
+                </a>
+              </div>
             </div>
-
-         </div>
+            
+            
+            <div class="edit__form__wrap" id="editFormWrap">
+              <form class="edit__form" onsubmit="saveProfile(event)">
+                <h3>Edit Profile</h3>
+                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <button type="submit">Save</button>
+              </form>
+            </div>
+        </div>
+       
    </nav>
 
 
