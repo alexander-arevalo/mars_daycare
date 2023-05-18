@@ -41,6 +41,7 @@ function saveProfile(event) {
 
 
 
+
 // Define your function
 async function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission behavior
@@ -73,6 +74,7 @@ async function handleSubmit(event) {
       console.log("enrolled successfully");
       console.log(res.data);
       alert('Successfully Reservered')
+      window.location.replace("status.html");
     })
     .catch(function (err) {
       console.log(err);
