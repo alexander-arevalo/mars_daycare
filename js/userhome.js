@@ -28,4 +28,3 @@ function saveProfile(event) {
   var editFormWrap = document.getElementById("editFormWrap");
   editFormWrap.style.display = "none";
 }
-

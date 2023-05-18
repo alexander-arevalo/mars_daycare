@@ -14,7 +14,7 @@ async function login() {
   let successful;
 
   await axios
-    .post("http://localhost:3001/api/auth/login", { email, password })
+    .post("http://54.210.165.102/api/auth/login", { email, password })
     .then((res) => {
       console.log(res.data);
       isAdmin = res.data.isAdmin;
@@ -27,10 +27,9 @@ async function login() {
       // Apply the token to all subsequent Axios requests
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     })
-    .catch((err,) => {
+    .catch((err) => {
       console.log(err);
       alert("Invalid username or password.");
-
     });
 
   // Check username and password against database

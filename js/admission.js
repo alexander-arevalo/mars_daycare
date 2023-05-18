@@ -39,9 +39,6 @@ function saveProfile(event) {
   editFormWrap.style.display = "none";
 }
 
-
-
-
 // Define your function
 async function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission behavior
@@ -61,7 +58,7 @@ async function handleSubmit(event) {
     `for testing ${firstName} ${lastName} ${phoneNumber}s ${email} ${birthday}`
   );
   await axios
-    .post("http://localhost:3001/api/enrollees", {
+    .post("http://54.210.165.102/api/enrollees", {
       firstName,
       lastName,
       email,
@@ -73,15 +70,14 @@ async function handleSubmit(event) {
     .then(function (res) {
       console.log("enrolled successfully");
       console.log(res.data);
-      alert('Successfully Reservered')
+      alert("Successfully Reservered");
       window.location.replace("status.html");
     })
     .catch(function (err) {
       console.log(err);
     });
 
-   document.getElementById("myForm").reset();
-   
+  document.getElementById("myForm").reset();
 }
 
 document.getElementById("myForm").addEventListener("submit", handleSubmit);

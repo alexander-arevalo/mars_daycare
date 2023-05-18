@@ -30,7 +30,7 @@ document
       password: password,
     };
     await axios
-      .post("http://localhost:3001/api/auth/signup", {
+      .post("http://54.210.165.102/api/auth/signup", {
         firstName,
         lastName,
         email,
@@ -39,7 +39,6 @@ document
       .then((res) => {
         console.log("Registered successfully");
         console.log("DATAAA " + res.data);
-        alert("Successfully Registered")
       })
       .catch((err) => {
         console.log(err);
