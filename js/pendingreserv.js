@@ -48,6 +48,8 @@ async function getEnrollees() {
         enrolleesTableBody.appendChild(row);
       });
     })
+      button = document.getElementById("Details")
+    
     .catch((err) => {
       console.log(err);
     });

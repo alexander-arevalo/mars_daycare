@@ -15,7 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">    
+    <link rel="stylesheet" href="./css/eventCalendar.css">
+
 
 </head>
 <body>
@@ -42,171 +44,38 @@
 
     <!--=========== END OF NAVBAR ===========-->
 
-    <header>
-        <div class="container header__container"> 
-            <div class="header__left">
-                <h1> Become a part of Mars Daycare Center</h1>
-                <p> 
-                    Are you looking for a unique and exciting childcare experience for your little ones? 
-                    Look no further than Mars Daycare! Our facility is specifically designed to cater to the needs and interests of young explorers, 
-                    with a range of educational and fun activities that are sure to capture their imagination.
-                </p>
-                <a href="registration.html" class="btn btn-primary"> Get Started</a>
-            </div>
-            <div class="header__right">
-                <div class="announcements"><h1> ANNOUNCEMENTS:</h1>
-                    <P>The Mars Daycare Will have short announcements shortly for now this will be an example of the announcement board</P>
-                </div>
-
-            </div>
-        
-        
+    <div class="container calendar__container">
+        <div class="calendar__header">
+          <button class="prev__btn" onclick="prevMonth()"><img src="./images/aleft.png"></button>
+          <h2 id="monthYear" class="monthYear"></h2>
+          <button class="nxt__btn" onclick="nextMonth()"><img src="./images/aright.png"></button>
         </div>
-
-    </header>
-
-
-
-
-
-    <!--=========== END OF HEADER ===========-->
-
-
-
-
-
-    <section class="daycare">
-            <div class="container daycare__container">
-                <div class="daycare__left">
-                    <h1> Mars Daycare</h1>
-                    <p>
-                        "Welcome to Mars Daycare, where we provide an 
-                        intergalactic learning and play environment for young explorers. 
-                        Join us as we embark on a journey of discovery and adventure!"
-                    </p>
-                </div>
-                <div class="daycare__right">
-                    <article class="daycare1">
-                        <span class="abtdaycare__icon"><i class="uil uil-kid"></i> </span>
-                        <h5>  Lively Environment </h5>
-                        <p> In a good daycare, children explore, socialize, 
-                            learn new skills, and build relationships in a safe and 
-                            nurturing environment created by educator </p>
-                    
-                    </article>
-
-                    <article class="daycare1">
-                        <span class="abtdaycare__icon"><i class="uil uil-user-circle"></i></i> </span>
-                        <h5>  Great Teacher </h5>
-                        <p> A great daycare teacher is passionate, patient, 
-                            adaptable, creative, and dedicated to the growth and 
-                            development of children </p>
-                    </article>
-
-                    <article class="daycare1">
-                        <span class="abtdaycare__icon"><i class="uil uil-grin"></i></i> </span>
-                        <h5> Quality Place </h5>
-                        <p> The rooms are fully air-conditioned and their place are well-maintained
-                            for your child to enjoy the Day in Daycare Center
-                        </p>
-                    </article>
-                </div>
-
-            </div>
-    </section>
-
-  
-    
-
-     <!--=========== END OF DAYCAREINFO ===========-->
+        <table class="calendar__table">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+    <div id="eventDetails" class="event__details">
+        <h3>Event Details</h3>
+        <p>Date: <span id="eventDate"></span></p>
+        <p>Time: <span id="eventTime"></span></p>
+        <p>Location: <span id="eventLocation"></span></p>
+    </div>
 
 
-    <section class="faqs">
-        <h2>Frequently Asked Question</h2>
-        <div class="conatainer faqs__container">
-           
-            <article class="faq">
-                <div class="faq__icon"><i class="uil uil-plus"></i></div>
-                <div class="question__answer">
-                    <h4>How do I Make Reservation?</h4>
-                    <p>
-                        Proceed to admission and continue to fill up the required fields to be able to make your reservation.
-                    </p>
-                </div>
-            </article> 
-            
-            <article class="faq">
-                <div class="faq__icon"><i class="uil uil-plus"></i></div>
-                <div class="question__answer">
-                    <h4>What services are offered at Mars DayCare Center?</h4>
-                    <p>
-                        1. Nutritious meals prepared by Volunteers.
-                        <br>
-                        2. Quality learning resources.
-                        <br>
-                        3. Regular festivities for annual events, cultural celebrations, and special occasions.
-                        <br>
-                        4. Based on the children's interests, we invite visitors and people of the community to the center.
-                    </p>
-                </div>
-            </article>
+    <!--=========== END OF OF FORM ===========-->
 
-            <article class="faq">
-                <div class="faq__icon"><i class="uil uil-plus"></i></div>
-                <div class="question__answer">
-                    <h4>What are your working hours?</h4>
-                    <p>
-                        Kindergarten Schedule: <br>
-                        8am - 10am <br> 
-                        10am-12pm <br>
-                        Teacher's Working Hour: <br>
-                        8am - 5pm <br>
-                    </p>
-                </div>
-            </article>
 
-            <article class="faq">
-                <div class="faq__icon"><i class="uil uil-plus"></i></div>
-                <div class="question__answer">
-                    <h4>What is the age range of children that you accept?</h4>
-                    <p>
-                        We accept zero (0) to four (4) year-old children, who are adequately prepared for the Kindergarten.
-                    </p>
-                </div>
-            </article>
-
-            <article class="faq">
-                <div class="faq__icon"><i class="uil uil-plus"></i></div>
-                <div class="question__answer">
-                    <h4>What is your policy for sick children?</h4>
-                    <p>
-                        Our daycare center has a strict policy for sick children to prevent the spread of illness to other 
-                        children and staff members. If a child is showing signs of illness, we request that they are kept home until
-                        they are fully recovered or receive medical clearance from a healthcare provider. If a child becomes sick while at the daycare,
-                        we will isolate the child and immediately notify the parent or guardian to arrange for pick up.
-                        We ask that parents come to pick up their child as soon as possible to minimize the risk of illness spreading to others.
-                    </p>
-                </div>
-            </article>
-
-            <article class="faq">
-                <div class="faq__icon"><i class="uil uil-plus"></i></div>
-                <div class="question__answer">
-                    <h4>What is your policy for communication with parents/guardians?</h4>
-                    <p>
-                        At our daycare center, we believe that clear and effective communication between our staff and parents/guardians is essential 
-                        for providing the best care for the children. We make sure to keep parents/guardians informed about their child's progress, activities,
-                        and any issues that may arise during their time at the daycare. We maintain an open-door policy and encourage parents/guardians to communicate
-                        with us about any concerns or questions they may have. We also use various communication channels such as emails, phone calls, and parent-teacher
-                        conferences to keep parents/guardians updated about their child's development and any important information related to the daycare.
-                    </p>
-                </div>
-            </article>
-
-            
-        </section>
-
-     <!--=========== END OF FAQs ===========-->
 
     <footer>
         <div class="container footer__container">
@@ -423,5 +292,6 @@
 
 
      <script src="./js/main.js"></script>
-</body>
+     <script src="./js/eventCalendar.js"></script>
+    </body>
 </html>

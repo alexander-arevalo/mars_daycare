@@ -115,66 +115,98 @@ img {
 
 /* ========== NAVBAR ========== */
 
-nav{
+nav {
     background: transparent;
     width: 100vw;
     height: 5rem;
     position: fixed;
     top: 0;
     z-index: 11;
-}
-
-.logo {
+  }
+  
+  .logo {
     width: 4%;
     position: absolute;
     margin-left: -5rem;
-}
-
-
-
-
-/* ========== WINDOW SCROLL ========== */
-
-.window-scroll  {
-    background-color: #1f79df;    
-}
-
-.nav__container {
+  }
+  
+  /* ========== WINDOW SCROLL ========== */
+  
+  .window-scroll {
+    background-color: #1f79df;
+  }
+  
+  .nav__container {
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-nav button{
-    display: inline-block ;
-}
-
-.nav__menu{
-   display: flex;
-   align-items: center;
-   gap: 2rem;
-}
-
-.nav__menu a {
+  }
+  
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav__menu a {
     font-size: 0.9rem;
     transition: var(--transition);
-
-}
-
-.nav__menu a:hover {
+  }
+  
+  .nav__menu a:hover {
     color: var(--color-bg2);
- }
-
-
-.btn-login{
+  }
+  
+  .btn-login {
     width: auto;
     cursor: pointer;
-    margin-right:-10rem ;
+    margin-right: -10rem;
     background-color: var(--color-success);
     border-radius: 2rem;
-}
+  }
 
+
+  /* ========== DROPDOWN MENU ========== */
+
+.dropdown {
+    position: relative;
+    width: 10rem;
+    cursor: pointer;
+  }
+  
+  .btn-dropdown {
+    color: var(--color-white);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: var(--color-white);
+    padding: 0.5rem 1rem;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .dropdown-menu li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    color: var(--color-black);
+    text-decoration: underline;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 /* ========== HEADER ========== */
 
 header {
@@ -223,8 +255,9 @@ header {
 /* ========== DAYCARE INFO ========== */
 
 .daycare {
-    background: var(--color-bg1);
+    background: var(--color-white);
     height: 30rem;
+    color: var(--color-black);
 }
 
 .daycare h1 {
@@ -251,7 +284,7 @@ header {
 }
 
 .daycare1 {
-    background: var(--color-bg2);
+    background: var(--color-bg3);
     padding: 1.8rem;
     border-radius: 1.8rem;
     transition: var(--transition);

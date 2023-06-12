@@ -23,21 +23,26 @@
 <body>
     <nav>
         <div class="container nav__container">
-           <img src="./images/logo.png" class="logo"> 
-           <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
-           <ul class="nav__menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           </ul>
-        </div>
-   </nav>
-
+            <img src="./images/logo.png" class="logo"> 
+            <a href="./index.html"><h4>MARS DAYCARE</h4></a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Mars Daycare Activity</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="dailyActivity.html">Daycare Gallery</a></li>
+                        <li><a href="eventCalendar.html">Event Calendar</a></li>
+                      </ul>
+                    </a> </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>                
+                <span><button class="btn btn-login" id="login">Log-In</button></span>
+            </ul>
+         </div>
+    </nav>
 
     <!--=========== END OF NAVBAR ===========-->
 
-    
  <div class="daily__container"> 
                 <h1 class="title">MARS DAYCARE GALLERY ACTIVITY</h1>
                 <button class="prev__btn" onclick="prev__btn()"><img src="./images/aleft.png"></button>
@@ -53,7 +58,6 @@
         
         </div>
     </div>
-
 
     <!--=========== END OF DAILYACTIVITY ===========-->
 

@@ -1,0 +1,67 @@
+/* ========== BODY ========== */
+
+.calendar__container {
+  background: var(--color-bg1);
+  padding: 4rem;
+  gap: 2rem;
+  height: auto;
+  width: 60rem;
+  margin: 7rem auto;
+  border-radius: 1rem;
+}
+
+/* ========== BUTTON ========== */
+
+.prev__btn,
+.nxt__btn {
+  border: none;
+  width: 6rem;
+  position: absolute;
+  background:none;
+  cursor: pointer;
+  z-index: 10;
+}
+.prev__btn {
+  left: 25rem;
+}
+
+.nxt__btn {
+  right: 25rem;
+}
+
+/* ========== CONTENT ========== */
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.calendar__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.monthYear {
+  margin-left: 20rem;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: center;
+}
+
+td {
+  border: 0.2rem solid var(--color-bg3);
+  cursor: pointer;
+}
+
+.event__details {
+  display: none;
+  margin: 2rem;
+  padding: 1rem;
+  background-color: var(--color-bg3);
+  border-radius: .2rem;
+}

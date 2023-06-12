@@ -10,16 +10,16 @@ window.addEventListener('scroll', () => {
 
 
 const images = [ 
- { image: "./images/daily activity images/img1.jpg", text: " Morning Gathering ", description: "In Morning We have short gathering"},
- { image: "./images/daily activity images/img2.jpg", text: " Activity 2 ", description: "Activity 2 short description"},
- { image: "./images/daily activity images/img3.jpg", text: " Activity 3", description: "Activity 3 short description"},
- { image: "./images/daily activity images/img4.jpg", text: " Activity 4", description: "Activity 4 short description"},
- { image: "./images/daily activity images/img5.jpg", text: " Activity 5 ", description: "Activity 5 short description"},
- { image: "./images/daily activity images/img6.jpg", text: " Activity 6 ", description: "Activity 6 short description"},
- { image: "./images/daily activity images/img7.jpg", text: " Activity 7  ", description: "Activity 7 short description"},
- { image: "./images/daily activity images/img8.jpg", text: " Activity 8", description: "Activity 8 short description"},
- { image: "./images/daily activity images/img9.jpg", text: " Activity 9", description: "Activity 9 short description"},
- { image: "./images/daily activity images/img10.jpg", text: " Activity 10", description: "Activity 10  short description"}]
+ { image: "./images/daily activity images/img1.jpg", text: " Morning Gathering ", description: "In Morning We Have Short Gathering"},
+ { image: "./images/daily activity images/img2.jpg", text: " Buwan ng Wika ", description: "Celebration For Buwan Ng Wika"},
+ { image: "./images/daily activity images/img3.jpg", text: " Prayer", description: "We Start The Day In Our Class With Prayer"},
+ { image: "./images/daily activity images/img4.jpg", text: " Rabbies Awareness ", description: "The Puppet Show Teach Them About What To Becareful About Rabies"},
+ { image: "./images/daily activity images/img5.jpg", text: " Puppet Show ", description: "For Awareness Of Rabbies"},
+ { image: "./images/daily activity images/img6.jpg", text: " Exercise ", description: "We Teach Them How To Exercise"},
+ { image: "./images/daily activity images/img7.jpg", text: " Outside Activity ", description: "We Had Quick Exercise Before Doing Activity Outside"},
+ { image: "./images/daily activity images/img8.jpg", text: " Fun Games", description: "They Get To play Fun Games"},
+ { image: "./images/daily activity images/img9.jpg", text: " What To Do In Earthquakse ", description: "We Teach Them What To Do in Earthquakes"},
+ { image: "./images/daily activity images/img10.jpg", text: "Earthquake Drill ", description: "Short Drill On What To Do On Earthquake"}]
 
 
 
