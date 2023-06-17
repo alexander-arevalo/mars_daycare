@@ -22,57 +22,60 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/action.css" />
   </head>
   <body>
     <nav>
         <div class="container nav__container">
             <img src="./images/logo.png" class="logo"> 
             <a href="./index.html"><h4>MARS DAYCARE</h4></a>
-            <ul class="nav__menu">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Mars Daycare Activity</a>
-                      <ul class="dropdown-menu">
-                        <li><a href="dailyActivity.html">Daycare Gallery</a></li>
-                        <li><a href="eventCalendar.html">Event Calendar</a></li>
-                      </ul>
-                    </a> </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>                
-            </ul>
-         </div>
+
     </nav>
     <!--=========== END OF NAVBAR ===========-->
 
     <div class="container form__container">
-      <div class="admin">
-        <h2 class="title">Login</h2>
-        <form>
-          <label for="username">Email:</label>
-          <input type="text" id="email" name="email" /><br />
+        <h1 class="enrollee">Enrollee Information</h1>
+        <table>
+            <tr>
+              <th style="width:60%;">Enrollee </th>
+              <th style="width:40%;">Details</th>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td>John</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>Doe</td>
+            </tr>
+            <tr>
+                <td>Relationship With The Student:</td>
+                <td>Mother</td>
+            </tr>
+            <tr>
+                <td>Pre-School Level:</td>
+                <td>Nursery 1</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>sample1gmail.com</td>
+            </tr>
+            <tr>
+                <td>Parents/Guardian Mobile Number:</td>
+                <td>09XX-XXX-XXX</td>
+            </tr>
+            <tr>
+                <td>Birthdate:</td>
+                <td>July 10, 2020</td>
+            </tr>
+ 
+          </table>
 
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" /><br />
-
-          <label for="remember">Remember me:</label>
-          <input type="checkbox" id="remember" name="remember" /><br />
-
-          <button type="button" class="btn btn-primary" onclick="login()">
-            Log in
-          </button>
-          <ul>
-            <li>
-              <a href="passRecovery.html"><h5>Forgot Password?</h5></a>
-            </li>
-            <li>
-              <a href="registration.html"><h5>Register</h5></a>
-            </li>
-          </ul>
-        </form>
+        <button class="btn btn-left" id="decline">Decline</button>
+        <button class="btn btn-middle" id="back">Go Back</button>
+        <button class="btn btn-right" id="acceppt">Accept</button>
       </div>
-    </div>
-
+    
     <!--=========== END OF LOG IN FORM ===========-->
 
     <footer>
@@ -353,8 +356,7 @@
     </footer>
 
     <!--=========== END OF FOOTER ===========-->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/action.js"></script>
   </body>
 </html>

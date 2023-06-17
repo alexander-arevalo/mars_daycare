@@ -1,0 +1,54 @@
+.pass__container  {
+    background: var(--color-bg1);
+    gap: 1rem;
+    padding: 4rem;
+    width: 50rem;
+    height: auto;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+.password {
+    text-align:center;
+    cursor: default;
+    text-decoration: underline;
+    padding: 1rem;
+    margin-bottom: 5rem;
+
+}
+
+.email {
+    margin-left: 10rem;
+}
+
+input {
+    width: 50%;
+    padding: 1rem 0.9rem;
+    align-items: center;
+    margin: 0.5rem 10rem;
+    box-sizing: border-box;
+  }
+  
+  
+  #error-message {
+    color: var(--color-danger);
+    margin-top: 1rem;
+  }
+
+
+  .btn {
+    width: 50%;
+    align-self: center;
+    margin-left: 10rem;
+    margin-top: 1.4rem;
+    cursor: pointer;
+    background: var(--color-success);
+  }
+
+  .message {
+    background-color: var(--color-white);
+    width: max-content;
+    color: var(--color-black);
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }

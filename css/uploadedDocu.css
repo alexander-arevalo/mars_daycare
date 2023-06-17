@@ -66,9 +66,8 @@
 .side__title2{
     text-align: center;
     width: max-content;
-    background-color: var(--color-bg3);
     border-radius: .8rem; 
-    color: var(--color-black);
+    color: var(--color-white);
     margin-left: 8rem;
     margin-bottom: .5rem;
 }

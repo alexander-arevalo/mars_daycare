@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/uploadedDocu.css">
+    <link rel="stylesheet" href="./css/requestedId.css">
 
 
 </head>
@@ -24,6 +24,7 @@
     <nav>
         <div class="container nav__container">
            <img src="./images/logo.png" class="logo"> 
+
            <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
            <ul class="nav__menu">
             <!--<li><a href="index.html">Home</a></li>
@@ -50,75 +51,56 @@
                 <li><a  href="pendingReserv.html">Pending Reservation</a></li><br>
                 <li><a  href="adminGallery.html">Mars Daycare Gallery Activity</a></li><br>
                 <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
-                <li><a  href="requestedId.html">Request For ID</a></li><br>
+                <li><a  href="reqId.html">Request For ID</a></li><br>
                 <li><a  href="adminAbout.html">About</a></li>
            </ul>
         </div>
         </div>
             <div class="sidenav__right">
-                        <div class="sidenav__announcement"><h2 class="side__title2"> Students Documents:</h2>
-                            <input type="text" id="students__table" class="students__table" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
+                <div class="sidenav__announcement"><h2 class="side__title2"> Request For ID:</h2>
+                    <input type="text" id="students__id" class="students__id" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
 
-                            <table id="table" class="table">
-                              <tr class="header">
-                                <th style="width:60%;">Name</th>
-                                <th style="width:40%;">Document</th>
-                           
+                    <table id="table" class="table">
+                      <tr class="header">
+                        <th style="width:60%;">Name</th>
+                        <th style="width:40%;">Information</th>
+                   
 
-                              </tr>
-                              <tr>
-                                <td>Sample  Student1</td>
-                                <td>
-                                <form>
-                                    <label for="file">Download File</label>
-                                </form>
-                                  </td>
-                              </tr>
-                              <tr>
-                                <td>Sample  Student2</td>
-                                <td>
-                                <form>
-                                    <label for="file">Download File</label>
-                                </form>
-                                  </td>
-                              </tr>
-                              <tr>
-                                <td>Sample  Student3</td>
-                                <td>
-                                <form>
-                                    <label for="file">Download File</label>
-                                </form>
-                                  </td>
-                              </tr>
-                              <tr>
-                                <td>Sample  Student4</td>
-                                <td>
-                                <form>
-                                    <label for="file">Download File</label>
-                                </form>
-                                  </td>
-                              </tr>
-                              <tr>
-                                <td>Sample  Student5</td>
-                                <td>
-                                <form>
-                                    <label for="file">Download File</label>
-                                </form>
-                                  </td>
-                              </tr>
-
-                         
-
-                      
-
-
-                            
-                            </table>
-                            
-                            
-                        </div>
+                      </tr>
+                      <tr>
+                        <td>Sample  Student1</td>
+                        <td>
+                        <form>
+                            <label for="file">Details</label>
+                        </form>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>Sample  Student2</td>
+                        <td>
+                        <form>
+                            <label for="file">Details</label>
+                        </form>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>Sample  Student3</td>
+                        <td>
+                        <form>
+                            <label for="file">Details</label>
+                        </form>
+                          </td>
+                      </tr>
+                     
+                    </table>
+                    
+                    
                 </div>
-            </div>
+        </div>
+    </div>
+
+
+
         
 
 
@@ -347,8 +329,6 @@
 
 
      <script src="./js/main.js"></script>
-     <script src="./js/admin.js"></script>
-     <script src="./js/pendingReserv.js"></script>
-
+     <script src="./js/requestedId.js"></script>
 </body>
 </html>

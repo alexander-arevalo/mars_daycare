@@ -80,7 +80,7 @@
   box-sizing: border-box;
 }
 
-.students__table {
+.students__id {
   background-image: url('../images/search.png');
   background-position: 0;
   background-repeat: no-repeat;
