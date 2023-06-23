@@ -45,3 +45,6 @@ function terms() {
   var termspopup = document.getElementById("terms");
   termspopup.classList.toggle("show");
 }
+
+
+

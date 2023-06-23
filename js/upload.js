@@ -35,56 +35,44 @@ function saveProfile(event) {
 
 //upload function 
 
-  // Assuming you have installed the necessary dependencies (express, mongoose, multer)
-const express = require('express');
-const mongoose = require('mongoose');
-const multer = require('multer');
+  document
+  .getElementById("upload")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-// Create an instance of the express application
-const app = express();
+     // Prevent the default form submission
 
-// Configure multer for file uploads
-const upload = multer({ dest: 'uploads/' });
+    // Get the form inputs' values
+    var birthCert = document.getElementById("birthCert").value;
+    var validId = document.getElementById("validId").value;
+    var certificate = document.getElementById("certificate").value;
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+    // Perform any additional validation or data manipulation here
 
-// Create a model based on the schema
-const Document = mongoose.model('Document', documentSchema);
+    // Create an object with the user's data
+    var upload = {
+      birthCert : birthCert ,
+      validId : validId ,
+      certificate: certificate,
+    };
+    await axios
+      .post("http://localhost:3001/api/upload", {
+        birthCert,
+        validId,
+        certificate,
+      })
+      .then((res) => {
+        console.log("Uploaded Successfully");
+        console.log("DATAAA" + res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
-// Define a route to handle the file uploads
-app.post('/upload', upload.fields([
-  { name: 'birthcert', maxCount: 1 },
-  { name: 'validid', maxCount: 1 },
-  { name: 'certificate', maxCount: 1 },
-]), (req, res) => {
+    // Send the user data to the server or perform any desired action
+    // For demonstration purposes, we'll just log the user object to the console
+    console.log("upload:", upload);
 
-  const birthCertFile = req.files['birthcert'][0];
-  const validIdFile = req.files['validid'][0];
-  const healthRecordFile = req.files['certificate'][0];
-
-  // Create a new document instance
-  const newDocument = new Document({
-    birthCertificate: birthCertFile.path,
-    validId: validIdFile.path,
-    healthRecord: healthRecordFile.path,
+    // Reset the form
+    document.getElementById("upload").reset();
   });
-
-  // Save the document to the database
-  newDocument.save((err) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send('Error saving document');
-    } else {
-      res.send('Document uploaded successfully');
-    }
-  });
-});
-
-// Start the server
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});

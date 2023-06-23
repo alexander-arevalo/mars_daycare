@@ -30,7 +30,7 @@ document
       password: password,
     };
     await axios
-      .post("http://54.210.165.102/api/auth/signup", {
+      .post("http://localhost:3001/api/auth/signup", {
         firstName,
         lastName,
         email,

@@ -55,10 +55,10 @@ async function handleSubmit(event) {
   // Get the values from the form inputs
   console.log("TESTINGG");
   console.log(
-    `for testing ${firstName} ${lastName} ${phoneNumber}s ${email} ${birthday}`
+    `for testing ${firstName} ${lastName}  ${phoneNumber} ${email} ${birthDate} ${relationship}`
   );
   await axios
-    .post("http://54.210.165.102/api/enrollees", {
+    .post("http://localhost:3001/api/enrollees", {
       firstName,
       lastName,
       email,

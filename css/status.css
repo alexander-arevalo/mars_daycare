@@ -134,7 +134,7 @@ hr {
 
 .status__container {
     align-items: center;
-    height: auto; 
+    height: 30rem; 
     background: var(--color-bg1);
     padding: 1rem 4rem 1rem 4rem;
     width: 50rem;

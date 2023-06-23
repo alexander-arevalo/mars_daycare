@@ -61,8 +61,8 @@
                 <h3>Edit Profile</h3>
                 <input type="text" id="firstName" placeholder="First Name">
                 <input type="text" id="lastName" placeholder="Last Name">
-                <input type="email" id="email" placeholder="Email">
                 <input type="password" id="password" placeholder="Password">
+                <input type="password" id="confirmPass" placeholder="Confirm Password">
                 <button type="submit">Save</button>
               </form>
             </div>
@@ -72,15 +72,15 @@
     <!--=========== END OF NAVBAR ===========-->
 
             <div class="container upload__container"> 
-
-                <label for="birthcert"><h4 class="names">Birth Certificate Of Child</h4></label>
-                <input class="fileupload" type="file" accept=".pdf">
-                <label for="valid id "><h4 class="names">Valid Id of Parents/Guardian</h4></label>              
-                <input class="fileupload" type="file" accept=".pdf">
+                <form id="submit">
+                <label for="birthCert"><h4 class="names">Birth Certificate Of Child</h4></label>
+                <input class="fileupload" id="birthCert" type="file" accept=".pdf">
+                <label for="validId "><h4 class="names">Valid Id of Parents/Guardian</h4></label>              
+                <input class="fileupload" id="validId"   type="file" accept=".pdf">
                 <label for="certificate"><h4 class="names">Child's Health Record</h4></label>
-                <input class="fileupload" type="file" accept=".pdf">
-
-                <button type="submit" class="btn btn-submit"> Submit Documents</button>
+                <input class="fileupload" id="certificate"type="file" accept=".pdf">
+                </form>
+                <button type="submit" class="btn btn-submit" id="sumbit"> Submit Documents</button>
 
     </div>
    

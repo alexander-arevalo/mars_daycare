@@ -37,7 +37,7 @@ function saveProfile(event) {
   editFormWrap.style.display = "none";
 }
 
-//reservation value
+//status value
 
 function tableHandler() {
   var input, filter, table, tr, td, i, txtValue;
@@ -58,9 +58,9 @@ function tableHandler() {
   }
 }
 
-async function getEnrollees() {
+async function getEnrolleeById() {
   await axios
-    .get("http://54.210.165.102/api/enrollees")
+    .get("http://localhost:3001/api/enrollees")
     .then((res) => {
       console.log(`getting enrollees ${res.data}`);
       const enrolleesTableBody = document.getElementById("enrolleesTableBody");
@@ -94,4 +94,4 @@ async function getEnrollees() {
 }
 
 // Call the function to fetch and display enrollees
-getEnrollees();
+getEnrolleeById();

@@ -51,7 +51,7 @@
                 <li><a  href="pendingReserv.html">Pending Reservation</a></li><br>
                 <li><a  href="adminGallery.html">Mars Daycare Gallery Activity</a></li><br>
                 <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
-                <li><a  href="reqId.html">Request For ID</a></li><br>
+                <li><a  href="requestedId.html">Request For ID</a></li><br>
                 <li><a  href="adminAbout.html">About</a></li>
            </ul>
         </div>
@@ -61,43 +61,44 @@
                     <input type="text" id="students__id" class="students__id" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
 
                     <table id="table" class="table">
-                      <tr class="header">
-                        <th style="width:60%;">Name</th>
-                        <th style="width:40%;">Information</th>
-                   
+                        <tr class="header">
+                          <th style="width: 40%;">Name</th>
+                          <th style="width: 30%;">Information</th>
+                          <th style="width: 30%;"></th>
+                        </tr>
+                        <tr>
+                          <td>Sample Student1</td>
+                          <td>
+                            <button class="btn btn-details" id="reqId">Details</button>    
+                          </td>
+                          <td class="action-cell">
+                            <div class="btn-circle" onclick="markAsDone(this)"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Sample Student2</td>
+                          <td>
+                            <button class="btn btn-details" id="reqId">Details</button>    
+                          </td>
+                          <td class="action-cell">
+                            <div class="btn-circle" onclick="markAsDone(this)"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Sample Student3</td>
+                          <td>
+                            <button class="btn btn-details" id="reqId">Details</button>    
+                          </td>
+                          <td class="action-cell">
+                            <div class="btn-circle" onclick="markAsDone(this)"></div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+            </div>
+                
+</div>
 
-                      </tr>
-                      <tr>
-                        <td>Sample  Student1</td>
-                        <td>
-                        <form>
-                            <label for="file">Details</label>
-                        </form>
-                          </td>
-                      </tr>
-                      <tr>
-                        <td>Sample  Student2</td>
-                        <td>
-                        <form>
-                            <label for="file">Details</label>
-                        </form>
-                          </td>
-                      </tr>
-                      <tr>
-                        <td>Sample  Student3</td>
-                        <td>
-                        <form>
-                            <label for="file">Details</label>
-                        </form>
-                          </td>
-                      </tr>
-                     
-                    </table>
-                    
-                    
-                </div>
-        </div>
-    </div>
 
 
 

@@ -20,7 +20,7 @@ function tableHandler() {
 
 async function getEnrollees() {
   try {
-    const res = await axios.get("http://54.210.165.102/api/enrollees");
+    const res = await axios.get("http://localhost:3001/api/enrollees");
     console.log(`Getting enrollees: ${res.data}`);
     
     const enrolleesTableBody = document.getElementById("enrolleesTableBody");
@@ -45,7 +45,7 @@ async function getEnrollees() {
       // Add an event listener to the "Details" button
       button.addEventListener("click", () => {
         // Redirect the user to another HTML page
-      window.location.href = 'action.html';
+      window.location.href = 'enrolleeAction.html';
       });
       actionCell.appendChild(button);
       row.appendChild(firstNameCell);
