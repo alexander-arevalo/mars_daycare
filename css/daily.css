@@ -1,15 +1,7 @@
-/* ========== BODY ========== */
-
-body {
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat ;
-  background-size: auto;
-}
-
 /* ========== MAIN CSS========== */
 
 .daily__container {
-  background: var(--color-bg1);
+  background: var(--color-bg3);
   overflow: hidden;
   padding: 4rem;
   height: 60rem;
@@ -22,7 +14,7 @@ body {
   padding: 0;
   text-align: center;
   color: var(--color-black);
-  background-color: var(--color-bg3);
+  background-color: var(--color-white);
   width: 50rem;
   margin-left: 11.5rem;
   border-radius: 1rem;

@@ -2,7 +2,7 @@
 
 .btn-signout {
     margin-right: -10rem ;
-    background-color: var(--color-light);
+    background-color: var(--color-success);
     border-radius: 2rem;
     padding: .8rem;
 }
@@ -13,7 +13,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     height: 100%; 
-    background: var(--color-bg1);
+    background: var(--color-bg3);
     padding: 4rem;
     gap: 2rem;
     margin: 7rem auto;    
@@ -23,7 +23,7 @@
 
 /* ========== LEFT SIDE CONTAINER ========== */
 .sidenav__left{
-    margin-top: -10rem;
+    margin-top: 0rem;
 }
 .sidenav__left a {
     background:  var(--transition);
@@ -38,7 +38,7 @@
 
 .side__title1{
     text-align: center;
-    background-color: var(--color-bg3);
+    background-color: var(--color-white);
     width: max-content;
     border-radius: .8rem; 
     color: var(--color-black);

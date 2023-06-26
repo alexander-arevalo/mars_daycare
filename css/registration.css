@@ -1,7 +1,7 @@
 .registration__container {
     height: auto; 
     width: 50rem;
-    background: var(--color-bg1);
+    background: var(--color-bg3);
     padding: 4rem;
     gap: 2rem;
     margin: 7rem auto;    

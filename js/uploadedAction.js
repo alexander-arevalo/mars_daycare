@@ -1,5 +1,7 @@
-const signoutLink = document.getElementById("sub__menu__link");
+const back = document.getElementById("back");
 
-signoutLink.addEventListener("click", () => {
-  window.location.replace("index.html");
+back.addEventListener("click", () => {
+  window.location.replace("uploadedDocu.html");
 });
+
+

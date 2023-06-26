@@ -2,7 +2,7 @@
 
 .btn-signout {
     margin-right: -10rem ;
-    background-color: var(--color-light);
+    background-color: var(--color-success);
     border-radius: 2rem;
     padding: .8rem;
 }
@@ -13,7 +13,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     height: 50rem; 
-    background: var(--color-bg1);
+    background: var(--color-bg3);
     padding: 1rem 4rem 1rem 4rem;
     gap: 2rem;
     margin: 7rem auto;    
@@ -24,7 +24,7 @@
 
 /* ========== LEFT SIDE CONTAINER ========== */
 .sidenav__left{
-    margin-top: -20rem;
+    margin-top: -10rem;
 }
 .sidenav__left a {
     background:  var(--transition);
@@ -33,13 +33,13 @@
 }
 
 .sidenav__left a:hover{
-    color: var(--color-bg2);
+    color: var(--color-white);
 
 }
 
 .side__title1{
     text-align: center;
-    background-color: var(--color-bg3);
+    background-color: var(--color-white);
     width: max-content;
     border-radius: .8rem; 
     color: var(--color-black);
@@ -86,14 +86,14 @@
   background-repeat: no-repeat;
   width: 100%;
   padding: 1rem 0 1rem 4rem;
-  border: .5rem solid var(--color-bg3);
+  border: .2rem solid var(--color-black);
   margin-bottom: 12px;
 }
 
 .table {
   border-collapse: collapse;
   width: 100%;
-  border: .2rem solid var(--color-bg3);
+  border: .2rem solid var(--color-white);
 }
 
 .table th, .table td {
@@ -102,9 +102,9 @@
 }
 
 .table tr {
-  border-bottom: .2rem solid var(--color-bg3);
+  border-bottom: .2rem solid var(--color-white);
 }
 
 .table tr.header, .table tr:hover {
-  background-color: var(--color-bg);
+  background-color: var(--color-bg4);
 }

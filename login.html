@@ -48,7 +48,7 @@
     <div class="container form__container">
       <div class="admin">
         <h2 class="title">Login</h2>
-        <form>
+        <form id="loginForm">
           <label for="username">Email:</label>
           <input type="text" id="email" name="email" /><br />
 
@@ -58,7 +58,7 @@
           <label for="remember">Remember me:</label>
           <input type="checkbox" id="remember" name="remember" /><br />
 
-          <button type="button" class="btn btn-primary" onclick="login()">
+          <button type="button" class="btn btn-primary" id="submit" onclick="login()">
             Log in
           </button>
           <ul>

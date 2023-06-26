@@ -14,7 +14,7 @@ async function login() {
   let successful;
 
   await axios
-    .post("http://54.210.165.102/api/auth/login", { email, password })
+    .post("http://localhost:3001/api/auth/login", { email, password })
     .then((res) => {
       console.log(res.data);
       isAdmin = res.data.isAdmin;
@@ -33,7 +33,7 @@ async function login() {
     });
 
   // Check username and password against database
-  if (successful) {
+  // if (successful) {
     // Redirect to respective secure page
     if (isAdmin) {
       window.location.href = "admin.html";
@@ -42,26 +42,15 @@ async function login() {
     }
 
     // Save username and password to local storage if "Remember me" is checked
-  } else {
-    // Display invalid log in
-    alert("Invalid username or password.");
-  }
+//   } else {
+//     // Display invalid log in
+//     alert("Invalid username or password.");
+//   }
 }
-
-// Retrieve saved login credentials from local storage
-// var savedUsername = localStorage.getItem("username");
-// var savedPassword = localStorage.getItem("password");
-
-// // If saved credentials exist, populate the form and check the "Remember me" checkbox
-// if (savedUsername && savedPassword) {
-//   document.getElementById("username").value = savedUsername;
-//   document.getElementById("password").value = savedPassword;
-//   document.getElementById("remember").checked = true;
-// }
 
 // Event listener for form submission
 document
-  .getElementById("login-form")
+  .getElementById("loginForm")
   .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
     login(); // Call the login function when the form is submitted
