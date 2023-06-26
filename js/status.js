@@ -60,7 +60,7 @@ function tableHandler() {
 
 async function getEnrolleeById() {
   await axios
-    .get("http://localhost:3001/api/enrollees")
+    .get("http://localhost:3001/api/enrollees/:id")
     .then((res) => {
       console.log(`getting enrollees ${res.data}`);
       const enrolleesTableBody = document.getElementById("enrolleesTableBody");

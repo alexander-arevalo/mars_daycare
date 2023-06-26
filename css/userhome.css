@@ -37,6 +37,7 @@
   .user__info {
     display: flex;
     align-items: center;
+    cursor: default;
   }
   
   .user__info h3 {
@@ -62,6 +63,7 @@
     text-decoration: none;
     color: var(--color-black);
     margin: 1.2rem 0;
+    cursor: default;
   }
   
   .sub__menu__link p {

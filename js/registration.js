@@ -39,9 +39,12 @@ document
       .then((res) => {
         console.log("Registered successfully");
         console.log("DATAAA " + res.data);
+        alert("Successfully Registerd");
+        window.location.replace("login.html");
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err,);
+        alert("Email is Already in Use")
       });
 
     // Send the user data to the server or perform any desired action

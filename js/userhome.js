@@ -1,4 +1,4 @@
-const signoutLink = document.getElementById("sub__menu__link");
+const signoutLink = document.getElementById("signout");
 
 signoutLink.addEventListener("click", () => {
   window.location.replace("index.html");
@@ -14,15 +14,28 @@ function openEditForm() {
   editFormWrap.style.display = "flex";
 }
 
-function saveProfile(event) {
+async function saveProfile(event) {
   event.preventDefault(); // Prevent form submission
-
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
   var userName = document.getElementById("userName");
 
   // Update the user profile name
   userName.textContent = firstName + " " + lastName;
+  try {
+    const res = await axios.get("http://localhost:3001/api/:id")
+    console.log(`Getting ID: ${res.data}`);
+
+    const user = document.getElementById("subMenu");
+    const data = res.data;
+
+  } catch (error) {
+    
+  }
+  
+
+
+  
 
   // Hide the edit form
   var editFormWrap = document.getElementById("editFormWrap");

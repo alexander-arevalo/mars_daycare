@@ -63,7 +63,7 @@ function saveProfile(event) {
       })
       .then((res) => {
         console.log("Uploaded Successfully");
-        console.log("DATAAA" + res.data);
+        console.log("DATA" + res.data);
       })
       .catch((err) => {
         console.log(err);
