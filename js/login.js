@@ -19,7 +19,7 @@ async function login() {
       try {
         console.log(res);
         isAdmin = res.data.isAdmin;
-        successful = res.data.sucessful;
+        successful = res.data.successful;
         const token = res.data.token;        
 
         // Store the token securely in local storage or a cookie
@@ -28,13 +28,21 @@ async function login() {
   
         axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-        if (isAdmin) {
-          window.location.replace("admin.html");
-          
-        } else {
-          window.location.replace("userhome.html");
+        if(successful){
+          if (isAdmin) {
+            window.location.replace("admin.html");
+            
+          } else {
+            window.location.replace("userhome.html");
+            
+          }
           
         }
+        else {
+          alert("Invalid username or password.");
+        }
+
+    
       
       } catch (error) {
         console.log(error);

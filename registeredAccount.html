@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/adminCalendar.css">
+    <link rel="stylesheet" href="./css/registeredAccount.css">
 
 
 </head>
@@ -56,32 +56,27 @@
         </div>
         </div>
             <div class="sidenav__right">
-                            <div class="container sidenav__calendar"><h2 class="side__title2"> ADD EVENTS</h2>
-                                <form id="eventForm" class="event__form">
-                                  <label for="title">Event Title:</label>
-                                  <input type="text" id="title" name="title" required> <br>
-                              
-                                  <label for="date">Date:</label>
-                                  <input type="date" id="date" name="date" required> <br>
-                              
-                                  <label for="time">Time:</label>
-                                  <input type="time" id="time" name="time" required> <br>
-                              
-                                  <label for="description">Description:</label><br>
-                                  <textarea id="description" name="description" rows="3" cols="50" required></textarea> <br>
-                              
-                                  <button type="submit" class="btn btn" > Submit </button>
+                <div class="sidenav__announcement"><h2 class="side__title2">Account Management:</h2>
+                    <input type="text" id="accounts" class="accounts" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
 
-                                </form>
-                              
-                        </div>
+                    <table id="accountTable" class="table">
+                      <tr class="header">
+                        <th style="width:35%;">First Name</th>
+                        <th style="width:35%;">Last Name</th>
+                        <th style="width:15%;">Status</th>
+                        <th style="width:15%;">Action</th>
+
+                      </tr>
+                     <tbody id="accountTableBody">
+
+                     </tbody>
+                  
+                    </table>
+                    
+                    
                 </div>
-            </div>
-        
-
-
-
-
+        </div>
+    </div>
 
 
 
@@ -302,11 +297,9 @@
 
 
 
-
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-     <script src="./js/admin.js"></script>
      <script src="./js/navbar.js"></script>
-     <script src="./js/adminCalendar.js"></script>
-
+     <script src="./js/admin.js"></script>
+     <script src="./js/registeredAccount.js"></script>
 </body>
 </html>

@@ -28,8 +28,21 @@ form {
     gap: 2rem;
     line-height: 5rem;
 }
-
-input[type=text], input[type=email], input[type=password] {
+.fileupload{
+    content: 'Select files';
+    display: inline-block;
+    align-items: center;
+    background: var(--color-white);
+    color: var(--color-black);
+    margin-left: 9rem;
+    padding: 1rem  0rem 1rem 2rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+  
+}
+input[type=text], input[type=email], input[type=password], input[type=file] {
     width: 100%;
     padding: 1rem 0.9rem;
     margin: 0.5rem 0;
