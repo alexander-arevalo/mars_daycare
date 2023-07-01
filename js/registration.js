@@ -1,17 +1,5 @@
-function passwordHandler() {
-  var x = document.getElementById("pass");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-
-// script.js
-
-document
-  .getElementById("register")
-  .addEventListener("submit", async function (event) {
+document.getElementById("register").addEventListener("submit", 
+    async function (event) {
     event.preventDefault(); // Prevent the default form submission
 
     // Get the form inputs' values

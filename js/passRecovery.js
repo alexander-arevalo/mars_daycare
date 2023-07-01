@@ -11,7 +11,7 @@ document.getElementById("recoveryForm").addEventListener("submit", function(even
   // Perform password recovery logic here
   // You can use AJAX or any other method to send a request to the server
 
-  var confirmation = confirm("An email has been sent to your email address with password recovery instructions. Do you want to go back to the login page?");
+  var confirmation = confirm("Email has been sent with Password recovery Instruction");
   if (confirmation) {
     window.location.href = "login.html"; 
   }

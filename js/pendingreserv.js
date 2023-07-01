@@ -45,7 +45,7 @@ async function getEnrollees() {
       // Add an event listener to the "Details" button
       button.addEventListener("click", () => {
         // Redirect the user to another HTML page
-      window.location.href = 'enrolleeAction.html';
+      window.location.href = 'pendingAction.html';
       });
       actionCell.appendChild(button);
       row.appendChild(firstNameCell);

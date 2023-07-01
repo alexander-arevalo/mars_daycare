@@ -1,10 +1,3 @@
-const logoutBtn = document.getElementById("signout")
-
-logoutBtn.addEventListener("click",()=> {
-    window.location.replace("index.html")
-})
-
-
 async function handleSubmit(event) {
     event.preventDefault();
     var title = document.getElementById("title").value;

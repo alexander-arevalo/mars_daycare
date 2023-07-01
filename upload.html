@@ -7,9 +7,6 @@
     <title>Mars Daycare Center</title>
     <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
 
-    <!-- ICONSCOUT CDN -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +14,7 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/upload.css">
+    <link rel="stylesheet" href="./css/userProfile.css">
 
 
 </head>
@@ -72,7 +70,7 @@
     <!--=========== END OF NAVBAR ===========-->
 
             <div class="container upload__container"> 
-                <form id="submit">
+                <form id="submitForm">
                 <label for="birthCert"><h4 class="names">Birth Certificate Of Child</h4></label>
                 <input class="fileupload" id="birthCert" type="file" accept=".pdf">
                 <label for="validId "><h4 class="names">Valid Id of Parents/Guardian</h4></label>              
@@ -309,8 +307,9 @@
 
 
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script src="./js/main.js"></script>
-     <script src="./js/upload.js"></script>     
+     <script src="./js/navbar.js"></script>
+     <script src="./js/userProfile.js"></script>
+     <script src="./js/upload.js"></script>
 
 
 </body>

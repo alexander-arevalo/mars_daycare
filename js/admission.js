@@ -1,11 +1,3 @@
-//  to freeze na navbar
-
-window.addEventListener("scroll", () => {
-  document
-    .querySelector("nav")
-    .classList.toggle("window-scroll", window.scrollY > 0);
-});
-
 //  to signout
 
 const signoutLink = document.getElementById("sub__menu__link");
@@ -78,6 +70,6 @@ async function handleSubmit(event) {
     });
 
   document.getElementById("myForm").reset();
-}
+};
 
 document.getElementById("myForm").addEventListener("submit", handleSubmit);

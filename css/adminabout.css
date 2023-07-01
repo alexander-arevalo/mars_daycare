@@ -23,7 +23,7 @@
 
 /* ========== LEFT SIDE CONTAINER ========== */
 .sidenav__left{
-    margin-top: -60rem;
+    margin-top: -50rem;
 }
 .sidenav__left a {
     background:  var(--transition);
