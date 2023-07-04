@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/admingallery.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/registeredAccount.css">
 
 
 </head>
 <body>
     <nav>
         <div class="container nav__container">
-           <img src="./images/logo.png" class="logo"> 
-           <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+           <img src="/images/logo.png" class="logo"> 
+
+           <a href="/index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
            <ul class="nav__menu">
             <!--<li><a href="index.html">Home</a></li>
                 <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
@@ -49,36 +50,33 @@
                 <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
                 <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
                 <li><a  href="requestedId.html">Request For ID</a></li><br>
-                <li><a  href="registered.html">Registered Account</a></li><br>
+                <li><a  href="registeredAccount.html">Registered Account</a></li><br>
                 <li><a  href="adminAbout.html">About</a></li>
            </ul>
         </div>
         </div>
+            <div class="sidenav__right">
+                <div class="sidenav__announcement"><h2 class="side__title2">Account Management:</h2>
+                    <input type="text" id="accounts" class="accounts" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
 
+                    <table id="accountTable" class="table">
+                      <tr class="header">
+                        <th style="width:35%;">First Name</th>
+                        <th style="width:35%;">Last Name</th>
+                        <th style="width:15%;">Status</th>
+                        <th style="width:15%;">Action</th>
 
+                      </tr>
+                     <tbody id="accountTableBody">
 
-
-        <div class="daily__container"> 
-            <h1 class="title">MARS DAYCARE GALLERY ACTIVITY</h1>
-            <div class="slider__container">
-
-                    <div class="img__container">
-                <img src="./images/daily activity images/img1.jpg" class="slider" id="img">
-                <h2 class="activity" id="txt">Morning Gathering</h2>
-                <p class="activity__description" id ="desc">In Morning We have short gathering </p>
-             </div>
-
-    
-    </div>
-</div>
-
-
-            
+                     </tbody>
+                  
+                    </table>
+                    
+                    
+                </div>
         </div>
-
-
-
-
+    </div>
 
 
 
@@ -299,10 +297,9 @@
 
 
 
-
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-     <script src="./js/admin.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/adminGallery.js"></script>
+     <script src="/js/navbar.js"></script>
+     <script src="/js/admin.js"></script>
+     <script src="/js/registeredAccount.js"></script>
 </body>
 </html>

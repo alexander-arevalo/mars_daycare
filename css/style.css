@@ -23,6 +23,8 @@
     --color-bg3: #C3E0E5;
     --color-bg4: #00BFFF;
     --color-bg5: #89CFF0;
+    --color-bg6: #25c9ff;
+
 
     --container-width-lg: 80%;
 
@@ -133,7 +135,7 @@ nav {
   /* ========== WINDOW SCROLL ========== */
   
   .window-scroll {
-    background-color: var(--color-bg4);
+    background-color: var(--color-bg6);
   }
   
   .nav__container {

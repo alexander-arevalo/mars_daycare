@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,125 +7,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/adminabout.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/status.css">
+    <link rel="stylesheet" href="/css/userProfile.css">
 
 
 </head>
 <body>
     <nav>
         <div class="container nav__container">
-           <img src="./images/logo.png" class="logo"> 
-           <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
-           <ul class="nav__menu">
-            <!--<li><a href="index.html">Home</a></li>
-                <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>-->
-                <span><button class="btn btn-signout" id="signout">Sign Out</button></span>
+            <img src="/images/logo.png" class="logo"> 
+            <a href="/index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+            <ul class="nav__menu">
+              <li><a href="userHome.html">Home</a></li>
+              <li><a href="status.html">Status</a></li>
+              <li><a href="admission.html">Admission</a></li>
+              <li><a href="upload.html">Upload Documents</a></li>
+              <li><a href="reqId.html">Request for ID</a></li>
+          </ul>
+            
+            <img src="/images/profile.png" class="user__profile" id="myImage" onclick="openProfile()">
 
-           </ul>
+            <div class="sub__menu__wrap" id="subMenu">
+              <div class="sub__menu">
+                <div class="user__info">
+                  <img src="/images/profile.png">
+                  <h3 id="userName">Zero Two</h3>
+                </div>
+                <hr>
+                <a href="#" class="sub__menu__link" onclick="openEditForm()">
+                  <img src="/images/profile.png">
+                  <p>Edit Profile</p>
+                  <span>></span>
+                </a>
+                <a href="#" class="sub__menu__link" id="sub__menu__link" onclick="signout()">
+                  <img src="/images/signout.png">
+                  <p>Sign Out</p>
+                  <span>></span>
+                </a>
+              </div>
+            </div>
+            
+            
+            <div class="edit__form__wrap" id="editFormWrap">
+              <form class="edit__form" onsubmit="saveProfile(event)">
+                <h3>Edit Profile</h3>
+                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="password" id="password" placeholder="Password">
+                <input type="password" id="confirmPass" placeholder="Confirm Password">
+                <button type="submit">Save</button>
+              </form>
+            </div>
         </div>
-
+       
    </nav>
-
 
 
     <!--=========== END OF NAVBAR ===========-->
 
- 
-    
-        <div class="container sidenav__container">
-           <div class="sidenav__left"><a><h2 class="side__title1">Admin Access</h2></a>
-            <div><ul class="sidenav__menu">
-                <li><a  href="admin.html">Announcements</a></li><br>           
-                <li><a  href="pendingReserv.html">Pending Reservation</a></li><br>
-                <li><a  href="adminGallery.html">Mars Daycare Gallery Activity</a></li><br>
-                <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
-                <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
-                <li><a  href="requestedId.html">Request For ID</a></li><br>
-                <li><a  href="registered.html">Registered Account</a></li><br>
-                <li><a  href="adminAbout.html">About</a></li>
-           </ul>
+    <div class="conainer status__container">
+        <div class="history"><h2 class="history__title">Check Your Child's Status:</h2></h2>
+            <input type="text" id="students__table" class="students__table" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
+
+            <table id="enrolleesTable" class="table">
+              <tr class="header">
+                <th style="width:40%;">First Name</th>
+                <th style="width:40%;">Last Name</th>
+                <th style="width:20%;">Status</th>
+              </tr>
+             <tbody id="enrolleesTableBody">
+
+             </tbody>
+          
+            </table>
+            
+            
         </div>
-        </div>
-        <div class="container about__container">
-            <h1 class="abt"> ABOUT US </h1>
-            
-                <div class="main__section">
-            
 
-
-                    <section>
-                        <h3 id="h1">Our Vision</h3>
-                
-                    <p id="p1"> 
-                        Holistically developed zero (0) to four (4) year-old Muntinlupeño children, who are adequately prepared for the Kindergarten, 
-                        equipped with life-long learning and whose rights and welfare are promoted and protected.
-                    
-                    </p>
-                    </section>   
-                    
-                    <section>
-                        <h3 id="h2">Our Mission</h3>
-    
-                    <p id="p2">
-                        1.	Develop zero (0) to four (4) year-old Muntinlupeño children through the Center-Based and 
-                        Home-based programs with developmentally appropriate practices, meaningful experiences and integrative services for 
-                        Early Childhood Education, Health, Nutrition, Culture, Environmental Care and Social Services Development Programs;<br>
-                        2.	Provide Parent Education and support systems that will assist parents in their roles as primary caregivers and first teachers of their children;<br>
-                        3.	Develop competent and committed Child Development Teachers and Workers and Service Providers;<br>
-                        4.	Improve the quality standards of Public and Private ECCD programs; and <br>
-                        5.	Promote child awareness in every community. <br>
-                        
-                    </p>
-                    </section>
-    
-                <section>
-                    <h3 id="h3">Mandate</h3>
-                    <p id="p3">
-                        The Early Childhood Education Division (ECED) shall be responsible for the development, integration and implementation of policies and programs, 
-                        projects and activities concerning early childhood education in the City, basic holistic needs and optimum growth and development of zero (0) to four (4) year - old children 
-                        through the Early Childhood Care and Development (ECCD) Programs (RA10410, Early Years Act of 2013).  In addition, Early Childhood Education Division (ECED) is also responsible in 
-                        the Registration, Granting of Permit and Recognition of Public Child Development Centers and Private Learning Centers.
-                    </p>
-    
-                </section>
-    
-    
-                <section>
-                    <h3 id="h4">Service Pledge</h3>
-            
-                <p id="p4"> 
-                    We are committed to support the holistic development of zero (0) to four (4) year-old Muntinlupeño children by promoting their welfare and protecting their rights, 
-                    providing them with developmentally appropriate practices and life-long learning.
-                
-                </p>
-                </section>     
-
-
-                </div>
-
-        </div>
-    
-            
     </div>
 
 
 
 
-
-
-
-
-    <!--=========== END OF ADMIN INFO ===========-->
+    <!--=========== END OF STATUS SEARCH ===========-->
 
 
 
@@ -140,10 +114,11 @@
             <div class="footer__2">
                 <h4>Permalinks</h4>
                 <ul class="permalinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                  <li><a href="userHome.html">Home</a></li>
+                  <li><a href="status.html">Status</a></li>
+                  <li><a href="admission.html">Admission</a></li>
+                  <li><a href="upload.html">Upload Documents</a></li>
+                  <li><a href="reqId.html">Request for ID</a></li>
                 </ul>
             </div>
 
@@ -341,8 +316,9 @@
 
 
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script src="./js/admin.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/adminAbout.js"></script>
+     <script src="/js/navbar.js"></script>
+     <script src="/js/userProfile.js"></script>
+     <script src="/js/status.js"></script>
+
 </body>
 </html>

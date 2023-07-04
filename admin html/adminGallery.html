@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,97 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/status.css">
-    <link rel="stylesheet" href="./css/userProfile.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admingallery.css">
 
 
 </head>
 <body>
     <nav>
         <div class="container nav__container">
-            <img src="./images/logo.png" class="logo"> 
-            <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
-            <ul class="nav__menu">
-              <li><a href="userHome.html">Home</a></li>
-              <li><a href="status.html">Status</a></li>
-              <li><a href="admission.html">Admission</a></li>
-              <li><a href="upload.html">Upload Documents</a></li>
-              <li><a href="reqId.html">Request for ID</a></li>
-          </ul>
-            
-            <img src="images/profile.png" class="user__profile" id="myImage" onclick="openProfile()">
+           <img src="/images/logo.png" class="logo"> 
+           <a href="/index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+           <ul class="nav__menu">
+            <!--<li><a href="index.html">Home</a></li>
+                <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>-->
+                <span><button class="btn btn-signout" id="signout">Sign Out</button></span>
 
-            <div class="sub__menu__wrap" id="subMenu">
-              <div class="sub__menu">
-                <div class="user__info">
-                  <img src="images/profile.png">
-                  <h3 id="userName">Zero Two</h3>
-                </div>
-                <hr>
-                <a href="#" class="sub__menu__link" onclick="openEditForm()">
-                  <img src="images/profile.png">
-                  <p>Edit Profile</p>
-                  <span>></span>
-                </a>
-                <a href="#" class="sub__menu__link" id="sub__menu__link" onclick="signout()">
-                  <img src="images/signout.png">
-                  <p>Sign Out</p>
-                  <span>></span>
-                </a>
-              </div>
-            </div>
-            
-            
-            <div class="edit__form__wrap" id="editFormWrap">
-              <form class="edit__form" onsubmit="saveProfile(event)">
-                <h3>Edit Profile</h3>
-                <input type="text" id="firstName" placeholder="First Name">
-                <input type="text" id="lastName" placeholder="Last Name">
-                <input type="password" id="password" placeholder="Password">
-                <input type="password" id="confirmPass" placeholder="Confirm Password">
-                <button type="submit">Save</button>
-              </form>
-            </div>
+           </ul>
         </div>
-       
+
    </nav>
+
 
 
     <!--=========== END OF NAVBAR ===========-->
 
-    <div class="conainer status__container">
-        <div class="history"><h2 class="history__title">Check Your Child's Status:</h2></h2>
-            <input type="text" id="students__table" class="students__table" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
+ 
+    
+        <div class="container sidenav__container">
+           <div class="sidenav__left"><a><h2 class="side__title1">Admin Access</h2></a>
+            <div><ul class="sidenav__menu">
+                <li><a  href="admin.html">Announcements</a></li><br>           
+                <li><a  href="pendingReserv.html">Pending Reservation</a></li><br>
+                <li><a  href="adminGallery.html">Mars Daycare Gallery Activity</a></li><br>
+                <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
+                <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
+                <li><a  href="requestedId.html">Request For ID</a></li><br>
+                <li><a  href="registeredAccount.html">Registered Account</a></li><br>
+                <li><a  href="adminAbout.html">About</a></li>
+           </ul>
+        </div>
+        </div>
 
-            <table id="enrolleesTable" class="table">
-              <tr class="header">
-                <th style="width:40%;">First Name</th>
-                <th style="width:40%;">Last Name</th>
-                <th style="width:20%;">Status</th>
-              </tr>
-             <tbody id="enrolleesTableBody">
 
-             </tbody>
-          
-            </table>
-            
+
+
+        <div class="daily__container"> 
+            <h1 class="title">MARS DAYCARE GALLERY ACTIVITY</h1>
+            <div class="slider__container">
+
+                    <div class="img__container">
+                <img src="/images/daily activity images/img1.jpg" class="slider" id="img">
+                <h2 class="activity" id="txt">Morning Gathering</h2>
+                <p class="activity__description" id ="desc">In Morning We have short gathering </p>
+             </div>
+
+    
+    </div>
+</div>
+
+
             
         </div>
 
-    </div>
 
 
 
 
-    <!--=========== END OF STATUS SEARCH ===========-->
+
+
+
+    <!--=========== END OF ADMIN INFO ===========-->
 
 
 
@@ -114,11 +100,10 @@
             <div class="footer__2">
                 <h4>Permalinks</h4>
                 <ul class="permalinks">
-                  <li><a href="userHome.html">Home</a></li>
-                  <li><a href="status.html">Status</a></li>
-                  <li><a href="admission.html">Admission</a></li>
-                  <li><a href="upload.html">Upload Documents</a></li>
-                  <li><a href="reqId.html">Request for ID</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -315,10 +300,9 @@
 
 
 
-     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/userProfile.js"></script>
-     <script src="./js/status.js"></script>
-
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script src="/js/admin.js"></script>
+     <script src="/js/navbar.js"></script>
+     <script src="/js/adminGallery.js"></script>
 </body>
 </html>

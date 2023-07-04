@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/pendingreserv.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/requestedId.css">
 
 
 </head>
 <body>
     <nav>
         <div class="container nav__container">
-           <img src="./images/logo.png" class="logo"> 
+           <img src="/images/logo.png" class="logo"> 
 
-           <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
-            <ul class="nav__menu">
+           <a href="/index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+           <ul class="nav__menu">
             <!--<li><a href="index.html">Home</a></li>
                 <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
                 <li><a href="about.html">About</a></li>
@@ -44,39 +44,63 @@
         <div class="container sidenav__container">
            <div class="sidenav__left"><a><h2 class="side__title1">Admin Access</h2></a>
             <div><ul class="sidenav__menu">
-                <li><a  href="admin.html">Announcements</a></li><br>           
-                <li><a  href="pendingReserv.html">Pending Reservation</a></li><br>
-                <li><a  href="adminGallery.html">Mars Daycare Gallery Activity</a></li><br>
-                <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
-                <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
-                <li><a  href="requestedId.html">Request For ID</a></li><br>
-                <li><a  href="registered.html">Registered Account</a></li><br>
-                <li><a  href="adminAbout.html">About</a></li>
+              <li><a  href="admin.html">Announcements</a></li><br>           
+              <li><a  href="pendingReserv.html">Pending Reservation</a></li><br>
+              <li><a  href="adminGallery.html">Mars Daycare Gallery Activity</a></li><br>
+              <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
+              <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
+              <li><a  href="requestedId.html">Request For ID</a></li><br>
+              <li><a  href="registeredAccount.html">Registered Account</a></li><br>
+              <li><a  href="adminAbout.html">About</a></li>
            </ul>
         </div>
         </div>
             <div class="sidenav__right">
-                        <div class="sidenav__announcement"><h2 class="side__title2"> Pending Reservation:</h2>
-                            <input type="text" id="students__table" class="students__table" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
+                <div class="sidenav__announcement"><h2 class="side__title2"> Request For ID:</h2>
+                    <input type="text" id="students__id" class="students__id" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
 
-                            <table id="enrolleesTable" class="table">
-                              <tr class="header">
-                                <th style="width:35%;">First Name</th>
-                                <th style="width:35%;">Last Name</th>
-                                <th style="width:15%;">Status</th>
-                                <th style="width:15%;">Action</th>
-
-                              </tr>
-                             <tbody id="enrolleesTableBody">
-
-                             </tbody>
-                          
-                            </table>
-                            
-                            
-                        </div>
-                </div>
+                    <table id="table" class="table">
+                        <tr class="header">
+                          <th style="width: 40%;">Name</th>
+                          <th style="width: 30%;">Information</th>
+                          <th style="width: 30%;"></th>
+                        </tr>
+                        <tr>
+                          <td>Sample Student1</td>
+                          <td>
+                            <button class="btn btn-details" id="reqId">Details</button>    
+                          </td>
+                          <td class="action-cell">
+                            <div class="btn-circle" onclick="markAsDone(this)"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Sample Student2</td>
+                          <td>
+                            <button class="btn btn-details" id="reqId">Details</button>    
+                          </td>
+                          <td class="action-cell">
+                            <div class="btn-circle" onclick="markAsDone(this)"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Sample Student3</td>
+                          <td>
+                            <button class="btn btn-details" id="reqId">Details</button>    
+                          </td>
+                          <td class="action-cell">
+                            <div class="btn-circle" onclick="markAsDone(this)"></div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
             </div>
+                
+</div>
+
+
+
+
         
 
 
@@ -302,11 +326,9 @@
 
 
 
-
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script src="./js/admin.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/pendingreserv.js"></script>
-
+     <script src="/js/admin.js"></script>
+     <script src="/js/navbar.js"></script>
+     <script src="/js/requestedId.js"></script>
 </body>
 </html>

@@ -1,11 +1,3 @@
-//  to freeze na navbar
-
-window.addEventListener("scroll", () => {
-  document
-    .querySelector("nav")
-    .classList.toggle("window-scroll", window.scrollY > 0);
-});
-
 async function login() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;

@@ -52,7 +52,7 @@
             <label for="Password"><h4>Password:</h4></label>
             <input type="password" id="pass"  minlength="8" maxlength="16" required>
             <label for="proof"><h4>Proof Of Residency</h4></label>
-            <input type="file" id="proof" name="proof" class="fileupload" placeholder="Upload File" accept=".jpeg">
+            <input type="file" id="proof" name="proof" class="fileupload" placeholder="Upload File" accept=".jpeg" onclick="imageUpload ()">
             <p class="lenght"> Password must be Minimum 8 Character</p>
             <h5><input type="checkbox" onclick="passwordHandler()">Show Password</h5>
             <button type="submit" class="btn btn-primary" > Register </button>

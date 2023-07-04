@@ -1,3 +1,36 @@
+//upload function 
+const base64Converter = (file)=>{
+  return new Promise((resolve,reject)=>{
+      const fileReader = new FileReader();
+
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload=()=>{
+          resolve(fileReader.result);
+      }
+      fileReader.onerror=(err)=>{
+          reject(err.message);
+      }
+  })
+}
+
+
+const imageUpload = async() => {
+  var proof = document.getElementById("proof").value;
+  var image = proof;
+
+  await axios 
+  .post("http://localhost:3001/api/upload", {
+    image
+  }).then((res)=>{
+    console.log(res)
+  }).catch((err)=>{
+    console.log(err)
+  }
+  )
+}
+
+
 document.getElementById("register").addEventListener("submit", 
     async function (event) {
     event.preventDefault(); // Prevent the default form submission
@@ -7,6 +40,11 @@ document.getElementById("register").addEventListener("submit",
     var lastName = document.getElementById("lastname").value;
     var email = document.getElementById("email").value;
     var password = document.getElementById("pass").value;
+    var proof = document.getElementById("proof").value;
+    var image = base64Converter(proof);
+
+    console.log(image)
+
 
     // Perform any additional validation or data manipulation here
 
@@ -16,6 +54,7 @@ document.getElementById("register").addEventListener("submit",
       lastName: lastName,
       email: email,
       password: password,
+
     };
     await axios
       .post("http://localhost:3001/api/auth/signup", {

@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/uploadedDocu.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
 
 
 </head>
 <body>
     <nav>
         <div class="container nav__container">
-           <img src="./images/logo.png" class="logo"> 
-           <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+           <img src="/images/logo.png" class="logo"> 
+
+           <a href="/index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
            <ul class="nav__menu">
             <!--<li><a href="index.html">Home</a></li>
                 <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
@@ -49,65 +50,14 @@
                 <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
                 <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
                 <li><a  href="requestedId.html">Request For ID</a></li><br>
-                <li><a  href="registered.html">Registered Account</a></li><br>
+                <li><a  href="registeredAccount.html">Registered Account</a></li><br>
                 <li><a  href="adminAbout.html">About</a></li>
            </ul>
         </div>
         </div>
             <div class="sidenav__right">
-                        <div class="sidenav__announcement"><h2 class="side__title2"> Students Documents:</h2>
-                            <input type="text" id="students__table" class="students__table" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
-
-                            <table id="table" class="table">
-                                <tr class="header">
-                                  <th style="width:40%;">Name</th>
-                                  <th style="width:30%;">Document</th>
-                                  <th style="width:30%;"></th>
-
-                             
-  
-                                </tr>
-                                <tr>
-                                  <td>Sample  Student1</td>
-                                  <td>
-                                      <button class="btn btn-details" id="uploadedDocu">Details</button>    
-                                 </td>
-                                </td>
-                                <td class="action-cell">
-                                  <div class="btn-circle" onclick="markAsDone(this)"></div>
-                                </td>
-                                </tr>
-                                <tr>
-
-                                  <td>Sample  Student2</td>
-                                  <td>
-                                      <button class="btn btn-details" id="uploadedDocu">Details</button>    
-                                 </td>
-                                </td>
-                                <td class="action-cell">
-                                  <div class="btn-circle" onclick="markAsDone(this)"></div>
-                                </td>
-                                </tr>
-                                <tr>
-
-                                  <td>Sample  Student3</td>
-                                  <td>
-                                      <button class="btn btn-details" id="uploadedDocu">Details</button>    
-                                 </td>
-                                </td>
-                                <td class="action-cell">
-                                  <div class="btn-circle" onclick="markAsDone(this)"></div>
-                                </td>
-                                </tr>
-                                
-  
-                        
-  
-  
-                              
-                              </table>
-                            
-                            
+                        <div class="sidenav__announcement"><h2 class="side__title2"> ANNOUNCEMENTS:</h2>
+                            <P class="side__desc">The Mars Daycare Will have short announcements shortly for now this will be an example of the announcement board</P>
                         </div>
                 </div>
             </div>
@@ -128,7 +78,7 @@
 	<footer>
         <div class="container footer__container">
            <div class="footer__1">
-            <a href="index.html" class="footer__logo"><h4>MARS DAYCARE</h4></a>
+            <a href="/index.html" class="footer__logo"><h4>MARS DAYCARE</h4></a>
             <P>
                 Join us at Mars Daycare and give your little ones an out-of-this-world experience!
             </P>
@@ -137,10 +87,10 @@
             <div class="footer__2">
                 <h4>Permalinks</h4>
                 <ul class="permalinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/dailyactivity.html">Mars DayCare Gallery Activity</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -336,11 +286,9 @@
 
 
 
-
-     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script src="./js/admin.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/uploadedDocu.js"></script>
-
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script src="/js/navbar.js"></script>
+     <script src="/js/admin.js"></script>
+     <script src="/js/adminFunction.js"></script>
 </body>
 </html>

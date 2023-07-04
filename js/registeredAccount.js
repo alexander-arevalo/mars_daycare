@@ -16,18 +16,21 @@ function tableHandler() {
       }
     }
   }
-  
+
+
+
   
 async function account() {
     try {
-      const res = await axios.get("http://localhost:3001/api/enrollees");
-      console.log(`Getting enrollees: ${res.data}`);
-      
+      const res = await axios.get("http://localhost:3001/api/auth/:id");
+      console.log(`Getting registeration: ${res.data}`);
+
       const enrolleesTableBody = document.getElementById("accountTableBody");
       const data = res.data;
   
       // Clear the existing content
       enrolleesTableBody.innerHTML = "";
+
   
       // Loop through the data and create table rows with table data cells to display it
       data.forEach((enrollee) => {
@@ -47,6 +50,7 @@ async function account() {
           // Redirect the user to another HTML page
         window.location.href = 'registeredAction.html';
         });
+
         actionCell.appendChild(button);
         row.appendChild(firstNameCell);
         row.appendChild(lastNameCell);

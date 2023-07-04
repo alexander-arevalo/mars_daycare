@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/registeredAccount.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/adminabout.css">
 
 
 </head>
 <body>
     <nav>
         <div class="container nav__container">
-           <img src="./images/logo.png" class="logo"> 
-
-           <a href="./index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
+            <img src="/images/logo.png" class="logo"> 
+            <a href="/index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
            <ul class="nav__menu">
             <!--<li><a href="index.html">Home</a></li>
                 <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
@@ -50,33 +49,76 @@
                 <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
                 <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
                 <li><a  href="requestedId.html">Request For ID</a></li><br>
-                <li><a  href="registered.html">Registered Account</a></li><br>
+                <li><a  href="registeredAccount.html">Registered Account</a></li><br>
                 <li><a  href="adminAbout.html">About</a></li>
            </ul>
         </div>
         </div>
-            <div class="sidenav__right">
-                <div class="sidenav__announcement"><h2 class="side__title2">Account Management:</h2>
-                    <input type="text" id="accounts" class="accounts" onkeyup="tableHandler()" placeholder="Search For Student" title="Type in a name">
+        <div class="container about__container">
+            <h1 class="abt"> ABOUT US </h1>
+            
+                <div class="main__section">
+            
 
-                    <table id="accountTable" class="table">
-                      <tr class="header">
-                        <th style="width:35%;">First Name</th>
-                        <th style="width:35%;">Last Name</th>
-                        <th style="width:15%;">Status</th>
-                        <th style="width:15%;">Action</th>
 
-                      </tr>
-                     <tbody id="accountTableBody">
-
-                     </tbody>
-                  
-                    </table>
+                    <section>
+                        <h3 id="h1">Our Vision</h3>
+                
+                    <p id="p1"> 
+                        Holistically developed zero (0) to four (4) year-old Muntinlupeño children, who are adequately prepared for the Kindergarten, 
+                        equipped with life-long learning and whose rights and welfare are promoted and protected.
                     
+                    </p>
+                    </section>   
                     
+                    <section>
+                        <h3 id="h2">Our Mission</h3>
+    
+                    <p id="p2">
+                        1.	Develop zero (0) to four (4) year-old Muntinlupeño children through the Center-Based and 
+                        Home-based programs with developmentally appropriate practices, meaningful experiences and integrative services for 
+                        Early Childhood Education, Health, Nutrition, Culture, Environmental Care and Social Services Development Programs;<br>
+                        2.	Provide Parent Education and support systems that will assist parents in their roles as primary caregivers and first teachers of their children;<br>
+                        3.	Develop competent and committed Child Development Teachers and Workers and Service Providers;<br>
+                        4.	Improve the quality standards of Public and Private ECCD programs; and <br>
+                        5.	Promote child awareness in every community. <br>
+                        
+                    </p>
+                    </section>
+    
+                <section>
+                    <h3 id="h3">Mandate</h3>
+                    <p id="p3">
+                        The Early Childhood Education Division (ECED) shall be responsible for the development, integration and implementation of policies and programs, 
+                        projects and activities concerning early childhood education in the City, basic holistic needs and optimum growth and development of zero (0) to four (4) year - old children 
+                        through the Early Childhood Care and Development (ECCD) Programs (RA10410, Early Years Act of 2013).  In addition, Early Childhood Education Division (ECED) is also responsible in 
+                        the Registration, Granting of Permit and Recognition of Public Child Development Centers and Private Learning Centers.
+                    </p>
+    
+                </section>
+    
+    
+                <section>
+                    <h3 id="h4">Service Pledge</h3>
+            
+                <p id="p4"> 
+                    We are committed to support the holistic development of zero (0) to four (4) year-old Muntinlupeño children by promoting their welfare and protecting their rights, 
+                    providing them with developmentally appropriate practices and life-long learning.
+                
+                </p>
+                </section>     
+
+
                 </div>
+
         </div>
+    
+            
     </div>
+
+
+
+
 
 
 
@@ -297,9 +339,10 @@
 
 
 
-     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-     <script src="./js/navbar.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="./js/admin.js"></script>
-     <script src="./js/registeredAccount.js"></script>
+     <script src="./js/navbar.js"></script>
+     <script src="./js/adminAbout.js"></script>
 </body>
 </html>

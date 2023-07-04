@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/adminCalendar.css">
 
 
 </head>
@@ -56,8 +56,24 @@
         </div>
         </div>
             <div class="sidenav__right">
-                        <div class="sidenav__announcement"><h2 class="side__title2"> ANNOUNCEMENTS:</h2>
-                            <P class="side__desc">The Mars Daycare Will have short announcements shortly for now this will be an example of the announcement board</P>
+                            <div class="container sidenav__calendar"><h2 class="side__title2"> ADD EVENTS</h2>
+                                <form id="eventForm" class="event__form">
+                                  <label for="title">Event Title:</label>
+                                  <input type="text" id="title" name="title" required> <br>
+                              
+                                  <label for="date">Date:</label>
+                                  <input type="date" id="date" name="date" required> <br>
+                              
+                                  <label for="time">Time:</label>
+                                  <input type="time" id="time" name="time" required> <br>
+                              
+                                  <label for="description">Description:</label><br>
+                                  <textarea id="description" name="description" rows="3" cols="50" required></textarea> <br>
+                              
+                                  <button type="submit" class="btn btn" > Submit </button>
+
+                                </form>
+                              
                         </div>
                 </div>
             </div>
@@ -286,9 +302,11 @@
 
 
 
+
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/admin.js"></script>
-     <script src="./js/adminFunction.js"></script>
+     <script src="/js/admin.js"></script>
+     <script src="/js/navbar.js"></script>
+     <script src="/js/adminCalendar.js"></script>
+
 </body>
 </html>
