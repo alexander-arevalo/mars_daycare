@@ -22,10 +22,10 @@ async function login() {
 
         if(successful){
           if (isAdmin) {
-            window.location.replace("admin.html");
+            window.location.replace("/admin_html/admin.html");
             
           } else {
-            window.location.replace("userhome.html");
+            window.location.replace("user_html/userhome.html");
             
           }
           

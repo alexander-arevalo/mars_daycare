@@ -1,5 +1,5 @@
 const signoutLink = document.getElementById("signout");
 
 signoutLink.addEventListener("click", () => {
-  window.location.replace("index.html");
+  window.location.replace("../index.html");
 });
