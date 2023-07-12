@@ -1,0 +1,160 @@
+
+.profile-photo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+}
+
+/* ========== ADMIN CONTAINER ========== */
+body {
+    background-color: #f6f6f9;
+}
+
+.admin__container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 14rem;
+}
+
+
+aside .top {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo1{
+    display: flex;
+    gap: 0.8rem;
+}
+aside .logo1 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* ========== SIDEBAR ========== */
+
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: var(--transition);
+}
+
+aside .sidebar a span {
+    transition: var(--transition);
+}
+
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+
+aside .sidebar a.active{
+    background: var(--color-info-dark);
+    color: var(--color-bg5);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-bg5);
+}
+
+aside .sidebar a.active span {
+    color: var(--color-bg5);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+    color: var(--color-bg5);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+/* ========== MAIN ========== */
+
+main {
+    margin-top: 3rem;
+}
+
+main .adminDashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+main .adminDashboard > div {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    width: 13rem;
+}
+
+main .adminDashboard > div:hover{
+    box-shadow: none;
+}
+
+main .adminDashboard > div span {
+    background: var(--color-bg1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-white);
+}
+
+main .adminDashboard > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ========== RIGHT ========== */
+
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right .top .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+

@@ -1,71 +1,51 @@
+/* ========== MAIN CONTAINER ========== */
+main {
+    margin: 10rem 15rem ;
+    background: var(--color-white);
+    padding: var(--card-padding);
+    width: 40rem;
+}
+
+h2{
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+/* ========== FORM ========== */
+
+label {
+    display: block;
+    margin: 1rem 0 1rem;
+    text-align: left;
+}
+
+
+form {
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
+input, .galleryUpload {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg3);
+    color: var(--color-black);
+}
+
+.gallery{
+    display: none;
+}
+
+.galleryUpload {
+    text-decoration: none;
+    text-align: left;
+    padding: 0.4rem;
+    font-size: 0,9rem;
+}
+
 /* ========== BUTTON ========== */
 
-.btn-signout {
-    margin-right: -10rem ;
-    background-color: var(--color-success);
-    border-radius: 2rem;
-    padding: .8rem;
-}
-/* ========== ADMIN CONTAINER ========== */
-
-.sidenav__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 100%; 
-    background: var(--color-bg3);
-    padding: 4rem;
-    gap: 2rem;
-    margin: 7rem auto;    
-    border-radius: 1rem;
-}
-
-
-/* ========== LEFT SIDE CONTAINER ========== */
-.sidenav__left{
-    margin-top: 0rem;
-}
-.sidenav__left a {
-    background:  var(--transition);
-    transition: var(--transition);
-    
-}
-
-.sidenav__left a:hover{
-    color: var(--color-bg2);
-
-}
-
-.side__title1{
-    text-align: center;
-    background-color: var(--color-white);
-    width: max-content;
-    border-radius: .8rem; 
-    color: var(--color-black);
-    margin-left: 10rem;
-}
-
-.sidenav__menu {
-    margin-top: 5rem;
-    padding-top: 0;
-    display: inline-block;
-    text-align: left;
-    margin-right: 22rem;
-}
-
-.title{
-    text-align: center;
-    font-size: 2rem;
-}
-
-.slider {
-    margin-left: 2.5rem;
-}
-
-.activity{
-    text-align: center;
-}
-
-.activity__description {
-    text-align: center;
+.btn-primary {
+    margin: 1rem 15rem;
+    width: 10rem;
 }

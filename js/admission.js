@@ -1,11 +1,3 @@
-//  to signout
-
-const signoutLink = document.getElementById("sub__menu__link");
-
-signoutLink.addEventListener("click", () => {
-  window.location.replace("index.html");
-});
-
 // Define your function
 async function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission behavior

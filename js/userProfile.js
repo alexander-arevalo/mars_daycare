@@ -18,9 +18,9 @@ function openProfile() {
     // Update the user profile name
     userName.textContent = firstName + " " + lastName;
     try {
-      const res = await axios.get("http://localhost:3001/api/:id")
+      const res = await axios.patch("http://localhost:3001/api/:id")
       console.log(`Getting ID: ${res.data}`);
-  
+      
       const user = document.getElementById("subMenu");
       const data = res.data;
   

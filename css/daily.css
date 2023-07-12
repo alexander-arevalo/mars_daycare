@@ -1,23 +1,18 @@
 /* ========== MAIN CSS========== */
 
 .daily__container {
-  background: var(--color-bg3);
+  background: var(--color-white);
   overflow: hidden;
   padding: 4rem;
-  height: 60rem;
-  width: 80rem;
+  height: 50rem;
+  width: 70rem;
   margin: 7rem auto;
   border-radius: 1rem;
 }
 
 .title{
-  padding: 0;
   text-align: center;
   color: var(--color-black);
-  background-color: var(--color-white);
-  width: 50rem;
-  margin-left: 11.5rem;
-  border-radius: 1rem;
 }
 
 .daily__container ::-webkit-scrollbar {
@@ -27,9 +22,9 @@
 /* ========== IMAGE  ========== */ 
 
 .slider{
-  height: 70%;
-  width: 70%;
-  margin-left: 11rem;
+  height: 60%;
+  width: 60%;
+  margin-left: 12rem;
   margin-top: 2rem;
 }
 
@@ -44,7 +39,6 @@
   text-align: center;
 }
 
-
 /* ========== BUTTON  ========== */ 
 
 .prev__btn,
@@ -52,18 +46,18 @@
   border: none;
   width: 6rem;
   position: absolute;
-  top: 40rem;
+  top: 30rem;
   background:none;
   cursor: pointer;
   z-index: 10;
 }
 
 .prev__btn {
-  left: 15rem;
+  left: 20rem;
 }
 
 .nxt__btn {
-  right: 15rem;
+  right: 20rem;
 }
 
 .footer__container {

@@ -1,12 +1,13 @@
 /* ========== FORM CONTAINER ========== */
+
 .form__container {
-  background: var(--color-white);
-  gap: 1rem;
-  padding: 4rem;
-  width: 50rem;
-  height: auto;
-  margin: 7rem auto;
-  border-radius: 1rem;
+    background: var(--color-white);
+    gap: 1rem;
+    padding: 4rem;
+    width: 50rem;
+    height: auto;
+    margin: 7rem auto;
+    border-radius: 1rem;
 }
 
 h2{

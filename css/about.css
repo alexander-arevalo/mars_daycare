@@ -2,12 +2,6 @@
 
 h1 {
 	text-align: center;
-	border-radius: 10rem;
-	color: var(--color-black);
-	background-color: var(--color-white);
-	width: 30rem;
-	margin-left: 20rem;
-	
 }
 
 p{
@@ -15,11 +9,8 @@ p{
 }
 
 h3 {
-	text-align: center;
-	width: max-content;
-	border-radius: .5rem;
+	text-align: left;
 	color: var(--color-black);
-	background-color: var(--color-white);
 
 }
 
@@ -32,9 +23,9 @@ section{
 
 .about__container {
     background: var(--color-bg3);
-    padding: 4rem;
+    padding: 3rem;
     gap: 4rem;
-	width: 80rem;
+	width: 70rem;
     height: 60rem;
     margin: 7rem auto;
     border-radius: 1rem;

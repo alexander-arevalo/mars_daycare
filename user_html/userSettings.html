@@ -11,123 +11,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <!--  GOOGLE MATERIAL ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--  CSS -->
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/adminabout.css">
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/userSettings.css">
 
 
 </head>
 <body>
-    <nav>
-        <div class="container nav__container">
-            <img src="/images/logo.png" class="logo"> 
-            <a href="/index.html"><h4 class="daycarename">MARS DAYCARE</h4></a>
-           <ul class="nav__menu">
-            <!--<li><a href="index.html">Home</a></li>
-                <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>-->
-                <span><button class="btn btn-signout" id="signout">Sign Out</button></span>
-
-           </ul>
-        </div>
-
-   </nav>
-
-
-
-    <!--=========== END OF NAVBAR ===========-->
-
- 
-    
-        <div class="container sidenav__container">
-           <div class="sidenav__left"><a><h2 class="side__title1">Admin Access</h2></a>
-            <div><ul class="sidenav__menu">
-                <li><a  href="admin.html">Announcements</a></li><br>           
-                <li><a  href="pendingReserv.html">Pending Reservation</a></li><br>
-                <li><a  href="adminGallery.html">Mars Daycare Gallery Activity</a></li><br>
-                <li><a  href="adminCalendar.html">Event Calendar    </a></li><br>
-                <li><a  href="uploadedDocu.html">Uploaded Documents</a></li><br>
-                <li><a  href="requestedId.html">Request For ID</a></li><br>
-                <li><a  href="registeredAccount.html">Registered Account</a></li><br>
-                <li><a  href="adminAbout.html">About</a></li>
-           </ul>
-        </div>
-        </div>
-        <div class="container about__container">
-            <h1 class="abt"> ABOUT US </h1>
-            
-                <div class="main__section">
-            
-
-
-                    <section>
-                        <h3 id="h1">Our Vision</h3>
-                
-                    <p id="p1"> 
-                        Holistically developed zero (0) to four (4) year-old Muntinlupeño children, who are adequately prepared for the Kindergarten, 
-                        equipped with life-long learning and whose rights and welfare are promoted and protected.
-                    
-                    </p>
-                    </section>   
-                    
-                    <section>
-                        <h3 id="h2">Our Mission</h3>
-    
-                    <p id="p2">
-                        1.	Develop zero (0) to four (4) year-old Muntinlupeño children through the Center-Based and 
-                        Home-based programs with developmentally appropriate practices, meaningful experiences and integrative services for 
-                        Early Childhood Education, Health, Nutrition, Culture, Environmental Care and Social Services Development Programs;<br>
-                        2.	Provide Parent Education and support systems that will assist parents in their roles as primary caregivers and first teachers of their children;<br>
-                        3.	Develop competent and committed Child Development Teachers and Workers and Service Providers;<br>
-                        4.	Improve the quality standards of Public and Private ECCD programs; and <br>
-                        5.	Promote child awareness in every community. <br>
-                        
-                    </p>
-                    </section>
-    
-                <section>
-                    <h3 id="h3">Mandate</h3>
-                    <p id="p3">
-                        The Early Childhood Education Division (ECED) shall be responsible for the development, integration and implementation of policies and programs, 
-                        projects and activities concerning early childhood education in the City, basic holistic needs and optimum growth and development of zero (0) to four (4) year - old children 
-                        through the Early Childhood Care and Development (ECCD) Programs (RA10410, Early Years Act of 2013).  In addition, Early Childhood Education Division (ECED) is also responsible in 
-                        the Registration, Granting of Permit and Recognition of Public Child Development Centers and Private Learning Centers.
-                    </p>
-    
-                </section>
-    
-    
-                <section>
-                    <h3 id="h4">Service Pledge</h3>
-            
-                <p id="p4"> 
-                    We are committed to support the holistic development of zero (0) to four (4) year-old Muntinlupeño children by promoting their welfare and protecting their rights, 
-                    providing them with developmentally appropriate practices and life-long learning.
-                
-                </p>
-                </section>     
-
-
+   <div class="admin__container">
+        <aside>
+            <div class="top">
+                <div class="logo1">
+                    <img class="img1" src="/images/logo.png"> 
+                    <h4 class="daycarename">MARS DAYCARE</h4>
                 </div>
+                <div class="close" id="close">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
 
+                <div class="sidebar" >
+                    <a href="userHome.html">
+                        <span class="material-symbols-sharp">home</span>
+                        <h5>Home</h5>
+                    </a>
+
+                    <a href="status.html" >
+                        <span class="material-symbols-sharp">person_search</span>
+                        <h5>Status</h5>
+                    </a>
+
+                    <a href="admission.html">
+                        <span class="material-symbols-sharp">other_admission</span>
+                        <h5>Admission</h5>
+                    </a>
+
+                    <a href="upload.html">
+                        <span class="material-symbols-sharp">gallery_thumbnail</span>
+                        <h5>Upload Documents</h5>
+                    </a>
+
+                    <a href="reqId.html">
+                        <span class="material-symbols-sharp">calendar_add_on</span>
+                        <h5>Request For ID</h5>
+                    </a>
+
+                    <a href="userSettings.html">
+                        <span class="material-symbols-sharp">manage_accounts</span>
+                        <h5>Settings</h5>
+                    </a>
+
+                    <a>
+                        <span class="material-symbols-sharp">logout</span>
+                        <h5 class="signout" id="signout">Sign Out</h5>
+                    </a>
+                    
+                </div>
+        </aside>
+
+<!--=========== END OF ASIDE ===========-->
+
+        <main>
+            <form onsubmit="saveProfile(event)">
+                
+                <h2>Edit Profile</h2>
+                    <input type="text" id="firstName" placeholder="First Name">
+
+                    <input type="text" id="lastName" placeholder="Last Name">
+
+                    <input type="password" id="password" placeholder="Password">
+
+                    <input type="password" id="confirmPass" placeholder="Confirm Password">
+
+                    <button type="submit" class="btn btn-primary">Update</button>
+
+            </form>
+        </main>
+
+<!--=========== END OF MAIN ===========-->
+
+        <div class="right">
+            <div class="top">
+                <div class="profile">
+                    <div class="info" id="user__info">
+                        <b id="firstName">Alexander <b id="lastName">Arevalo</b></b><br>
+                        <small class="text-muted" id="user">User Account</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/images/profile.png">
+                    </div>
+                </div>
+            </div>
         </div>
-    
-            
     </div>
 
+<!--=========== END OF RIGHT ===========-->
 
 
 
-
-
-
-
-    <!--=========== END OF ADMIN INFO ===========-->
-
-
-
-
+<!-- 
 	<footer>
         <div class="container footer__container">
            <div class="footer__1">
@@ -140,10 +125,11 @@
             <div class="footer__2">
                 <h4>Permalinks</h4>
                 <ul class="permalinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="dailyactivity.html">Mars DayCare Gallery Activity</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="userHome.html">Home</a></li>
+                    <li><a href="status.html">Status</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="upload.html">Upload Documents</a></li>
+                    <li><a href="reqId.html">Request for ID</a></li>
                 </ul>
             </div>
 
@@ -323,11 +309,13 @@
                 
          </div>
 
-         <div class="footer__copyright">
-            <small>Copyright &copy; Mars Daycare</small>
-        </div>
 
-    </footer>
+    </footer> -->
+
+    
+    <div class="footer__copyright">
+        <small>Copyright &copy; Mars Daycare</small>
+    </div>
 
  
      <!--=========== END OF FOOTER ===========-->
@@ -340,9 +328,6 @@
 
 
 
-     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script src="./js/admin.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/adminAbout.js"></script>
+     <script src="/js/userHome.js"></script>
 </body>
 </html>

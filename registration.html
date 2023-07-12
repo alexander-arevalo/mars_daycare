@@ -12,8 +12,9 @@
     <!--  GOOGLE FONTS (MONSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/registration.css">
 
@@ -52,9 +53,9 @@
             <label for="Password"><h4>Password:</h4></label>
             <input type="password" id="pass"  minlength="8" maxlength="16" required>
             <label for="proof"><h4>Proof Of Residency</h4></label>
-            <input type="file" id="proof" name="proof" class="fileupload" placeholder="Upload File" accept=".jpeg" onclick="imageUpload ()">
+            <input type="file" id="proof" name="proof" class="fileupload" placeholder="Upload File" accept="image/*" onclick="imageUpload ()">
             <p class="lenght"> Password must be Minimum 8 Character</p>
-            <h5><input type="checkbox" onclick="passwordHandler()">Show Password</h5>
+            <!-- <input type="checkbox" onclick="passwordHandler()">Show Password -->
             <button type="submit" class="btn btn-primary" > Register </button>
             <ul><a href="login.html"><h5 class="login">Already have Acount? Proceed to Login</h5></a></ul>
             

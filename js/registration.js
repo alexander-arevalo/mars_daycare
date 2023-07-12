@@ -1,34 +1,34 @@
-//upload function 
-const base64Converter = (file)=>{
-  return new Promise((resolve,reject)=>{
-      const fileReader = new FileReader();
+// //upload function 
+// const base64Converter = (file)=>{
+//   return new Promise((resolve,reject)=>{
+//       const fileReader = new FileReader();
 
-      fileReader.readAsDataURL(file);
+//       fileReader.readAsDataURL(file);
 
-      fileReader.onload=()=>{
-          resolve(fileReader.result);
-      }
-      fileReader.onerror=(err)=>{
-          reject(err.message);
-      }
-  })
-}
+//       fileReader.onload=()=>{
+//           resolve(fileReader.result);
+//       }
+//       fileReader.onerror=(err)=>{
+//           reject(err.message);
+//       }
+//   })
+// }
 
 
-const imageUpload = async() => {
-  var proof = document.getElementById("proof").value;
-  var image = proof;
+// const imageUpload = async() => {
+//   var proof = document.getElementById("proof").value;
+//   var image = proof;
 
-  await axios 
-  .post("http://localhost:3001/api/upload", {
-    image
-  }).then((res)=>{
-    console.log(res)
-  }).catch((err)=>{
-    console.log(err)
-  }
-  )
-}
+//   await axios 
+//   .post("http://localhost:3001/api/upload", {
+//     image
+//   }).then((res)=>{
+//     console.log(res)
+//   }).catch((err)=>{
+//     console.log(err)
+//   }
+//   )
+// }
 
 
 document.getElementById("register").addEventListener("submit", 
@@ -41,7 +41,7 @@ document.getElementById("register").addEventListener("submit",
     var email = document.getElementById("email").value;
     var password = document.getElementById("pass").value;
     var proof = document.getElementById("proof").value;
-    var image = base64Converter(proof);
+    // var image = base64Converter(proof);
 
     console.log(image)
 
@@ -54,6 +54,7 @@ document.getElementById("register").addEventListener("submit",
       lastName: lastName,
       email: email,
       password: password,
+      proof: proof,
 
     };
     await axios
@@ -62,6 +63,7 @@ document.getElementById("register").addEventListener("submit",
         lastName,
         email,
         password,
+        proof,
       })
       .then((res) => {
         console.log("Registered successfully");

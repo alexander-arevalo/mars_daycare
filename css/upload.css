@@ -1,42 +1,40 @@
-/* ========== BODY CONTAINER ========== */
+/* ========== MAIN CONTAINER ========== */
+main {
+  margin: 5rem 15rem ;
+  background: var(--color-white);
+  padding: var(--card-padding);
+  width: 40rem;
 
-.upload__container {
-    background: var(--color-bg3);
-    padding: 4rem;
-    gap: 2rem;
-    height: auto;
-    width: 45rem;
-    margin: 7rem auto;
-    border-radius: 1rem;
 }
 
 /* ========== UPLOAD CONTAINER ========== */
 
+.fileupload {
+  display: none;
+}
 
-  .fileupload {
-    content: 'Select files';
-    display: inline-block;
-    align-items: center;
-    background: var(--color-white);
-    color: var(--color-black);
-    margin-left: 9rem;
-    border-radius: 1rem;
-    padding: 1rem  0rem 1rem 2rem;
-    margin-bottom: 0.5rem;
-    outline: none;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-  
-  .names{
-    text-align: center;
-    margin: 1rem 0 2rem ;
-  }
+.customFileUpload {
+  background-color:var(--color-bg3); 
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 0rem 0 1rem ;
+  padding: .5rem  0rem .5rem 1rem;
+  cursor: pointer;
+}
+
+.file-name {
+  margin-left: 1rem;
+}
+
+.names{
+  text-align: center;
+  margin: 0.5rem 0 1rem ;
+}
 
 
-  .btn-submit {
-    padding-top: 1rem;
-    margin-top: 1rem;
-    margin-left: 12.5rem;
-    background: var(--color-success);
-  }
+.btn-submit {
+  margin-top: 2rem;
+  margin-left: 12.5rem;
+  background: var(--color-start);
+}

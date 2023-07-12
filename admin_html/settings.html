@@ -16,6 +16,8 @@
     <!--  CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/settings.css">
+
 
 
 </head>
@@ -31,7 +33,7 @@
             </div>
 
                 <div class="sidebar" >
-                    <a href="admin.html" class="active">
+                    <a href="admin.html">
                         <span class="material-symbols-sharp">grid_view</span>
                         <h5>Dashboard</h5>
                     </a>
@@ -71,7 +73,7 @@
                         <h5>Registered Account</h5>
                     </a>
 
-                    <a href="settings.html">
+                    <a href="settings.html" class="active">
                         <span class="material-symbols-sharp">manage_accounts</span>
                         <h5>Settings</h5>
                     </a>
@@ -87,51 +89,20 @@
     <!--=========== END OF ASIDE ===========-->
 
         <main>
-            <h4>Dashboard</h4>
-            <div class="adminDashboard">
-                <div class="reservation">
-                    <span class="material-symbols-sharp">pending_actions</span>
-                    <div class="middle">
-                        <div class="middle1">
-                            <a href="pendingReserv.html"><h4>Pending Reservation</h4></a>
-                            <h5 id="reservation">Total Reservation:</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="uploaded">
-                    <span class="material-symbols-sharp">note_add</span>
-                    <div class="middle">
-                        <div class="middle2">
-                            <a href="uploadedDocu.html"><h4>Uploaded Documents</h4></a>
-                            <h5 id="uploadedDocu">Total Uploaded Documents:</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="requestId">
-                    <span class="material-symbols-sharp">contacts</span>
-                    <div class="middle">
-                        <div class="middle3">
-                            <a href="requestedId.html"><h4>Request For Id</h4></a>
-                            <h5 id="requestedId">Total Request of Id:</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="registered">
-                    <span class="material-symbols-sharp">group_add</span>
-                    <div class="middle">
-                        <div class="middle4">
-                            <a href="registeredAccount.html"><h4>Registered Account</h4></a>
-                            <h5 id="registeredAccount">Total Account:</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <form onsubmit="saveProfile(event)">
+                    
+                    <h2>Edit Profile</h2>
+                    <input type="text" id="firstName" placeholder="First Name">
+            
+                    <input type="text" id="lastName" placeholder="Last Name">
+            
+                    <input type="password" id="password" placeholder="Password">
+            
+                    <input type="password" id="confirmPass" placeholder="Confirm Password">
+            
+                    <button type="submit" class="btn btn-primary">Update</button>
+            
+                  </form>
         </main>
 
     <!--=========== END OF MAIN ===========-->
@@ -141,7 +112,7 @@
                 <div class="profile">
                     <div class="info" id="user__info">
                         <b id="firstName">Alexander <b id="lastName">Arevalo</b></b>
-                        <small class="text-muted" id="user">Admin</small>
+                        <small class="text-muted" id="user">Admin Account</small>
                     </div>
                     <div class="profile-photo">
                         <img src="/images/profile.png">
@@ -152,10 +123,6 @@
     </div>
 
     <!--=========== END OF RIGHT ===========-->
-
-
-
-
  
          <div class="footer__copyright">
             <small>Copyright &copy; Mars Daycare</small>
@@ -167,6 +134,6 @@
 
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
      <script src="/js/admin.js"></script>
-     <script src="/js/adminFunction.js"></script>
+     <script src="/js/settings.js"></script>
 </body>
 </html>

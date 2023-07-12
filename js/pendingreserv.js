@@ -17,14 +17,25 @@ function tableHandler() {
   }
 }
 
+// // Get the bearer token from storage
+// var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY1MTU4Zjk4MWJkNzYxNWFiNzczZWYiLCJpYXQiOjE2ODkwNDU1NDF9.Myfb0F5lfDIoFn9hU_ed9GhzM1CEGGakAwLgVS6f6FE";
+// var headers = {'Authorization': 'Bearer ' + token};
 
-async function getEnrollees() {
+
+async function getEnrollees() 
+  const res = await axios
+  .get("http://localhost:3001/api/enrollees", )
+  .then((res) => {
+
   try {
-    const res = await axios.get("http://localhost:3001/api/enrollees");
-    console.log(`Getting enrollees: ${res.data}`);
+    
+    console.log(`Getting enrollees:`, res.data);
+    const data = res.data;
+    const token = res.data.token;
+    
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     
     const enrolleesTableBody = document.getElementById("enrolleesTableBody");
-    const data = res.data;
 
     // Clear the existing content
     enrolleesTableBody.innerHTML = "";
@@ -45,7 +56,7 @@ async function getEnrollees() {
       // Add an event listener to the "Details" button
       button.addEventListener("click", () => {
         // Redirect the user to another HTML page
-      window.location.href = 'pendingAction.html';
+        window.location.href = 'pendingAction.html';
       });
       actionCell.appendChild(button);
       row.appendChild(firstNameCell);
@@ -57,7 +68,6 @@ async function getEnrollees() {
   } catch (err) {
     console.log(err);
   }
-}
-
+});
 // Call the function to fetch and display enrollees
 getEnrollees();

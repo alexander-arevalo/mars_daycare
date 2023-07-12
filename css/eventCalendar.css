@@ -1,7 +1,7 @@
 /* ========== BODY ========== */
 
 .calendar__container {
-  background: var(--color-bg3);
+  background: var(--color-white);
   padding: 4rem;
   gap: 2rem;
   height: auto;

@@ -16,53 +16,58 @@
     />
 
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/pendingAction.css" />
+    <link rel="stylesheet" href="/css/registeredAction.css" />
   </head>
   <body>
     <nav>
         <div class="container nav__container">
             <img src="/images/logo.png" class="logo"> 
-            <a href="/index.html"><h4>MARS DAYCARE</h4></a>
+            <a><h4>MARS DAYCARE</h4></a>
 
     </nav>
-    <!--=========== END OF NAVBAR ===========-->
 
-    <div class="container form__container">
-        <h1 class="enrollee">Account Information</h1>
-        <table>
-            <tr>
-              <th style="width:60%;"></th>
-              <th style="width:40%;">Account Details</th>
-            </tr>
-            <tr>
-                <td>First Name:</td>
-                <td>Frank</td>
-            </tr>
-            <tr>
-                <td>Last Name:</td>
-                <td>Delgado</td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td>sample1@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Proof Of Residency Image:</td>
-                <!-- make it an image pop -->
-                <td></td>
-            </tr>
- 
-          </table>
+<!--=========== END OF NAVBAR ===========-->
 
+  <div class="container form__container">
+    <h2>Account Information</h2>
+      <table id="accountTable">
+          <tr>
+            <th style="width:60%;"></th>
+            <th style="width:40%;">Account Details</th>
+          </tr>
+
+          <tr>
+            <td>First Name:</td>
+            <td id="firstName"></td>
+          </tr>
+
+          <tr>
+            <td>Last Name:</td>
+            <td id="lastName"></td>
+          </tr>
+
+          <tr>
+            <td>Email:</td>
+            <td id="email"></td>
+          </tr>
+
+          <tr>
+            <td>Proof Of Residency Image:</td>
+            <td id="proofOfResidency"></td>
+          </tr>
+
+      </table>
+      
         <button class="btn btn-left" id="decline">Decline</button>
         <button class="btn btn-middle" id="back">Go Back</button>
-        <button class="btn btn-right" id="acceppt">Accept</button>
-      </div>
-    
-    <!--=========== END OF LOG IN FORM ===========-->
+        <button class="btn btn-right" id="accept">Accept</button>
+
+    </div>
+
+
+<!--=========== END OF FORM ===========-->
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/js/navbar.js"></script>
     <script src="/js/registeredAction.js"></script>
   </body>
 </html>

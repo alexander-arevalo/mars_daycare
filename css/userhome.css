@@ -1,34 +1,25 @@
-/* ========== HEADER ========== */
+/* ========== MAIN CONTAINER ========== */
+main {
+    margin: 10rem 15rem;
+    cursor: default;
+  }
 
-
-
-.user__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 5rem;
-    height: 100%; 
-}
-
-.user__left {
-    padding: 0;
-
-
-}
-
-
-.user__left p {
-    margin: 1rem 0 2.4rem;
-}
-
-.user__right {
+.announcement{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
     width: auto;
     height: 25rem;
     text-align: center;
-    background-color: var(--color-bg1);
-    border-radius: 1rem;
+}
+  
+.announcement:hover{
+    box-shadow: none;
 }
 
-.user__right p {
-    margin: 5rem 2rem 0 2rem;
+h2 {
+    margin-bottom: 3rem;
+    text-align: center;
 }

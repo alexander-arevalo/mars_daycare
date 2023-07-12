@@ -16,11 +16,12 @@
     <!--  CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/adminAnnouncement.css">
 
 
 </head>
 <body>
-    
+
     <div class="admin__container">
         <aside>
             <div class="top">
@@ -31,12 +32,12 @@
             </div>
 
                 <div class="sidebar" >
-                    <a href="admin.html" class="active">
+                    <a href="admin.html">
                         <span class="material-symbols-sharp">grid_view</span>
                         <h5>Dashboard</h5>
                     </a>
 
-                    <a href="adminAnnouncement.html" >
+                    <a href="adminAnnouncement.html" class="active" >
                         <span class="material-symbols-sharp">notifications</span>
                         <h5>Announcements</h5>
                     </a>
@@ -71,6 +72,7 @@
                         <h5>Registered Account</h5>
                     </a>
 
+                    
                     <a href="settings.html">
                         <span class="material-symbols-sharp">manage_accounts</span>
                         <h5>Settings</h5>
@@ -87,55 +89,19 @@
     <!--=========== END OF ASIDE ===========-->
 
         <main>
-            <h4>Dashboard</h4>
-            <div class="adminDashboard">
-                <div class="reservation">
-                    <span class="material-symbols-sharp">pending_actions</span>
-                    <div class="middle">
-                        <div class="middle1">
-                            <a href="pendingReserv.html"><h4>Pending Reservation</h4></a>
-                            <h5 id="reservation">Total Reservation:</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="uploaded">
-                    <span class="material-symbols-sharp">note_add</span>
-                    <div class="middle">
-                        <div class="middle2">
-                            <a href="uploadedDocu.html"><h4>Uploaded Documents</h4></a>
-                            <h5 id="uploadedDocu">Total Uploaded Documents:</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="requestId">
-                    <span class="material-symbols-sharp">contacts</span>
-                    <div class="middle">
-                        <div class="middle3">
-                            <a href="requestedId.html"><h4>Request For Id</h4></a>
-                            <h5 id="requestedId">Total Request of Id:</h5>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="registered">
-                    <span class="material-symbols-sharp">group_add</span>
-                    <div class="middle">
-                        <div class="middle4">
-                            <a href="registeredAccount.html"><h4>Registered Account</h4></a>
-                            <h5 id="registeredAccount">Total Account:</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         
+            <div class="announcement">
+                <form id="announcementForm">
+                    <label><h2> ANNOUNCEMENTS:</h2></label>
+                    <textarea id="description" name="description" class="description" rows="3" cols="50" required></textarea>
+                    <button class="btn btn-primary">Add Announcement</button>                      
+                </form>
+    </div>
         </main>
 
     <!--=========== END OF MAIN ===========-->
 
+    
         <div class="right">
             <div class="top">
                 <div class="profile">
@@ -150,13 +116,31 @@
             </div>
         </div>
     </div>
-
+</body>
+ 
     <!--=========== END OF RIGHT ===========-->
 
 
+    
 
 
  
+
+        
+
+
+
+
+
+
+
+
+    <!--=========== END OF ADMIN INFO ===========-->
+
+
+
+
+
          <div class="footer__copyright">
             <small>Copyright &copy; Mars Daycare</small>
         </div>
@@ -165,8 +149,15 @@
      <!--=========== END OF FOOTER ===========-->
 
 
+
+
+
+
+
+
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script src="/js/navbar.js"></script>
      <script src="/js/admin.js"></script>
-     <script src="/js/adminFunction.js"></script>
+     <script src="/js/adminAnnouncement.js></script>
 </body>
 </html>

@@ -1,31 +1,16 @@
-/* ========== ADMIN CONTAINER ========== */
+/* ========== MAIN CONTAINER ========== */
+main {
+  margin: 5rem 15rem ;
+  background: var(--color-white);
+  padding: var(--card-padding);
+  width: 40rem;
 
-.status__container {
-    align-items: center;
-    height: 30rem; 
-    background: var(--color-bg3);
-    padding: 1rem 4rem 1rem 4rem;
-    width: 50rem;
-    gap: 2rem;
-    margin: 7rem auto;    
-    border-radius: 1rem;
-    
 }
 
-
-/* ========== RIGHT SIDE CONTAINER ========== */
-.history{
-    padding: 1rem;
-    width: 100%;
-    height: 20rem;
-    text-align: center;
-    border-radius: 1rem;
-}
-.history__title{
+h2{
     text-align: center;
     margin-bottom: 2rem;
 }
-
 
 * {
   box-sizing: border-box;
@@ -37,7 +22,7 @@
   background-repeat: no-repeat;
   width: 100%;
   padding: 1rem 0 1rem 4rem;
-  border: .2rem solid var(--color-black);
+  border: .1rem solid var(--color-black);
   margin-bottom: 12px;
 }
 
@@ -57,5 +42,5 @@
 }
 
 .table tr.header, .table tr:hover {
-  background-color: var(--color-bg4);
+  background-color: var(--color-bg5);
 }

@@ -1,0 +1,25 @@
+/* ========== MAIN CONTAINER ========== */
+main {
+    margin: 10rem 15rem;
+    background: var(--color-white);
+    padding: var(--card-padding);
+    width: 40rem;
+  
+  }
+  
+
+h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 4rem;
+    background: var(--color-bg3);
+}
+
+.btn-primary {
+    margin: 1rem 12rem;
+    width: 12rem;
+}

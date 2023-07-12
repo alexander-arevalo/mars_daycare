@@ -1,25 +1,12 @@
-const signoutLink = document.getElementById("sub__menu__link");
+const fileUploadInputs = document.querySelectorAll('.fileupload');
 
-signoutLink.addEventListener("click", () => {
-  window.location.replace("index.html");
+fileUploadInputs.forEach(function (input) {
+    input.addEventListener('change', function (event) {
+        const fileName = event.target.files[0].name;
+        const label = event.target.nextElementSibling;
+        label.innerText = 'Image selected: ' + fileName;
+    });
 });
-
-
-//upload function 
-const base64Converter = (file)=>{
-  return new Promise((resolve,reject)=>{
-      const fileReader = new FileReader();
-
-      fileReader.readAsDataURL(file);
-
-      fileReader.onload=()=>{
-          resolve(fileReader.result);
-      }
-      fileReader.onerror=(err)=>{
-          reject(err.message);
-      }
-  })
-}
 
 async function handleSubmit(event) {
     event.preventDefault();
@@ -35,23 +22,6 @@ async function handleSubmit(event) {
     //testing 
     console.log('testing', birthCert,validId,certificate);
 
-    
-    // await axios
-    //   .post("http://localhost:3001/api/upload", {
-    //     birthCert,
-    //     validId,
-    //     certificate,
-    //   })
-    //   .then((res) => {
-    //     console.log("Uploaded Successfully");
-    //     console.log("DATA" + res.data);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-
-    // Send the user data to the server or perform any desired action
-    // For demonstration purposes, we'll just log the user object to the console
 
     // Reset the form
     document.getElementById("submitForm").reset();

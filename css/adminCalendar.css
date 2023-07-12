@@ -1,80 +1,15 @@
-/* ========== BUTTON ========== */
-
-.btn-signout {
-    margin-right: -10rem ;
-    background-color: var(--color-success);
-    border-radius: 2rem;
-    cursor: pointer;
-    padding: .8rem;
-}
-/* ========== ADMIN CONTAINER ========== */
-
-.sidenav__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 100%; 
-    background: var(--color-bg3);
-    padding: 4rem;
-    gap: 2rem;
-    margin: 7rem auto;    
-    border-radius: 1rem;
-}
-
-
-/* ========== LEFT SIDE CONTAINER ========== */
-.sidenav__left a {
-    background:  var(--transition);
-    transition: var(--transition);
-    
-}
-
-.sidenav__left a:hover{
-    color: var(--color-white);
+/* ========== MAIN CONTAINER ========== */
+main {
+  margin: 10rem 15rem ;
+  background: var(--color-white);
+  padding: var(--card-padding);
+  width: 40rem;
 
 }
 
-.side__title1{
-    text-align: center;
-    background-color: var(--color-white);
-    width: max-content;
-    border-radius: .8rem; 
-    color: var(--color-black);
-    margin-left: 11rem;
-}
-
-.sidenav__menu {
-    margin-top: 5rem;
-    padding-top: 0;
-    display: inline-block;
-    text-align: left;
-    margin-right: 22rem;
-}
-
-
-/* ========== RIGHT SIDE CONTAINER ========== */
-.sidenav__calendar{
-    padding: 1rem;
-    width: 100%;
-    height: 40rem;
-    text-align: center;
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border-radius: 1rem;
-}
-.sidenav__left{
-    margin-top: -10rem;
-}
-.side__title2{
-    text-align: center;
-    width: max-content;
-    border-radius: .8rem; 
-    margin-left: 11rem;
-    margin-bottom: 2rem;
-}
-
-.sidenav__right {
-    margin-top: 1rem;
+h2{
+  text-align: center;
+  margin: 1rem 0 2rem;
 }
 
 /* ========== FORM ========== */
@@ -82,27 +17,27 @@
 form {
     margin: 0 auto;
   }
-  
-  .event__form {
-    display: flex;
-    flex-direction: column;
-  }
-  .event__form input[type="text"] {
-    width: 100%; /* Change the width to 100% */
-  }
-  
-  input {
-    width: 100%;
-    padding: 1rem;
-    background: var(--color-bg3);
-    color: var(--color-black);
-  }
-  textarea{
-    background-color: var(--color-bg3);
-  }  
-  .event__form .btn {
-    width: 40%;
-    align-self: center;
-    cursor: pointer;
-    background: var(--color-success);
-  }
+
+.event__form {
+  display: flex;
+  flex-direction: column;
+}
+.event__form input[type="text"] {
+  width: 100%;
+}
+
+input, textarea  {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-bg3);
+  color: var(--color-black);
+}
+
+
+/* ========== BUTTON ========== */
+
+.btn-primary {
+  width: 40%;
+  align-self: center;
+  cursor: pointer;
+}

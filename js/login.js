@@ -1,7 +1,6 @@
 async function login() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-  var remember = document.getElementById("remember").checked;
   let isAdmin;
   let successful;
 
@@ -22,6 +21,7 @@ async function login() {
 
         if(successful){
           if (isAdmin) {
+            // console.log = localStorage.getItem("token");
             window.location.replace("/admin_html/admin.html");
             
           } else {
@@ -42,11 +42,6 @@ async function login() {
       }
     })
 
-  // Check username and password against database
-  
-  //   // Redirect to respective secure page
-    
-  //   // Save username and password to local storage if "Remember me" is checked
 
 };
 

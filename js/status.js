@@ -1,14 +1,8 @@
-const signoutLink = document.getElementById("sub__menu__link");
-
-signoutLink.addEventListener("click", () => {
-  window.location.replace("index.html");
-});
-
 //status value
 
 function tableHandler() {
   var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("students__table");
+  input = document.getElementById("status__table");
   filter = input.value.toUpperCase();
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
@@ -24,13 +18,13 @@ function tableHandler() {
     }
   }
 }
-
+//token
 async function getEnrolleeById() {
   await axios
-    .get("http://localhost:3001/api/enrollees/:id")
+    .get("http://localhost:3001/api/enrollees")
     .then((res) => {
       console.log(`getting enrollees ${res.data}`);
-      const enrolleesTableBody = document.getElementById("enrolleesTableBody");
+      const enrolleesTableBody = document.getElementById("statusTableBody");
 
       const data = res.data;
       // Clear the existing content
@@ -45,9 +39,6 @@ async function getEnrolleeById() {
         lastNameCell.textContent = enrollee.lastName;
         const status = document.createElement("td");
         status.textContent = "pending";
-        const actionCell = document.createElement("td");
-        const button = document.createElement("button");
-        button.textContent = "Details";
         actionCell.appendChild(button);
         row.appendChild(firstNameCell);
         row.appendChild(lastNameCell);

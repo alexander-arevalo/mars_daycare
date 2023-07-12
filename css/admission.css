@@ -1,37 +1,25 @@
-/* ========== TEXT ADJUSTMENTS ========== */
+/* ========== MAIN CONTAINER ========== */
+main {
+  margin: 5rem 15rem ;
+  background: var(--color-white);
+  padding: var(--card-padding);
+  width: 40rem;
+
+}
+
+
+.reser__img{
+  width: 5rem;
+  margin: -3rem 0.5rem 0 ;
+}
 
 h1  {
   text-align: center;
 }
 
-h5{
-  text-align: center;
-  font-size: 1rem;
-  color: var(--color-success);
-  text-decoration: underline;
-  margin-top: 1rem;
-}
-
 label {
   text-decoration: underline;
-}
-/* ========== ADMISSION ========== */
-
-
-.admission__container {
-    background: var(--color-bg3);
-    padding: 4rem;
-    gap: 2rem;
-    height: auto;
-    width: 50rem;
-    margin: 7rem auto;
-    border-radius: 1rem;
-}
-
-
-.reser__img{
-  width: 15rem;
-  margin-top: -4.8rem;
+  display: block;
 }
 
 
@@ -45,78 +33,29 @@ form {
 .contact__form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .form__name {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .contact__form input[type="text"] {
   width: 100%; /* Change the width to 100% */
 }
 
-input {
+input, select{
   width: 100%;
-  padding: 1rem;
-  background: var(--color-white);
-  color: var(--color-black);
+  padding: .8rem;
+  appearance: none;
+  background: var(--color-bg3);
 }
 
 .contact__form .btn {
-  width: 55%;
+  width: 10rem;
   align-self: center;
-  margin-top: 1.4rem;
   cursor: pointer;
-  background: var(--color-success);
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.select-wrapper {
-  position: relative;
-  width: 60%;
-}
-
-.select-wrapper::after {
-  content: "\25BC";
-  position: absolute;
-  top: 50%;
-  right: 0.5rem;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-select {
-  width: 100%;
-  padding: 1rem;
-  background: var(--color-white);
-  color: var(--color-black);
-  appearance: none;
-  border: none;
-  outline: none;
-}
-
-/* Custom Select Styling */
-.custom-select {
-  position: relative;
-}
-
-.custom-select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 50%;
-  right: 0.5rem;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.custom-select select {
-  width: 100%;
-  padding: 1rem;
+  background: var(--color-start);
 }

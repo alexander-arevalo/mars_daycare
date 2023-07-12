@@ -1,5 +1,6 @@
-.idForm__container {
-    background: var(--color-bg3);
+/* ========== FORM CONTAINER ========== */
+.form__container {
+    background: var(--color-white);
     gap: 1rem;
     padding: 4rem;
     width: 50rem;
@@ -7,26 +8,40 @@
     margin: 7rem auto;
     border-radius: 1rem;
 }
+h2{
+  text-align: center;
+  padding: 1rem;
+  margin: 0 0 1rem;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  th, td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid var(--color-white);
-  }
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-black);
+}
 
-  .btn-middle{
-    margin-left: 16rem;
-    margin-top: 2rem;
-  }
+/* ========== BUTTON ========== */
 
-  .btn-right{
-    margin-left: 11rem;
-    margin-top: 2rem;
-  }
+.btn {
+  background-color: var(--color-start);
+}
 
- 
+.btn-right{
+  margin-left: 10rem;
+  margin-top: 2rem;
+}
+
+.btn-middle{
+  margin-left: 6.5rem;
+  margin-top: 2rem;
+}
+
+.btn-left{
+  margin-right: 3rem;
+  margin-top: 2rem;
+}
