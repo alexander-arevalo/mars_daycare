@@ -23,17 +23,36 @@
 
 </head>
 <body>
-
-   <div class="admin__container">
-        <aside>
-            <div class="top">
+    <nav>
+        <div class="container nav__container">
+            <div class="navbar">
                 <div class="logo1">
-                    <img class="img1" src="/images/logo.png"> 
-                    <h4 class="daycarename">MARS DAYCARE</h4>
+                    <img src="/images/logo.png" class="img1"> 
+                    <a href="userHome.html"><h4>MARS DAYCARE</h4></a>
                 </div>
-                <div class="close" id="close">
-                    <span class="material-symbols-sharp">close</span>
+            </div>
+    
+                <div class="right__navbar">
+                    <div class="profile">
+                        <div class="info" id="user__info">
+                            <b id="firstName">Alexander <b id="lastName">Arevalo</b></b><br>
+                            <small class="text-muted" id="user">User Account</small>
+                        </div>
+                    
+                        <div class="profile-photo">
+                            <img src="/images/profile.png">
+                        </div>
+                    </div>
                 </div>
+        </div>
+    </nav>
+
+    <!--=========== END OF NAVBAR ===========-->
+    
+    <div class="admin__container">
+        <aside>
+            <div class="topDb">
+                    <h4>User Dashboard</h4>
             </div>
 
                 <div class="sidebar" >
@@ -64,7 +83,7 @@
 
                     <a href="userSettings.html">
                         <span class="material-symbols-sharp">manage_accounts</span>
-                        <h5>Settings</h5>
+                        <h5>Profile Settings</h5>
                     </a>
 
                     <a>
@@ -95,25 +114,8 @@
                 
             </div>
         </main>
-
-<!--=========== END OF MAIN ===========-->
-
-        <div class="right">
-            <div class="top">
-                <div class="profile">
-                    <div class="info" id="user__info">
-                        <b id="firstName">Alexander <b id="lastName">Arevalo</b></b><br>
-                        <small class="text-muted" id="user">User Account</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="/images/profile.png">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-<!--=========== END OF RIGHT ===========-->
+<!--=========== END OF MAIN ===========-->
 
 
 	<!-- <footer>
@@ -320,18 +322,15 @@
       <small>Copyright &copy; Mars Daycare</small>
   </div>
 
-     <!--=========== END OF FOOTER ===========-->
-
-
-
-
-
-
+<!--=========== END OF FOOTER ===========-->
 
 
 
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="/js/user.js"></script>
+     <script src="/js/navbar.js"></script>
      <script src="/js/status.js"></script>
+     
 
 </body>
 </html>

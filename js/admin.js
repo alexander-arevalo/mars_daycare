@@ -1,7 +1,9 @@
-const logoutBtn = document.getElementById("signout")
+function signOut() {
+  localStorage.removeItem('token');
+  console.log('Token removed');
 
-logoutBtn.addEventListener("click",()=> {
-    window.location.replace("../index.html")
-})
+  window.location.replace("/index.html");
+}
 
-var userName = document.getElementById("userName").value;
+const signOutFunction = document.getElementById('signOut');
+signOutFunction.addEventListener('click', signOut);

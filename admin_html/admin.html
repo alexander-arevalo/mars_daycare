@@ -20,14 +20,36 @@
 
 </head>
 <body>
+    <nav>
+        <div class="container nav__container">
+            <div class="navbar">
+                <div class="logo1">
+                    <img src="/images/logo.png" class="img1"> 
+                    <a href="admin.html"><h4>MARS DAYCARE</h4></a>
+                </div>
+            </div>
+    
+                <div class="right__navbar">
+                    <div class="profile">
+                        <div class="info" id="user__info">
+                            <b id="firstName">Alexander <b id="lastName">Arevalo</b></b><br>
+                            <small class="text-muted" id="user">Admin Account</small>
+                        </div>
+                    
+                        <div class="profile-photo">
+                            <img src="/images/profile.png">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </nav>
+
+    <!--=========== END OF NAVBAR ===========-->
     
     <div class="admin__container">
         <aside>
-            <div class="top">
-                <div class="logo1">
-                    <img class="img1" src="/images/logo.png"> 
-                    <h4 class="daycarename">MARS DAYCARE</h4>
-                </div>
+            <div class="topDb">
+                    <h4>Admin Dashboard</h4>
             </div>
 
                 <div class="sidebar" >
@@ -73,12 +95,12 @@
 
                     <a href="settings.html">
                         <span class="material-symbols-sharp">manage_accounts</span>
-                        <h5>Settings</h5>
+                        <h5>Profile Settings</h5>
                     </a>
 
                     <a>
                         <span class="material-symbols-sharp">logout</span>
-                        <h5 class="signout" id="signout">Sign Out</h5>
+                        <h5 class="signOut" id="signOut">Sign Out</h5>
                     </a>
                     
                 </div>
@@ -100,17 +122,6 @@
                 </div>
 
 
-                <div class="uploaded">
-                    <span class="material-symbols-sharp">note_add</span>
-                    <div class="middle">
-                        <div class="middle2">
-                            <a href="uploadedDocu.html"><h4>Uploaded Documents</h4></a>
-                            <h5 id="uploadedDocu">Total Uploaded Documents:</h5>
-                        </div>
-                    </div>
-                </div>
-
-
                 <div class="requestId">
                     <span class="material-symbols-sharp">contacts</span>
                     <div class="middle">
@@ -127,34 +138,14 @@
                     <div class="middle">
                         <div class="middle4">
                             <a href="registeredAccount.html"><h4>Registered Account</h4></a>
-                            <h5 id="registeredAccount">Total Account:</h5>
+                            <h5 id="registeredAccount">Total Request for Account:</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-
-    <!--=========== END OF MAIN ===========-->
-
-        <div class="right">
-            <div class="top">
-                <div class="profile">
-                    <div class="info" id="user__info">
-                        <b id="firstName">Alexander <b id="lastName">Arevalo</b></b>
-                        <small class="text-muted" id="user">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="/images/profile.png">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-    <!--=========== END OF RIGHT ===========-->
-
-
-
+    <!--=========== END OF MAIN ===========-->
 
  
          <div class="footer__copyright">
@@ -167,6 +158,7 @@
 
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
      <script src="/js/admin.js"></script>
+     <script src="/js/navbar.js"></script>
      <script src="/js/adminFunction.js"></script>
 </body>
 </html>

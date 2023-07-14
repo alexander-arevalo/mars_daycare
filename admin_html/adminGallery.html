@@ -21,16 +21,38 @@
 
 </head>
 <body>
+    <nav>
+        <div class="container nav__container">
+            <div class="navbar">
+                <div class="logo1">
+                    <img src="/images/logo.png" class="img1"> 
+                    <a href="admin.html"><h4>MARS DAYCARE</h4></a>
+                </div>
+            </div>
+    
+                <div class="right__navbar">
+                    <div class="profile">
+                        <div class="info" id="user__info">
+                            <b id="firstName">Alexander <b id="lastName">Arevalo</b></b><br>
+                            <small class="text-muted" id="user">Admin Account</small>
+                        </div>
+                    
+                        <div class="profile-photo">
+                            <img src="/images/profile.png">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </nav>
 
+    <!--=========== END OF NAVBAR ===========-->
     
     <div class="admin__container">
         <aside>
-            <div class="top">
-                <div class="logo1">
-                    <img class="img1" src="/images/logo.png"> 
-                    <h4 class="daycarename">MARS DAYCARE</h4>
-                </div>
+            <div class="topDb">
+                    <h4>Admin Dashboard</h4>
             </div>
+
 
                 <div class="sidebar" >
                     <a href="admin.html">
@@ -75,7 +97,7 @@
                     
                     <a href="settings.html">
                         <span class="material-symbols-sharp">manage_accounts</span>
-                        <h5>Settings</h5>
+                        <h5>Profile Settings</h5>
                     </a>
 
 
@@ -105,28 +127,10 @@
                         <button type="submit" class="btn btn-primary" > Add To Gallery </button>
                     </form>
         </main>
+    </div>
 
 
     <!--=========== END OF MAIN ===========-->
-
-        <div class="right">
-            <div class="top">
-                <div class="profile">
-                    <div class="info" id="user__info">
-                        <b id="firstName">Alexander <b id="lastName">Arevalo</b></b>
-                        <small class="text-muted" id="user">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="/images/profile.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--=========== END OF RIGHT ===========-->
-
-
 
 
          <div class="footer__copyright">
@@ -140,11 +144,9 @@
 
 
 
-
-
-
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
      <script src="/js/admin.js"></script>
-     <script src="/js/adminGallery.js"></script>
+     <script src="/js/navbar.js"></script>
+         <script src="/js/adminGallery.js"></script>
 </body>
 </html>

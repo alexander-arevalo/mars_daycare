@@ -43,6 +43,16 @@
   border-collapse: collapse;
 }
 
+.current-day {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.event-day {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
 .monthYear {
   margin-left: 20rem;
 }

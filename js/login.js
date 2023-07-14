@@ -10,18 +10,13 @@ async function login() {
       try {
         console.log(res);
         isAdmin = res.data.isAdmin;
-        successful = res.data.successful;
-        const token = res.data.token;        
-
-        // Store the token securely in local storage or a cookie
-  
-        localStorage.setItem("token", token);
-  
+        successful = res.data.successful;     
+        const token = localStorage.getItem('token');
+     
         axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
         if(successful){
           if (isAdmin) {
-            // console.log = localStorage.getItem("token");
             window.location.replace("/admin_html/admin.html");
             
           } else {

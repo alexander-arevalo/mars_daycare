@@ -34,6 +34,14 @@ function generateCalendar(month, year) {
         var calendarCell = document.createElement("td");
         calendarCell.textContent = date;
 
+        if (date === currentDate.getDate() && month === currentMonth && year === currentYear) {
+          calendarCell.classList.add("current-day");
+        }
+
+        if (hasEvent(date, month, year)) {
+          calendarCell.classList.add("event-day");
+        }
+
         // Validate year and month
         if (year !== 2023 || (year === 2023 && month < currentMonth)) {
           calendarCell.classList.add("disabled");
@@ -55,6 +63,12 @@ function generateCalendar(month, year) {
       break;
     }
   }
+}
+
+function hasEvent(date, month, year) {
+  // Add your logic here to determine if a specific date has an event
+  // For demonstration purposes, let's assume there is an event on the 10th of the current month
+  return date === 10 && month === currentMonth && year === currentYear;
 }
 
 function prevMonth() {

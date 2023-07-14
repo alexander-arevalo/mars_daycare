@@ -1,6 +1,6 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-    margin: 10rem 15rem;
+    margin: 5rem 20rem;
     cursor: default;
   }
 
@@ -10,7 +10,7 @@ main {
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
-    width: auto;
+    width: 40rem;
     height: 25rem;
     text-align: center;
 }
@@ -23,3 +23,4 @@ h2 {
     margin-bottom: 3rem;
     text-align: center;
 }
+
