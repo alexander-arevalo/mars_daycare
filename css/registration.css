@@ -1,52 +1,61 @@
 .registration__container {
-    height: auto; 
-    width: 50rem;
-    background: var(--color-bg3);
-    padding: 4rem;
-    gap: 2rem;
-    margin: 7rem auto;    
+  height: auto;
+  width: 50rem;
+  background: var(--color-bg3);
+  padding: 4rem;
+  gap: 2rem;
+  margin: 7rem auto;
 }
 
-  h2 {
-    text-align: center;
-    text-decoration: underline;
-    cursor: default;
-    margin-bottom: 5rem;
-  }
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  cursor: default;
+  margin-bottom: 5rem;
+}
 
-.login{
-    text-align: center;
-    font-size: 1rem;
-    color: var(--color-success);
-    text-decoration: underline;
-    margin-top: 1rem;
-  }
+.login {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-success);
+  text-decoration: underline;
+  margin-top: 1rem;
+}
 
 form {
-    gap: 2rem;
-    line-height: 5rem;
+  gap: 2rem;
+  line-height: 1;
 }
-.fileupload{
-    content: 'Select files';
-    display: inline-block;
-    align-items: center;
-    background: var(--color-white);
-    color: var(--color-black);
-    margin-left: 9rem;
-    padding: 1rem  0rem 1rem 2rem;
-    margin-bottom: 0.5rem;
-    outline: none;
-    white-space: nowrap;
-    cursor: pointer;
-  
-}
-input[type=text], input[type=email], input[type=password], input[type=file] {
-    width: 100%;
-    padding: 1rem 0.9rem;
-    margin: 0.5rem 0;
-    box-sizing: border-box;
-  }
 
-  .btn {
-    margin-left: 17rem;
+.fileupload {
+  display: none;
+}
+
+.customFileUpload {
+  background-color: var(--color-white);
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.file-name {
+  margin-left: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 1rem 0.9rem;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
 }

@@ -46,6 +46,13 @@ input, .galleryUpload {
 /* ========== BUTTON ========== */
 
 .btn-primary {
-    margin: 1rem 15rem;
+    margin: 2rem 13rem;
     width: 10rem;
+}
+
+.btn-view {
+    width: 100%;   
+    background-color: var(--color-success);
+    margin: 0;
+
 }

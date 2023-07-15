@@ -1,84 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
-    <!--  GOOGLE FONTS (MONSERRAT) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"rel="stylesheet"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mars Daycare Center</title>
+  <link rel="icon" href="/images/logo.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/pendingAction.css" />
-  </head>
-  <body>
-    <nav>
-        <div class="container nav__container">
-            <img src="/images/logo.png" class="logo"> 
-            <a><h4>MARS DAYCARE</h4></a>
+  <!--  GOOGLE FONTS (MONSERRAT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-    </nav>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/pendingAction.css" />
+</head>
 
-<!--=========== END OF NAVBAR ===========-->
+<body>
+  <nav>
+    <div class="container nav__container">
+      <img src="/images/logo.png" class="logo">
+      <a>
+        <h4>MARS DAYCARE</h4>
+      </a>
 
-    <div class="container form__container">
-      <h2>Account Information</h2>
-          <table id="enrolleeTable">
-            <tr>
-              <th style="width:60%;"></th>
-              <th style="width:40%;">Account Details</th>
-            </tr>
+  </nav>
 
-            <tr>
-              <td>First Name:</td>
-              <td id="firstName"></td>
-            </tr>
+  <!--=========== END OF NAVBAR ===========-->
 
-            <tr>
-              <td>Last Name:</td>
-              <td id="lastName"></td>
-            </tr>
+  <div class="container form__container">
+    <h2>Account Information</h2>
+    <table id="enrolleeTable">
+      <tr>
+        <th style="width:60%;"></th>
+        <th style="width:40%;">Account Details</th>
+      </tr>
 
-            <tr>
-              <td>Relationship:</td>
-              <td id="relationship"></td>
-            </tr>
+      <tr>
+        <td>First Name:</td>
+        <td id="firstName"></td>
+      </tr>
 
-            <tr>
-              <td>Pre-School Level:</td>
-              <td id="level"></td>
-            </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td id="lastName"></td>
+      </tr>
 
-            <tr>
-              <td>Email:</td>
-              <td id="email"></td>
-            </tr>
+      <tr>
+        <td>Relationship:</td>
+        <td id="relationship"></td>
+      </tr>
 
-            <tr>
-              <td>Parents/Guardian Mobile Number:</td>
-              <td id="contact"></td>
-            </tr>
+      <tr>
+        <td>Pre-School Level:</td>
+        <td id="level"></td>
+      </tr>
 
-            <tr>
-              <td>BirthDate:</td>
-              <td id="birthDate"></td>
-            </tr>
+      <tr>
+        <td>Email:</td>
+        <td id="email"></td>
+      </tr>
 
-        </table>
-    
-          <button class="btn btn-left" id="decline">Decline</button>
-          <button class="btn btn-middle" id="back">Go Back</button>
-          <button class="btn btn-right" id="accept">Accept</button>
+      <tr>
+        <td>Parents/Guardian Mobile Number:</td>
+        <td id="contact"></td>
+      </tr>
 
-    </div>
-    
-    <!--=========== END OF FORM ===========-->
+      <tr>
+        <td>BirthDate:</td>
+        <td id="birthDate"></td>
+      </tr>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/js/pendingAction.js"></script>
-  </body>
+      <tr>
+        <td>Birth Certificate of Child:</td>
+        <td id="birthCert"></td>
+      </tr>
+
+      <tr>
+        <td>Valid ID of Parents/Guardian:</td>
+        <td id="validID"></td>
+      </tr>
+
+      <tr>
+        <td>Child's Health Record:</td>
+        <td id="certificate"></td>
+      </tr>
+
+    </table>
+
+    <button class="btn btn-left" id="decline">Decline</button>
+    <button class="btn btn-middle" id="back">Go Back</button>
+    <button class="btn btn-right" id="accept" onclick="acceptById()">Accept</button>
+
+  </div>
+
+  <!--=========== END OF FORM ===========-->
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/js/pendingAction.js"></script>
+</body>
+
 </html>

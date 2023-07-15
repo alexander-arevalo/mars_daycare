@@ -1,8 +1,6 @@
-//status value
-
 function tableHandler() {
   var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("status__table");
+  input = document.getElementById("students__table");
   filter = input.value.toUpperCase();
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
@@ -18,15 +16,20 @@ function tableHandler() {
     }
   }
 }
-//token
-async function getEnrolleeById() {
-  await axios
-    .get("http://localhost:3001/api/enrollees")
-    .then((res) => {
-      console.log(`getting enrollees ${res.data}`);
-      const enrolleesTableBody = document.getElementById("statusTableBody");
 
+async function getEnrollees() {
+  let token = localStorage.getItem("token");
+  const res = await axios
+    .get("http://localhost:3001/api/enrollees/:id", {
+      headers: { Authorization: "Bearer " + token },
+    })
+
+    .then((res) => {
+      console.log(`Getting enrollees:`, res.data);
       const data = res.data;
+
+      const enrolleesTableBody = document.getElementById("enrolleesTableBody");
+
       // Clear the existing content
       enrolleesTableBody.innerHTML = "";
 
@@ -38,18 +41,18 @@ async function getEnrolleeById() {
         const lastNameCell = document.createElement("td");
         lastNameCell.textContent = enrollee.lastName;
         const status = document.createElement("td");
-        status.textContent = "pending";
-        actionCell.appendChild(button);
+        status.textContent =
+          enrollee.isApproved === true
+            ? "Approved"
+            : enrollee.isApproved === false
+            ? "Declined"
+            : "Pending";
         row.appendChild(firstNameCell);
         row.appendChild(lastNameCell);
         row.appendChild(status);
         enrolleesTableBody.appendChild(row);
       });
-    })
-    .catch((err) => {
-      console.log(err);
     });
 }
-
 // Call the function to fetch and display enrollees
-getEnrolleeById();
+getEnrollees();

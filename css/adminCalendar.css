@@ -41,3 +41,11 @@ input, textarea  {
   align-self: center;
   cursor: pointer;
 }
+
+
+.btn-view {
+  width: 100%;   
+  background-color: var(--color-success);
+  margin: 0;
+
+}

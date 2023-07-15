@@ -10,38 +10,32 @@ async function login() {
       try {
         console.log(res);
         isAdmin = res.data.isAdmin;
-        successful = res.data.successful;     
-        const token = localStorage.getItem('token');
-     
+        successful = res.data.successful;
+        const token = res.data.token;
+        localStorage.setItem("token", token);
+
         axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-        if(successful){
+        if (successful) {
           if (isAdmin) {
             window.location.replace("/admin_html/admin.html");
-            
           } else {
             window.location.replace("user_html/userhome.html");
-            
           }
-          
-        }
-        else {
+        } else {
           alert("Invalid username or password.");
         }
-
-    
-      
       } catch (error) {
         console.log(error);
         alert("Invalid username or password.");
       }
-    })
-
-
-};
+    });
+}
 
 // Event listener for form submission
-document.getElementById("loginForm").addEventListener("submit", function (event) {
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
     login(); // Call the login function when the form is submitted
   });

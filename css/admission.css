@@ -1,19 +1,18 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-  margin: 5rem 20rem ;
+  margin: 5rem auto;
   background: var(--color-white);
   padding: var(--card-padding);
-  width: 40rem;
-
+  max-width: 40rem;
+  width: 90%;
 }
 
-
-.reser__img{
+.reser__img {
   width: 5rem;
-  margin: -3rem 0.5rem 0 ;
+  margin: -3rem 0.5rem 0;
 }
 
-h1  {
+h1 {
   text-align: center;
 }
 
@@ -22,12 +21,12 @@ label {
   display: block;
 }
 
-
 /* ========== FORM ========== */
 
 form {
   margin: 0 auto;
   max-width: 40rem;
+  width: 100%;
 }
 
 .contact__form {
@@ -42,20 +41,51 @@ form {
   gap: 1rem;
 }
 
-.contact__form input[type="text"] {
-  width: 100%; /* Change the width to 100% */
-}
-
-input, select{
+.contact__form input[type="text"],
+.contact__form select,
+.contact__form input[type="email"],
+.contact__form input[type="date"],
+.contact__form input[type="contact"] {
   width: 100%;
-  padding: .8rem;
+  padding: 0.8rem;
   appearance: none;
   background: var(--color-bg3);
 }
 
+.fileupload {
+  display: none;
+}
+
+.customFileUpload {
+  background-color: var(--color-bg3);
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  margin: 0rem 0 1rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+}
+
+.file-name {
+  margin-left: 1rem;
+}
+
 .contact__form .btn {
+  margin-top: 2rem;
   width: 10rem;
-  align-self: center;
   cursor: pointer;
   background: var(--color-start);
+}
+
+.btn-prev {
+  margin-left: 4rem;
+}
+
+.btn-next {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.btn-submit {
+  margin-left: 12rem;
 }

@@ -1,4 +1,4 @@
-function tableHandler() {
+function tableHandler1() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("request__table");
   filter = input.value.toUpperCase();
@@ -16,56 +16,52 @@ function tableHandler() {
     }
   }
 }
-
-
-
-async function getEnrollees() 
+async function getRequestId() {
+  let token = localStorage.getItem("token");
   const res = await axios
-  .get("http://localhost:3001/api/enrollees", )
-  .then((res) => {
+    .get("http://localhost:3001/api/reqId", {
+      headers: { Authorization: "Bearer " + token },
+    })
 
-  try {
-    
-    console.log(`Getting enrollees:`, res.data);
-    const data = res.data;
-    const token = res.data.token;
-    
-    localStorage.setItem("token", token);
-    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-    
-    const enrolleesTableBody = document.getElementById("requestTableBody");
+    .then((res) => {
+      console.log(`Getting Request:`, res.data);
+      const data = res.data;
 
-    // Clear the existing content
-    enrolleesTableBody.innerHTML = "";
+      const requestTableBody = document.getElementById("requestTableBody");
 
-    // Loop through the data and create table rows with table data cells to display it
-    data.forEach((enrollee) => {
-      const row = document.createElement("tr");
-      const firstNameCell = document.createElement("td");
-      firstNameCell.textContent = enrollee.firstName;
-      const lastNameCell = document.createElement("td");
-      lastNameCell.textContent = enrollee.lastName;
-      const status = document.createElement("td");
-      status.textContent = "pending";
-      const actionCell = document.createElement("td");
-      const button = document.createElement("button");
-      button.textContent = "Details";
-      button.classList.add("btn");
-      // Add an event listener to the "Details" button
-      button.addEventListener("click", () => {
-        // Redirect the user to another HTML page
-        window.location.href = 'idAction.html';
+      // Clear the existing content
+      requestTableBody.innerHTML = "";
+
+      // Loop through the data and create table rows with table data cells to display it
+      data.forEach((reqId) => {
+        const row = document.createElement("tr");
+        const firstNameCell = document.createElement("td");
+        firstNameCell.textContent = reqId.firstName;
+        const lastNameCell = document.createElement("td");
+        lastNameCell.textContent = reqId.lastName;
+        const status = document.createElement("td");
+        status.textContent =
+          reqId.isApproved === true
+            ? "Approved"
+            : reqId.isApproved === false
+            ? "Declined"
+            : "Pending";
+        const actionCell = document.createElement("td");
+        const button = document.createElement("button");
+        button.textContent = "Details";
+        button.classList.add("btn");
+        button.addEventListener("click", () => {
+          // Redirect the user to another HTML page
+          window.location.href = `idAction.html?id=${reqId._id}`;
+        });
+        actionCell.appendChild(button);
+        row.appendChild(firstNameCell);
+        row.appendChild(lastNameCell);
+        row.appendChild(status);
+        row.appendChild(actionCell);
+        requestTableBody.appendChild(row);
       });
-      actionCell.appendChild(button);
-      row.appendChild(firstNameCell);
-      row.appendChild(lastNameCell);
-      row.appendChild(status);
-      row.appendChild(actionCell);
-      enrolleesTableBody.appendChild(row);
     });
-  } catch (err) {
-    console.log(err);
-  }
-});
-// Call the function to fetch and display enrollees
-getEnrollees();
+}
+
+getRequestId();
