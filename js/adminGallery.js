@@ -39,3 +39,63 @@ async function handleSubmit(event) {
 }
 
 document.getElementById("galleryForm").addEventListener("submit", handleSubmit);
+
+//TABLE HANDLER
+function tableHandler() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("gallery__table");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+async function galleryHandler() {
+  let token = localStorage.getItem("token");
+  const res = await axios.get("http://localhost:3001/api/gallery", {
+    headers: { Authorization: "Bearer " + token },
+  });
+
+  console.log(`Getting Request:`, res.data);
+  const data = res.data;
+
+  const galleryTableBody = document.getElementById("galleryTableBody");
+
+  // Clear the existing content
+  galleryTableBody.innerHTML = "";
+
+  // Loop through the data and create table rows with table data cells to display it
+  data.forEach((gallery) => {
+    const row = document.createElement("tr");
+
+    // Create table data cells for gallery details
+    const galleryCell = document.createElement("td");
+    galleryCell.textContent = gallery.title;
+
+    const actionCell = document.createElement("td");
+    const button = document.createElement("button");
+    button.textContent = "Details";
+    button.classList.add("btn");
+    button.addEventListener("click", () => {
+      // Redirect the user to another HTML page
+      window.location.href = `galleryAction.html?id=${gallery._id}`;
+    });
+    actionCell.appendChild(button);
+
+    row.appendChild(galleryCell);
+    row.appendChild(actionCell);
+    galleryTableBody.appendChild(row);
+  });
+}
+
+galleryHandler();

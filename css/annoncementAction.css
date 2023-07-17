@@ -1,0 +1,41 @@
+/* ========== FORM CONTAINER ========== */
+.form__container {
+    background: var(--color-white);
+    gap: 1rem;
+    padding: 4rem;
+    width: 50rem;
+    height: auto;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+h2{
+  text-align: center;
+  padding: 1rem;
+  margin: 0 0 1rem;
+}
+
+.announcement {
+    background-color: var(--color-bg3);
+    width: 100%;
+    height: auto;
+}
+/* ========== BUTTON ========== */
+
+.btn {
+  background-color: var(--color-start);
+}
+
+.btn-right{
+  margin-left: 10rem;
+  margin-top: 2rem;
+}
+
+.btn-middle{
+  margin-left: 6.5rem;
+  margin-top: 2rem;
+}
+
+.btn-left{
+  margin-right: 3rem;
+  margin-top: 2rem;
+}

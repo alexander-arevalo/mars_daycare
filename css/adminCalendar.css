@@ -52,6 +52,9 @@ textarea {
   height: 4rem;
 }
 
+.list__table {
+  display: none;
+}
 
 .table {
   border-collapse: collapse;
