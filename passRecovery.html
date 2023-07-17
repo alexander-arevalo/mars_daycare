@@ -1,337 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mars Daycare Center</title>
-    <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
 
-    <!--  GOOGLE FONTS (MONSERRAT) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mars Daycare Center</title>
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/passRecovery.css" />
-  </head>
-  <body>
-    <nav>
-        <div class="container nav__container">
-            <img src="./images/logo.png" class="logo"> 
-            <a href="./index.html"><h4>MARS DAYCARE</h4></a>
-            <ul class="nav__menu">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Mars Daycare Activity</a>
-                      <ul class="dropdown-menu">
-                        <li><a href="dailyActivity.html">Daycare Gallery</a></li>
-                        <li><a href="eventCalendar.html">Event Calendar</a></li>
-                      </ul>
-                    </a> </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>                
-            </ul>
-         </div>
-    </nav>
-    <!--=========== END OF NAVBAR ===========-->
+  <!--  GOOGLE FONTS (MONSERRAT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-    <div class="container pass__container">
-        <h2 class="password">Password Recovery</h2>
-        <form id="recoveryForm" class="recoveryForm">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/passRecovery.css" />
+</head>
 
-          <label for="email"><a class="email">Email:</a></label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
-          <button type="submit" class="btn btn-primary">Recover Password</button>
+<body>
+  <nav>
+    <div class="container nav__container">
+      <img src="./images/logo.png" class="logo">
+      <a href="./index.html">
+        <h4>MARS DAYCARE</h4>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Mars Daycare Activity</a>
+          <ul class="dropdown-menu">
+            <li><a href="dailyActivity.html">Daycare Gallery</a></li>
+            <li><a href="eventCalendar.html">Event Calendar</a></li>
+          </ul>
+          </a>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--=========== END OF NAVBAR ===========-->
 
-        </form>
+  <div class="container pass__container">
+    <h2 class="password">Password Recovery</h2>
+    <form id="recoveryForm" class="recoveryForm">
 
-        <div id="message" class="message"></div>
+      <label for="email"><a class="email">Email:</a></label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn btn-primary">Recover Password</button>
+
+    </form>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <!--=========== END OF LOG IN FORM ===========-->
+
+  <footer>
+    <div class="container footer__container">
+      <div class="footer__1">
+        <a href="index.html" class="footer__logo">
+          <h4>MARS DAYCARE</h4>
+        </a>
+        <p>
+          Join us at Mars Daycare and give your little ones an
+          out-of-this-world experience!
+        </p>
       </div>
-      
 
-    <!--=========== END OF LOG IN FORM ===========-->
+      <div class="footer__2">
+        <h4>Permalinks</h4>
+        <ul class="permalinks">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="dailyactivity.html">Mars DayCare Gallery Activity</a>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
 
-    <footer>
-      <div class="container footer__container">
-        <div class="footer__1">
-          <a href="index.html" class="footer__logo"><h4>MARS DAYCARE</h4></a>
-          <p>
-            Join us at Mars Daycare and give your little ones an
-            out-of-this-world experience!
-          </p>
-        </div>
+      <div class="footer__3">
+        <h4>Primacy</h4>
+        <ul class="policy">
+          <div class="privacypopup" onclick="privacy()">
+            <li><a>Privacy Policy</a></li>
+            <span class="popuptext" id="privacy">
+              <h4>Privacy Policy for Mars Daycare Center:</h4>
+              <br />
 
-        <div class="footer__2">
-          <h4>Permalinks</h4>
-          <ul class="permalinks">
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <a href="dailyactivity.html">Mars DayCare Gallery Activity</a>
-            </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+              <p>
+                At Mars Daycare Center, we take your privacy seriously. This
+                Privacy Policy outlines how we collect, use, and protect your
+                personal information when you visit our website.
+              </p>
+              <br />
 
-        <div class="footer__3">
-          <h4>Primacy</h4>
-          <ul class="policy">
-            <div class="privacypopup" onclick="privacy()">
-              <li><a>Privacy Policy</a></li>
-              <span class="popuptext" id="privacy">
-                <h4>Privacy Policy for Mars Daycare Center:</h4>
+              <h4>Information We Collect:</h4>
+              <br />
+
+              <p>
+                When you visit our website, we may collect certain information
+                about you, including: <br />
+
+                Your name <br />
+                Your email address <br />
+                Your Phone number <br />
+                Your child's name <br />
+                We collect this information in order to provide a better
+                experience for you and your child on our website. <br />
+                We may use this information to personalize your child's
+                learning experience, <br />
+                send you updates about our services, or contact you for
+                feedback.
+              </p>
+              <br />
+
+              <h4>How We Use Your Information:</h4>
+              <br />
+
+              <p>
+                We use your information in order to provide and improve our
+                services to you. Specifically, we may use your information to
                 <br />
+              </p>
 
-                <p>
-                  At Mars Daycare Center, we take your privacy seriously. This
-                  Privacy Policy outlines how we collect, use, and protect your
-                  personal information when you visit our website.
-                </p>
+              <p>
+                Personalize your child's learning experience <br />
+                Send you updates about our services <br />
+                Contact you for feedback <br />
+                Analyze how our website is being used <br />
+                Detect and prevent fraud and other illegal activities <br />
+                How We Protect Your Information
+              </p>
+              <br />
+
+              <p>
+                We take the security of your personal information seriously.
+                We have implemented appropriate technical and <br />
+                organizational measures to protect your personal information
+                from unauthorized access, disclosure, alteration, or
+                destruction. <br />
+
+                We also limit access to your personal information to employees
+                who have a need to know in order to provide our services to
+                you. <br />
+                Our employees are required to keep your personal information
+                confidential.
+              </p>
+              <br />
+
+              <h4>Disclosure of Your Information:</h4>
+              <br />
+
+              <p>
+                We may disclose your personal information to third-party
+                service providers who help us provide our services to you.
                 <br />
-
-                <h4>Information We Collect:</h4>
+                These service providers may include website hosting companies,
+                email service providers, and customer service providers.
                 <br />
+                We require these service providers to protect your personal
+                information in accordance with this Privacy Policy. <br />
 
-                <p>
-                  When you visit our website, we may collect certain information
-                  about you, including: <br />
+                We may also disclose your personal information if we are
+                required to do so by law or if we believe that such disclosure
+                is necessary to protect our rights, property, or safety, or
+                the rights, property, or safety of others.
+              </p>
+              <br />
 
-                  Your name <br />
-                  Your email address <br />
-                  Your Phone number <br />
-                  Your child's name <br />
-                  We collect this information in order to provide a better
-                  experience for you and your child on our website. <br />
-                  We may use this information to personalize your child's
-                  learning experience, <br />
-                  send you updates about our services, or contact you for
-                  feedback.
-                </p>
+              <h4>Your Rights:</h4>
+              <br />
+
+              <p>
+                You have the right to access, correct, or delete your personal
+                information at any time. You can do this by contacting us
+                at,"marsdaycarecentereced@gmail.com" Telephone No."8
+                741-7326".
+              </p>
+              <br />
+
+              <h4>Changes to This Privacy Policy:</h4>
+              <br />
+
+              <p>
+                We may update this Privacy Policy from time to time. If we
+                make any material changes, we will notify you by email or by
+                posting a notice on our website prior to the change becoming
+                effective. We encourage you to review this Privacy Policy
+                periodically.
+              </p>
+              <br />
+
+              <h4>Contact Us:</h4>
+              <br />
+
+              <p>
+                If you have any questions or concerns about this Privacy
+                Policy, please contact us at "marsdaycarecentereced@gmail.com"
                 <br />
-
-                <h4>How We Use Your Information:</h4>
-                <br />
-
-                <p>
-                  We use your information in order to provide and improve our
-                  services to you. Specifically, we may use your information to
-                  <br />
-                </p>
-
-                <p>
-                  Personalize your child's learning experience <br />
-                  Send you updates about our services <br />
-                  Contact you for feedback <br />
-                  Analyze how our website is being used <br />
-                  Detect and prevent fraud and other illegal activities <br />
-                  How We Protect Your Information
-                </p>
-                <br />
-
-                <p>
-                  We take the security of your personal information seriously.
-                  We have implemented appropriate technical and <br />
-                  organizational measures to protect your personal information
-                  from unauthorized access, disclosure, alteration, or
-                  destruction. <br />
-
-                  We also limit access to your personal information to employees
-                  who have a need to know in order to provide our services to
-                  you. <br />
-                  Our employees are required to keep your personal information
-                  confidential.
-                </p>
-                <br />
-
-                <h4>Disclosure of Your Information:</h4>
-                <br />
-
-                <p>
-                  We may disclose your personal information to third-party
-                  service providers who help us provide our services to you.
-                  <br />
-                  These service providers may include website hosting companies,
-                  email service providers, and customer service providers.
-                  <br />
-                  We require these service providers to protect your personal
-                  information in accordance with this Privacy Policy. <br />
-
-                  We may also disclose your personal information if we are
-                  required to do so by law or if we believe that such disclosure
-                  is necessary to protect our rights, property, or safety, or
-                  the rights, property, or safety of others.
-                </p>
-                <br />
-
-                <h4>Your Rights:</h4>
-                <br />
-
-                <p>
-                  You have the right to access, correct, or delete your personal
-                  information at any time. You can do this by contacting us
-                  at,"marsdaycarecentereced@gmail.com" Telephone No."8
-                  741-7326".
-                </p>
-                <br />
-
-                <h4>Changes to This Privacy Policy:</h4>
-                <br />
-
-                <p>
-                  We may update this Privacy Policy from time to time. If we
-                  make any material changes, we will notify you by email or by
-                  posting a notice on our website prior to the change becoming
-                  effective. We encourage you to review this Privacy Policy
-                  periodically.
-                </p>
-                <br />
-
-                <h4>Contact Us:</h4>
-                <br />
-
-                <p>
-                  If you have any questions or concerns about this Privacy
-                  Policy, please contact us at "marsdaycarecentereced@gmail.com"
-                  <br />
-                  Telephone No."8 741-7326".
-                </p>
-              </span>
-            </div>
-            <div class="termspopup" onclick="terms()">
-              <li><a>Terms and Condition</a></li>
-              <span class="popuptext" id="terms">
-                <h4>Terms and Conditions for Mars Daycare Center:</h4>
-                <br />
-
-                <p>
-                  Welcome to Mars Daycare Center. These terms and conditions
-                  ("Terms") govern your use of our website, including all
-                  content, services, and products available on or through the
-                  website. By accessing or using our website, you agree to be
-                  bound by these Terms. If you do not agree to these Terms, you
-                  should not use our website.
-                </p>
-                <br />
-
-                <h4>
-                  You may use our website for lawful purposes only. <br />
-                  You agree not to use our website:
-                </h4>
-                <br />
-
-                <p>
-                  In any way that violates any applicable federal, state, local,
-                  or international law or regulation; To transmit, or procure
-                  the sending of, any advertising or promotional material,
-                  including any "junk mail," "chain letter," "spam," or any
-                  other similar solicitation; To impersonate or attempt to
-                  impersonate Mars Daycare Center, a Mars Daycare Center
-                  employee, another user, or any other person or entity; To
-                  engage in any other conduct that restricts or inhibits
-                  anyone's use or enjoyment of the website, or which, as
-                  determined by us, may harm Mars Daycare Center or users of the
-                  website, or expose them to liability.
-                </p>
-                <br />
-
-                <h4>Intellectual Property:</h4>
-                <br />
-
-                <p>
-                  The content, layout, design, graphics, and other elements of
-                  our website are protected by intellectual property laws,
-                  including copyright and trademark laws. You may not copy,
-                  reproduce, distribute, transmit, display, publish, or create
-                  derivative works from any of the content on our website
-                  without our prior written permission.
-                </p>
-                <br />
-
-                <h4>You represent and warrant that:</h4>
-                <br />
-
-                <p>
-                  You own or control all rights in and to the content that you
-                  post; The content is accurate and not misleading; The content
-                  does not violate any applicable laws or regulations; The
-                  content does not infringe any third-party intellectual
-                  property rights, privacy rights, or publicity rights; and The
-                  content does not contain any viruses, malware, or other
-                  harmful code. We reserve the right to remove any content from
-                  our website at any time for any reason without notice.
-                </p>
-                <br />
-
-                <h4>Disclaimer of Warranties</h4>
-                <br />
-
-                <p>
-                  Our website is provided "as is" and "as available" without
-                  warranty of any kind, either express or implied, including,
-                  but not limited to, the implied warranties of merchantability,
-                  fitness for a particular purpose, or non-infringement. We do
-                  not warrant that our website will be uninterrupted, timely,
-                  secure, or error-free, or that any defects will be corrected.
-                </p>
-                <br />
-
-                <h4>Limitation of Liability</h4>
-                <br />
-
-                <p>
-                  In no event will Mars Daycare Center, its affiliates,
-                  licensors, service providers, employees, agents, officers, or
-                  directors be liable for damages of any kind, including without
-                  limitation any direct, indirect, incidental, special,
-                  consequential, or punitive damages, arising out of or in
-                  connection with your use, inability to use, or reliance on our
-                  website or any content, products, or services provided through
-                  our website.
-                </p>
-                <br />
-
-                <h4>Indenification</h4>
-                <br />
-
-                <p>
-                  You agree to indemnify and hold harmless Mars Daycare Center,
-                  its affiliates, licensors, service providers, employees,
-                  agents, officers, and directors from any claim or demand,
-                  including reasonable attorneys' fees, made by any third party
-                  due to or arising out of your use
-                </p>
-                <br />
-              </span>
-            </div>
-          </ul>
-        </div>
-
-        <div class="footer__4">
-          <h4>Contact Us</h4>
-          <div>
-            <p>8-741-7326</p>
-            <p>marsdaycarecentereced@gmail.com</p>
+                Telephone No."8 741-7326".
+              </p>
+            </span>
           </div>
+          <div class="termspopup" onclick="terms()">
+            <li><a>Terms and Condition</a></li>
+            <span class="popuptext" id="terms">
+              <h4>Terms and Conditions for Mars Daycare Center:</h4>
+              <br />
 
-          <ul class="footer__socials">
-            <li>
-              <a href="https://www.facebook.com/profile.php?id=100064112469530"
-                ><i class="uil uil-facebook-f"></i
-              ></a>
-            </li>
-          </ul>
+              <p>
+                Welcome to Mars Daycare Center. These terms and conditions
+                ("Terms") govern your use of our website, including all
+                content, services, and products available on or through the
+                website. By accessing or using our website, you agree to be
+                bound by these Terms. If you do not agree to these Terms, you
+                should not use our website.
+              </p>
+              <br />
+
+              <h4>
+                You may use our website for lawful purposes only. <br />
+                You agree not to use our website:
+              </h4>
+              <br />
+
+              <p>
+                In any way that violates any applicable federal, state, local,
+                or international law or regulation; To transmit, or procure
+                the sending of, any advertising or promotional material,
+                including any "junk mail," "chain letter," "spam," or any
+                other similar solicitation; To impersonate or attempt to
+                impersonate Mars Daycare Center, a Mars Daycare Center
+                employee, another user, or any other person or entity; To
+                engage in any other conduct that restricts or inhibits
+                anyone's use or enjoyment of the website, or which, as
+                determined by us, may harm Mars Daycare Center or users of the
+                website, or expose them to liability.
+              </p>
+              <br />
+
+              <h4>Intellectual Property:</h4>
+              <br />
+
+              <p>
+                The content, layout, design, graphics, and other elements of
+                our website are protected by intellectual property laws,
+                including copyright and trademark laws. You may not copy,
+                reproduce, distribute, transmit, display, publish, or create
+                derivative works from any of the content on our website
+                without our prior written permission.
+              </p>
+              <br />
+
+              <h4>You represent and warrant that:</h4>
+              <br />
+
+              <p>
+                You own or control all rights in and to the content that you
+                post; The content is accurate and not misleading; The content
+                does not violate any applicable laws or regulations; The
+                content does not infringe any third-party intellectual
+                property rights, privacy rights, or publicity rights; and The
+                content does not contain any viruses, malware, or other
+                harmful code. We reserve the right to remove any content from
+                our website at any time for any reason without notice.
+              </p>
+              <br />
+
+              <h4>Disclaimer of Warranties</h4>
+              <br />
+
+              <p>
+                Our website is provided "as is" and "as available" without
+                warranty of any kind, either express or implied, including,
+                but not limited to, the implied warranties of merchantability,
+                fitness for a particular purpose, or non-infringement. We do
+                not warrant that our website will be uninterrupted, timely,
+                secure, or error-free, or that any defects will be corrected.
+              </p>
+              <br />
+
+              <h4>Limitation of Liability</h4>
+              <br />
+
+              <p>
+                In no event will Mars Daycare Center, its affiliates,
+                licensors, service providers, employees, agents, officers, or
+                directors be liable for damages of any kind, including without
+                limitation any direct, indirect, incidental, special,
+                consequential, or punitive damages, arising out of or in
+                connection with your use, inability to use, or reliance on our
+                website or any content, products, or services provided through
+                our website.
+              </p>
+              <br />
+
+              <h4>Indenification</h4>
+              <br />
+
+              <p>
+                You agree to indemnify and hold harmless Mars Daycare Center,
+                its affiliates, licensors, service providers, employees,
+                agents, officers, and directors from any claim or demand,
+                including reasonable attorneys' fees, made by any third party
+                due to or arising out of your use
+              </p>
+              <br />
+            </span>
+          </div>
+        </ul>
+      </div>
+
+      <div class="footer__4">
+        <h4>Contact Us</h4>
+        <div>
+          <p>8-741-7326</p>
+          <p>marsdaycarecentereced@gmail.com</p>
         </div>
-      </div>
 
-      <div class="footer__copyright">
-        <small>Copyright &copy; Mars Daycare</small>
+        <ul class="footer__socials">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100064112469530"><i class="uil uil-facebook-f"></i></a>
+          </li>
+        </ul>
       </div>
-    </footer>
+    </div>
 
-    <!--=========== END OF FOOTER ===========-->
-    <script src="./js/navbar.js"></script>
-    <script src="./js/passRecovery.js"></script>
-  </body>
+    <div class="footer__copyright">
+      <small>Copyright &copy; Mars Daycare</small>
+    </div>
+  </footer>
+
+  <!--=========== END OF FOOTER ===========-->
+  <script src="./js/navbar.js"></script>
+  <script src="./js/passRecovery.js"></script>
+</body>
+
 </html>

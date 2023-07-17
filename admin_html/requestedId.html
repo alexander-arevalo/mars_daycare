@@ -72,11 +72,6 @@
                     <h5>Announcements</h5>
                 </a>
 
-                <a href="pendingReserv.html">
-                    <span class="material-symbols-sharp">pending_actions</span>
-                    <h5>Pending Reservation</h5>
-                </a>
-
                 <a href="adminGallery.html">
                     <span class="material-symbols-sharp">gallery_thumbnail</span>
                     <h5>Mars Daycare Gallery Activity</h5>
@@ -85,6 +80,11 @@
                 <a href="adminCalendar.html">
                     <span class="material-symbols-sharp">calendar_add_on</span>
                     <h5>Event Calendar</h5>
+                </a>
+
+                <a href="pendingReserv.html">
+                    <span class="material-symbols-sharp">pending_actions</span>
+                    <h5>Pending Reservation</h5>
                 </a>
 
                 <a href="requestedId.html" class="active">
@@ -115,15 +115,15 @@
         <main>
             <div>
                 <h2> Request For ID:</h2>
-                <input type="text" id="request__table" class="students__table" onkeyup="tableHandler1()"
+                <input type="text" id="request__table" class="students__table" onkeyup="tableHandler()"
                     placeholder="Search For Student" title="Type in a name">
 
                 <table id="requestTable" class="table">
                     <tr class="header">
-                        <th style="width:35%;">First Name</th>
-                        <th style="width:35%;">Last Name</th>
-                        <th style="width:15%;">Status</th>
-                        <th style="width:15%;">Action</th>
+                        <th style="width:30%;">First Name</th>
+                        <th style="width:30%;">Last Name</th>
+                        <th style="width:20%;">Status</th>
+                        <th style="width:20%;">Action</th>
                     </tr>
 
                     <tbody id="requestTableBody">

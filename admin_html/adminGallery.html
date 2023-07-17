@@ -72,10 +72,6 @@
                     <h5>Announcements</h5>
                 </a>
 
-                <a href="pendingReserv.html">
-                    <span class="material-symbols-sharp">pending_actions</span>
-                    <h5>Pending Reservation</h5>
-                </a>
 
                 <a href="adminGallery.html" class="active">
                     <span class="material-symbols-sharp">gallery_thumbnail</span>
@@ -85,6 +81,11 @@
                 <a href="adminCalendar.html">
                     <span class="material-symbols-sharp">calendar_add_on</span>
                     <h5>Event Calendar</h5>
+                </a>
+
+                <a href="pendingReserv.html">
+                    <span class="material-symbols-sharp">pending_actions</span>
+                    <h5>Pending Reservation</h5>
                 </a>
 
                 <a href="requestedId.html">
@@ -114,27 +115,47 @@
         <!--=========== END OF ASIDE ===========-->
 
         <main>
-            <h2>Mars Daycare Gallery Activity</h2>
-            <button class="btn btn-view" id="view"> View Gallery List </button>
+            <div class="gallery__container">
+                <div class="gallery">
+                    <h2>Mars Daycare Gallery Activity</h2>
+                    <form id="galleryForm">
+                        <label for="galleryPicture">Add Picture On Gallery</label>
+                        <input type="file" id="galleryPicture" class="galleryPicture" name="gallery" accept="image/*"
+                            required>
+                        <label for="galleryPicture" class="galleryUpload">Select Image</label>
 
-            <form id="galleryForm">
-                <label for="galerry">Add Picture On Gallery</label>
-                <input type="file" id="gallery" class="gallery" name="gallery" accept="image/*" required>
-                <label for="gallery" class="galleryUpload">Select Image</label>
+                        <label for="title">Add Title On Image</label>
+                        <input type="text" name="title" id="title" required>
 
-                <label for="title">Add Title On Image</label>
-                <input type="text" name="title" id="title" required>
+                        <label for="description">Add Description On Image</label>
+                        <input type="text" name="description" id="description" required>
 
-                <label for="description">Add Description On Image</label>
-                <input type="text" name="description" id="description" required>
+                        <button type="submit" class="btn btn-primary"> Add To Gallery </button>
 
-                <button type="submit" class="btn btn-primary"> Add To Gallery </button>
+                    </form>
+                </div>
+                <div class="gallery">
+                    <h2>Mars Daycare Gallery List</h2>
 
-            </form>
+                    <table id="galleryTable" class="table">
+                        <tr class="header">
+                            <th style="width:60%;">Gallery</th>
+                            <th style="width:40%;">Action</th>
+                        </tr>
+
+                        <tbody id="galleryTableBody">
+                            <tr>
+                                <td>Sample Title 1</td>
+                                <td id="details"><button class="btn btn-primary">Details</button></td>
+                            </tr>
 
 
+                        </tbody>
 
+                    </table>
 
+                </div>
+            </div>
         </main>
     </div>
 

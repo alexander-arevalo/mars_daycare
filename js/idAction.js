@@ -10,9 +10,9 @@ back.addEventListener("click", () => {
 let token = localStorage.getItem("token");
 console.log("this is token");
 
-async function getUserId() {
+async function getReqId() {
   axios
-    .get(`http://localhost:3001/api/reqId/${userId}`, {
+    .get(`http://localhost:3001/api/requestId/${userId}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
@@ -20,10 +20,9 @@ async function getUserId() {
       document.getElementById("lastName").textContent = res.data.lastName;
       document.getElementById("relationship").textContent =
         res.data.relationship;
-      document.getElementById("contact").textContent = res.data.contact;
+      document.getElementById("contact").textContent = res.data.phoneNumber;
       document.getElementById("address").textContent = res.data.address;
-      document.getElementById("picture").textContent = res.data.picture;
-
+      document.getElementById("picture").textContent = res.data.studentPicture;
       console.log(res.data);
     });
 }
@@ -62,4 +61,4 @@ async function declineById() {
     });
 }
 
-getUserId();
+getReqId();

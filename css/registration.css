@@ -1,10 +1,12 @@
+/* ========== CONTAINER ========== */
+
 .registration__container {
-  height: auto;
+  height: auto; 
   width: 50rem;
   background: var(--color-bg3);
   padding: 4rem;
   gap: 2rem;
-  margin: 7rem auto;
+  margin: 7rem auto;    
 }
 
 h2 {
@@ -14,7 +16,7 @@ h2 {
   margin-bottom: 5rem;
 }
 
-.login {
+.login{
   text-align: center;
   font-size: 1rem;
   color: var(--color-success);
@@ -22,9 +24,33 @@ h2 {
   margin-top: 1rem;
 }
 
+/* ========== FORM ========== */
+
 form {
-  gap: 2rem;
-  line-height: 1;
+  margin: 0 auto;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.name {
+  display: flex;
+  gap: 1rem;
+}
+
+.registration__form input[type="text"],
+.registration__form input[type="email"],
+.registration__form input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  appearance: none;
+  background: var(--color-white);
 }
 
 .fileupload {
@@ -36,26 +62,14 @@ form {
   display: inline-block;
   text-align: left;
   width: 100%;
+  margin: 0rem 0 1rem;
+  padding: 0.5rem 0rem;
   cursor: pointer;
 }
 
-.file-name {
-  margin-left: 1rem;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select {
-  width: 100%;
-  padding: 1rem 0.9rem;
-  margin: 0.5rem 0;
-  box-sizing: border-box;
-}
-
-.btn {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: fit-content;
+.registration__form .btn {
+  margin: 2rem 15rem;
+  width: 10rem;
+  cursor: pointer;
+  background: var(--color-start);
 }

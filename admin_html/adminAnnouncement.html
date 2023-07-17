@@ -71,11 +71,6 @@
                     <h5>Announcements</h5>
                 </a>
 
-                <a href="pendingReserv.html">
-                    <span class="material-symbols-sharp">pending_actions</span>
-                    <h5>Pending Reservation</h5>
-                </a>
-
                 <a href="adminGallery.html">
                     <span class="material-symbols-sharp">gallery_thumbnail</span>
                     <h5>Mars Daycare Gallery Activity</h5>
@@ -84,6 +79,11 @@
                 <a href="adminCalendar.html">
                     <span class="material-symbols-sharp">calendar_add_on</span>
                     <h5>Event Calendar</h5>
+                </a>
+
+                <a href="pendingReserv.html">
+                    <span class="material-symbols-sharp">pending_actions</span>
+                    <h5>Pending Reservation</h5>
                 </a>
 
                 <a href="requestedId.html">
@@ -113,16 +113,41 @@
         <!--=========== END OF ASIDE ===========-->
 
         <main>
+            <div class="announcement__container">
 
-            <div class="announcement">
-                <form id="announcementForm">
-                    <label>
-                        <h2> ANNOUNCEMENTS:</h2>
-                    </label>
-                    <textarea id="description" name="description" class="description" rows="3" cols="50"
-                        required></textarea>
-                    <button class="btn btn-primary">Add Announcement</button>
-                </form>
+
+                <div class="announcement">
+                    <form id="announcementForm">
+                        <label>
+                            <h2> ANNOUNCEMENTS:</h2>
+                        </label>
+                        <textarea id="description" name="description" class="description" rows="3" cols="50"
+                            required></textarea>
+                        <button type="submit" class="btn btn-primary">Add Announcement</button>
+                    </form>
+                </div>
+
+                <div class="announcement">
+                    <h2>Announcement List</h2>
+
+
+                    <table id="announcementTable" class="table">
+                        <tr class="header">
+                            <th style="width:60%;">Announcements</th>
+                            <th style="width:40%;">Action</th>
+                        </tr>
+
+                        <tbody id="announcementTableBody">
+                            <tr>
+                                <td>Sample Title 1</td>
+                                <td id="details"><button class="btn btn-primary">Details</button></td>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
             </div>
         </main>
     </div>
@@ -143,6 +168,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/admin.js"></script>
     <script src="/js/navbar.js"></script>
-    <script src="/js/adminAnnouncement.js></script>
+    <script src="/js/adminAnnouncement.js"></script>
+
 </body>
+
 </html>

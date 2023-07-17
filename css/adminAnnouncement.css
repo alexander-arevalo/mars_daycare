@@ -1,15 +1,30 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-    margin: 8rem 20rem;
+    margin: 8rem 1rem;
+}
+
+main .announcement__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+}
+
+main .announcement__container > div {
     background: var(--color-white);
     padding: var(--card-padding);
     width: 40rem;
-  
-  }
-  
+    height: auto;
+}
+
+main .announcement__container > div .announcement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
 
 h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -19,7 +34,31 @@ textarea {
     background: var(--color-bg3);
 }
 
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: .1rem solid var(--color-black);
+    
+}
+
+.table th,
+.table td {
+    text-align: center;
+    padding: .8rem;
+}
+
+.table tr {
+    border-bottom: .1rem solid var(--color-black);
+}
+
+
+.table tr.header,
+.table tr:hover {
+    background-color: var(--color-bg5);
+}
+
 .btn-primary {
-    margin: 1rem 12rem;
-    width: 12rem;
+    margin: 1rem auto; 
+    display: block; 
+    text-align: center; 
 }

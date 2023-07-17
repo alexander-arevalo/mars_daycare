@@ -1,29 +1,45 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-  margin: 8rem 20rem ;
+  margin: 8rem 1rem;
+}
+
+main .calendar__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+main .calendar__container > div {
   background: var(--color-white);
   padding: var(--card-padding);
   width: 40rem;
-
+  height: auto;
 }
 
-h2{
+main .calendar__container > div .calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+h2 {
+  margin-bottom: 2rem;
   text-align: center;
-  margin: 1rem 0 2rem;
 }
+
 
 /* ========== FORM ========== */
 
-form {
-    margin: 0 auto;
-  }
-
-.event__form {
-  display: flex;
-  flex-direction: column;
+label {
+  display: block;
+  margin: 1rem 0 1rem;
+  text-align: left;
 }
-.event__form input[type="text"] {
-  width: 100%;
+
+form {
+  margin: 0 auto;
 }
 
 input, textarea  {
@@ -32,20 +48,41 @@ input, textarea  {
   background: var(--color-bg3);
   color: var(--color-black);
 }
+textarea {
+  height: 4rem;
+}
 
 
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: .1rem solid var(--color-black);
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: .8rem;
+}
+
+.table tr {
+  border-bottom: .1rem solid var(--color-black);
+}
+
+.table tr.header,
+.table tr:hover {
+  background-color: var(--color-bg5);
+}
 /* ========== BUTTON ========== */
 
+
 .btn-primary {
-  width: 40%;
-  align-self: center;
-  cursor: pointer;
+  margin: 1rem auto; 
+  display: block; 
+  text-align: center; 
 }
 
 
-.btn-view {
-  width: 100%;   
-  background-color: var(--color-success);
-  margin: 0;
 
-}
+
+

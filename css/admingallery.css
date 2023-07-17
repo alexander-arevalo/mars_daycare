@@ -1,17 +1,37 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-    margin: 8rem 20rem ;
+    margin: 8rem 1rem;
+}
+
+main .gallery__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+main .gallery__container > div {
     background: var(--color-white);
     padding: var(--card-padding);
     width: 40rem;
+    height: auto;
 }
 
-h2{
-    margin: 1rem 0 2rem;
+main .gallery__container > div .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+h2 {
+    margin-bottom: 2rem;
     text-align: center;
 }
 
+
 /* ========== FORM ========== */
+
 
 label {
     display: block;
@@ -32,7 +52,7 @@ input, .galleryUpload {
     color: var(--color-black);
 }
 
-.gallery{
+.galleryPicture{
     display: none;
 }
 
@@ -43,16 +63,36 @@ input, .galleryUpload {
     font-size: 0,9rem;
 }
 
-/* ========== BUTTON ========== */
 
-.btn-primary {
-    margin: 2rem 13rem;
-    width: 10rem;
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: .1rem solid var(--color-black);
 }
 
-.btn-view {
-    width: 100%;   
-    background-color: var(--color-success);
-    margin: 0;
+.table th,
+.table td {
+    text-align: center;
+    padding: .8rem;
+}
 
+.table tr {
+    border-bottom: .1rem solid var(--color-black);
+}
+
+.table tr.header,
+.table tr:hover {
+    background-color: var(--color-bg5);
+}
+
+
+
+/* ========== BUTTON ========== */
+
+
+.btn-primary {
+    margin: 1rem auto; 
+    display: block; 
+    text-align: center; 
 }

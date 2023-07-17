@@ -59,16 +59,15 @@
                     <h4>Email:</h4>
                 </label>
                 <input type="email" id="email" name="Email Address" placeholder="sample@gmail.com">
+                <label for="proofOfResidency">
+                    <h4>Proof Of Residency</h4>
+                </label>
+                <input class="fileupload" id="proofOfResidency" type="file" accept="image/" required />
+                <label for="proofOfResidency" class="customFileUpload">Select Image</label>
                 <label for="Password">
                     <h4>Password:</h4>
                 </label>
                 <input type="password" id="pass" minlength="8" maxlength="16" required>
-                <label for="proof">
-                    <h4>Proof Of Residency</h4>
-                </label>
-                <input type="file" id="proofOfResidency" name="proof" class="fileupload" placeholder="Upload File"
-                    accept="image/*">
-                <label for="certificate" class="customFileUpload">Select Image</label>
                 <p class="lenght"> Password must be Minimum 8 Character</p>
                 <!-- <input type="checkbox" onclick="passwordHandler()">Show Password -->
                 <button type="submit" class="btn btn-primary"> Register </button>

@@ -1,8 +1,3 @@
-const view = document.getElementById("view");
-view.addEventListener("click", () => {
-  window.location.replace("eventList.html");
-});
-
 async function handleSubmit(event) {
   event.preventDefault();
   var title = document.getElementById("title").value;

@@ -1,4 +1,4 @@
-function tableHandler1() {
+function tableHandler() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("request__table");
   filter = input.value.toUpperCase();
@@ -19,7 +19,7 @@ function tableHandler1() {
 async function getRequestId() {
   let token = localStorage.getItem("token");
   const res = await axios
-    .get("http://localhost:3001/api/reqId", {
+    .get("http://localhost:3001/api/requestId", {
       headers: { Authorization: "Bearer " + token },
     })
 
@@ -33,17 +33,17 @@ async function getRequestId() {
       requestTableBody.innerHTML = "";
 
       // Loop through the data and create table rows with table data cells to display it
-      data.forEach((reqId) => {
+      data.forEach((requestId) => {
         const row = document.createElement("tr");
         const firstNameCell = document.createElement("td");
-        firstNameCell.textContent = reqId.firstName;
+        firstNameCell.textContent = requestId.firstName;
         const lastNameCell = document.createElement("td");
-        lastNameCell.textContent = reqId.lastName;
+        lastNameCell.textContent = requestId.lastName;
         const status = document.createElement("td");
         status.textContent =
-          reqId.isApproved === true
+          requestId.isApproved === true
             ? "Approved"
-            : reqId.isApproved === false
+            : requestId.isApproved === false
             ? "Declined"
             : "Pending";
         const actionCell = document.createElement("td");
@@ -52,7 +52,7 @@ async function getRequestId() {
         button.classList.add("btn");
         button.addEventListener("click", () => {
           // Redirect the user to another HTML page
-          window.location.href = `idAction.html?id=${reqId._id}`;
+          window.location.href = `idAction.html?id=${requestId._id}`;
         });
         actionCell.appendChild(button);
         row.appendChild(firstNameCell);

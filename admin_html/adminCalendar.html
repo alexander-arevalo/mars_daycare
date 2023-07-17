@@ -72,11 +72,6 @@
                     <h5>Announcements</h5>
                 </a>
 
-                <a href="pendingReserv.html">
-                    <span class="material-symbols-sharp">pending_actions</span>
-                    <h5>Pending Reservation</h5>
-                </a>
-
                 <a href="adminGallery.html">
                     <span class="material-symbols-sharp">gallery_thumbnail</span>
                     <h5>Mars Daycare Gallery Activity</h5>
@@ -85,6 +80,12 @@
                 <a href="adminCalendar.html" class="active">
                     <span class="material-symbols-sharp">calendar_add_on</span>
                     <h5>Event Calendar</h5>
+                </a>
+
+
+                <a href="pendingReserv.html">
+                    <span class="material-symbols-sharp">pending_actions</span>
+                    <h5>Pending Reservation</h5>
                 </a>
 
                 <a href="requestedId.html">
@@ -113,27 +114,53 @@
         <!--=========== END OF ASIDE ===========-->
 
         <main>
-            <div class="container sidenav__calendar">
-                <h2> ADD EVENTS</h2>
-                <button class="btn btn-view" id="view"> View Event List </button>
-                <form id="eventForm" class="event__form">
-                    <label for="title">Event Title:</label>
-                    <input type="text" id="title" name="title" required> <br>
+            <div class="calendar__container">
 
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" required> <br>
+                <div class="calendar">
+                    <h2> ADD EVENTS</h2>
+                    <form id="eventForm" class="event__form">
+                        <label for="title">Event Title:</label>
+                        <input type="text" id="title" name="title" required>
 
-                    <label for="time">Time:</label>
-                    <input type="time" id="time" name="time" required> <br>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
 
-                    <label for="description">Description:</label><br>
-                    <textarea id="description" name="description" rows="3" cols="50" required></textarea> <br>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
 
-                    <button type="submit" class="btn btn-primary"> Add Event </button>
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="3" cols="50" required></textarea>
 
-                </form>
+                        <button type="submit" class="btn btn-primary"> Add Event </button>
+
+                    </form>
+                </div>
+
+
+                <div class="calendar">
+
+                    <h2>Event List</h2>
+                    <table id="calendarTable" class="table">
+                        <tr class="header">
+                            <th style="width:60%;">Events</th>
+                            <th style="width:40%;">Action</th>
+                        </tr>
+
+                        <tbody id="calendarTable">
+                            <tr>
+                                <td>Sample Title 1</td>
+                                <td id="details"><button class="btn btn-primary">Details</button></td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
 
             </div>
+
         </main>
     </div>
     <!--=========== END OF MAIN ===========-->
