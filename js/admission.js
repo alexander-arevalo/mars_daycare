@@ -33,19 +33,19 @@ prevButton.addEventListener("click", () => {
 // Define your function
 async function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission behavior
-  var firstName = document.getElementById("firstName").value;
-  var lastName = document.getElementById("lasName").value;
-  var phoneNumber1 = document.getElementById("contact").value;
-  var phoneNumber = phoneNumber1.toString();
-  var email = document.getElementById("email").value;
-  var birthday = document.getElementById("birthday").value;
-  var relationship = document.getElementById("relationship").value;
-  var birthDate = birthday.toString();
-  var yearLevel = document.getElementById("yearLevel").value;
-  var birthCert = document.getElementById("birthCert").files[0];
-  var validId = document.getElementById("validId").files[0];
-  var certificate = document.getElementById("certificate").files[0];
-  var formData = formData();
+  let firstName = document.getElementById("firstName").value;
+  let lastName = document.getElementById("lasName").value;
+  let phoneNumber1 = document.getElementById("contact").value;
+  let phoneNumber = phoneNumber1.toString();
+  let email = document.getElementById("email").value;
+  let birthday = document.getElementById("birthday").value;
+  let relationship = document.getElementById("relationship").value;
+  let birthDate = birthday.toString();
+  let yearLevel = document.getElementById("yearLevel").value;
+  let birthCert = document.getElementById("birthCert").files[0];
+  let validId = document.getElementById("validId").files[0];
+  let certificate = document.getElementById("certificate").files[0];
+  let formData = formData();
 
   // Get the values from the form inputs
   console.log("TESTINGG");

@@ -1,112 +1,78 @@
-var calendarContainer = document.getElementById("calendarBody");
-var monthYear = document.getElementById("monthYear");
-var eventDate = document.getElementById("eventDate");
-var eventTime = document.getElementById("eventTime");
-var eventLocation = document.getElementById("eventLocation");
-var eventDetails = document.getElementById("eventDetails");
+let nav = 0;
 
-var currentDate = new Date();
-var currentMonth = currentDate.getMonth();
-var currentYear = currentDate.getFullYear();
+const calendar = document.getElementById("calendar");
+const weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-monthYear.innerHTML = getMonthAndYear(currentMonth, currentYear);
+function load() {
+  const dt = new Date();
 
-generateCalendar(currentMonth, currentYear);
+  if (nav !== 0) {
+    dt.setMonth(new Date().getMonth() + nav);
+  }
 
-function generateCalendar(month, year) {
-  calendarContainer.innerHTML = "";
+  const day = dt.getDate();
+  const month = dt.getMonth();
+  const year = dt.getFullYear();
 
-  var firstDay = new Date(year, month, 1);
-  var lastDay = new Date(year, month + 1, 0).getDate();
-  var startDay = firstDay.getDay();
-  var date = 1;
+  const firstDayOfMonth = new Date(year, month, 1);
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-  for (var row = 0; row < 6; row++) {
-    var calendarRow = document.createElement("tr");
+  const paddingDays = firstDayOfMonth.getDay();
 
-    for (var col = 0; col < 7; col++) {
-      if (row === 0 && col < startDay) {
-        var emptyCell = document.createElement("td");
-        calendarRow.appendChild(emptyCell);
-      } else if (date > lastDay) {
-        break;
-      } else {
-        var calendarCell = document.createElement("td");
-        calendarCell.textContent = date;
+  document.getElementById("monthDisplay").innerText = `${dt.toLocaleDateString(
+    "en-us",
+    { month: "long" }
+  )} ${year}`;
 
-        if (date === currentDate.getDate() && month === currentMonth && year === currentYear) {
-          calendarCell.classList.add("current-day");
-        }
+  calendar.innerHTML = "";
 
-        if (hasEvent(date, month, year)) {
-          calendarCell.classList.add("event-day");
-        }
+  for (let i = 1; i <= paddingDays; i++) {
+    const daySquare = createDaySquare("", "padding");
+    calendar.appendChild(daySquare);
+  }
 
-        // Validate year and month
-        if (year !== 2023 || (year === 2023 && month < currentMonth)) {
-          calendarCell.classList.add("disabled");
-          calendarCell.onclick = null; // Disable click event
-        } else {
-          calendarCell.onclick = function() {
-            showEventDetails(date);
-          };
-        }
+  for (let i = 1; i <= daysInMonth; i++) {
+    const daySquare = createDaySquare(i);
 
-        calendarRow.appendChild(calendarCell);
-        date++;
-      }
+    if (i === day && nav === 0) {
+      daySquare.setAttribute("id", "currentDay");
     }
 
-    calendarContainer.appendChild(calendarRow);
-
-    if (date > lastDay) {
-      break;
-    }
+    calendar.appendChild(daySquare);
   }
 }
 
-function hasEvent(date, month, year) {
-  // Add your logic here to determine if a specific date has an event
-  // For demonstration purposes, let's assume there is an event on the 10th of the current month
-  return date === 10 && month === currentMonth && year === currentYear;
-}
-
-function prevMonth() {
-  if (currentMonth === 0) {
-    currentYear--;
-    currentMonth = 11;
-  } else {
-    currentMonth--;
+function createDaySquare(day, additionalClass) {
+  const daySquare = document.createElement("div");
+  daySquare.classList.add("day");
+  if (additionalClass) {
+    daySquare.classList.add(additionalClass);
   }
-  updateCalendar();
-}
-
-function nextMonth() {
-  if (currentMonth === 11) {
-    currentYear++;
-    currentMonth = 0;
-  } else {
-    currentMonth++;
+  if (day !== "") {
+    daySquare.innerText = day;
   }
-  updateCalendar();
+  return daySquare;
 }
 
-function updateCalendar() {
-  monthYear.innerHTML = getMonthAndYear(currentMonth, currentYear);
-  generateCalendar(currentMonth, currentYear);
+function initButtons() {
+  document.getElementById("nextButton").addEventListener("click", () => {
+    nav++;
+    load();
+  });
+
+  document.getElementById("backButton").addEventListener("click", () => {
+    nav--;
+    load();
+  });
 }
 
-function showEventDetails(date) {
-  eventDate.textContent = currentMonth + 1 + "/" + date + "/" + currentYear;
-  eventTime.textContent = "10:00 AM";
-  eventLocation.textContent = "Event Hall";
-  eventDetails.style.display = "block";
-}
-
-function getMonthAndYear(month, year) {
-  var monthNames = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  return monthNames[month] + " " + year;
-}
+initButtons();
+load();

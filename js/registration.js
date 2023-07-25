@@ -16,16 +16,16 @@ document
     event.preventDefault(); // Prevent the default form submission
 
     // Get the form inputs' values
-    var firstName = document.getElementById("firstname").value;
-    var lastName = document.getElementById("lastname").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("pass").value;
-    var proofOfResidency = document.getElementById("proofOfResidency").value;
+    let firstName = document.getElementById("firstname").value;
+    let lastName = document.getElementById("lastname").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("pass").value;
+    let proofOfResidency = document.getElementById("proofOfResidency").value;
 
     // Perform any additional validation or data manipulation here
 
     // Create an object with the user's data
-    var user = {
+    let user = {
       firstName: firstName,
       lastName: lastName,
       email: email,

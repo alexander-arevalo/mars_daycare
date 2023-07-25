@@ -1,10 +1,10 @@
 // SUBMISSION FUNCTION
-async function handleSubmit(event) {
+async function addAnnouncement(event) {
   event.preventDefault();
   let token = localStorage.getItem("token");
-  var description = document.getElementById("description").value;
+  let description = document.getElementById("description").value;
 
-  console.log("TEST");
+  console.log(description);
   await axios
     .post(
       "http://localhost:3001/api/announcement",
@@ -12,7 +12,7 @@ async function handleSubmit(event) {
       { headers: { Authorization: "Bearer " + token } }
     )
     .then(function (res) {
-      console.log("Announcement Added");
+      alert("Added Announcement");
     })
     .catch(function (err) {
       console.log(err);
@@ -23,13 +23,13 @@ async function handleSubmit(event) {
 
 document
   .getElementById("announcementForm")
-  .addEventListener("submit", handleSubmit);
+  .addEventListener("submit", addAnnouncement);
 
 //LIST FUNCTION
 
 function tableHandler() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("announcement__table");
+  let input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("list__able");
   filter = input.value.toUpperCase();
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
@@ -46,7 +46,7 @@ function tableHandler() {
   }
 }
 
-async function announcementHandler() {
+async function getCalendar() {
   let token = localStorage.getItem("token");
   const res = await axios.get("http://localhost:3001/api/announcement", {
     headers: { Authorization: "Bearer " + token },
@@ -69,7 +69,6 @@ async function announcementHandler() {
     // Create table data cells for announcement details
     const announcementCell = document.createElement("td");
     announcementCell.textContent = announcement.title;
-
     const actionCell = document.createElement("td");
     const button = document.createElement("button");
     button.textContent = "Details";
@@ -86,4 +85,4 @@ async function announcementHandler() {
   });
 }
 
-announcementHandler();
+getCalendar();

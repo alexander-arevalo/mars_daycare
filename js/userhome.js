@@ -1,1 +1,1 @@
-var announcement = document.getElementById("announcement");
+let announcement = document.getElementById("announcement");

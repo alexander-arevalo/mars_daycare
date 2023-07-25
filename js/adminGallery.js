@@ -1,4 +1,4 @@
-const fileUploadInputs = document.querySelectorAll(".gallery");
+const fileUploadInputs = document.querySelectorAll(".galleryPicture");
 
 fileUploadInputs.forEach(function (input) {
   input.addEventListener("change", function (event) {
@@ -9,27 +9,35 @@ fileUploadInputs.forEach(function (input) {
 });
 
 //Define your function
-async function handleSubmit(event) {
+async function addGallery(event) {
   event.preventDefault(); // Prevent the default form submission behavior
-  var title = document.getElementById("title").value;
-  var description = document.getElementById("description").value;
-  var galleryPicture = document.getElementById("galleryPicture").files[0];
-  var formData = formData();
+  let token = localStorage.getItem("token");
+  let title = document.getElementById("title").value;
+  let description = document.getElementById("description").value;
+  let galleryPicture = document.getElementById("galleryPicture").files[0];
+  const formData = new FormData();
+
+  if (!galleryPicture) return;
+
+  formData.append("galleryPicture", galleryPicture);
 
   // Get the values from the form inputs
   console.log("TESTINGG");
   console.log(`for testing ${title} ${description} ${galleryPicture}`);
   await axios
-    .post("http://localhost:3001/api/gallery", {
-      title,
-      description,
-      galleryPicture,
-    })
+    .post(
+      "http://localhost:3001/api/gallery",
+      formData, // Use formData directly as the data
+      {
+        headers: {
+          Authorization: "Bearer " + token,
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    )
     .then(function (res) {
-      console.log("enrolled successfully");
       console.log(res.data);
-      alert("Successfully Reservered");
-      window.location.replace("status.html");
+      alert("Add Gallery");
     })
     .catch(function (err) {
       console.log(err);
@@ -38,12 +46,12 @@ async function handleSubmit(event) {
   document.getElementById("galleryForm").reset();
 }
 
-document.getElementById("galleryForm").addEventListener("submit", handleSubmit);
+document.getElementById("galleryForm").addEventListener("submit", addGallery);
 
 //TABLE HANDLER
 function tableHandler() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("gallery__table");
+  let input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("list__table");
   filter = input.value.toUpperCase();
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
@@ -60,7 +68,7 @@ function tableHandler() {
   }
 }
 
-async function galleryHandler() {
+async function getGallery() {
   let token = localStorage.getItem("token");
   const res = await axios.get("http://localhost:3001/api/gallery", {
     headers: { Authorization: "Bearer " + token },
@@ -81,7 +89,6 @@ async function galleryHandler() {
     // Create table data cells for gallery details
     const galleryCell = document.createElement("td");
     galleryCell.textContent = gallery.title;
-
     const actionCell = document.createElement("td");
     const button = document.createElement("button");
     button.textContent = "Details";
@@ -91,11 +98,10 @@ async function galleryHandler() {
       window.location.href = `galleryAction.html?id=${gallery._id}`;
     });
     actionCell.appendChild(button);
-
     row.appendChild(galleryCell);
     row.appendChild(actionCell);
     galleryTableBody.appendChild(row);
   });
 }
 
-galleryHandler();
+getGallery();

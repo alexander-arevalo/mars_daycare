@@ -1,77 +1,105 @@
 /* ========== BODY ========== */
 
+
 .calendar__container {
   background: var(--color-white);
   padding: 4rem;
   gap: 2rem;
   height: auto;
-  width: 60rem;
+  width: 70rem;
   margin: 7rem auto;
+  display: flex;
   border-radius: 1rem;
+  justify-content: center;  
+
 }
 
 /* ========== BUTTON ========== */
 
-.prev__btn,
-.nxt__btn {
-  border: none;
-  width: 6rem;
-  position: absolute;
-  background:none;
+button {
+  width: 75px;
   cursor: pointer;
-  z-index: 10;
-}
-.prev__btn {
-  left: 25rem;
-}
-
-.nxt__btn {
-  right: 25rem;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
 }
 
-/* ========== CONTENT ========== */
-
-.calendar__header {
+#header {
+  padding: 10px;
+  color: var(--color-danger-variant);
+  font-size: 26px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  justify-content: space-between;
 }
 
-.calendar__table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.current-day {
-  background-color: yellow;
-  font-weight: bold;
-}
-
-.event-day {
-  background-color: lightblue;
-  font-weight: bold;
-}
-
-.monthYear {
-  margin-left: 20rem;
-}
-
-th,
-td {
-  padding: 1rem;
-  text-align: center;
-}
-
-td {
-  border: 0.2rem solid var(--color-black);
-  cursor: pointer;
-}
-
-.event__details {
-  display: none;
-  margin: 2rem;
-  padding: 1rem;
+#header button {
   background-color: var(--color-bg3);
-  border-radius: .2rem;
 }
+
+#container {
+  width: 770px;
+}
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: #247BA0;
+}
+
+#weekdays div {
+  width: 6.5rem;
+  padding: 1rem;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day {
+  width: 100%;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 3px #CBD4C2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.day:hover {
+  background-color: var(--color-white);
+}
+
+#currentDay {
+  background-color: var(--color-bg3); /* Add a background color to highlight the current day */
+  color: var(--color-white);
+}
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: var(--color-bg3);
+  color: var(--color-white);
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
+}
+
+/* The rest of the CSS remains unchanged */

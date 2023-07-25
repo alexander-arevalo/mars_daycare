@@ -1,6 +1,6 @@
 async function login() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
   let isAdmin;
   let successful;
 
