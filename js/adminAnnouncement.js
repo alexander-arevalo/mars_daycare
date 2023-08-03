@@ -28,16 +28,21 @@ document
 //LIST FUNCTION
 
 function tableHandler() {
-  let input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("list__able");
+  var input, filter, table, tr, td1, td2, i, txtValue1, txtValue2;
+  input = document.getElementById("announcement__table");
   filter = input.value.toUpperCase();
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    td1 = tr[i].getElementsByTagName("td")[0];
+    td2 = tr[i].getElementsByTagName("td")[1];
+    if (td1 && td2) {
+      txtValue1 = td1.textContent || td1.innerText;
+      txtValue2 = td2.textContent || td2.innerText;
+      if (
+        txtValue1.toUpperCase().indexOf(filter) > -1 ||
+        txtValue2.toUpperCase().indexOf(filter) > -1
+      ) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
@@ -46,7 +51,7 @@ function tableHandler() {
   }
 }
 
-async function getCalendar() {
+async function getAnnouncement() {
   let token = localStorage.getItem("token");
   const res = await axios.get("http://localhost:3001/api/announcement", {
     headers: { Authorization: "Bearer " + token },
@@ -62,7 +67,7 @@ async function getCalendar() {
   // Clear the existing content
   announcementTableBody.innerHTML = "";
 
-  // Loop through the data and create table rows with table data cells to display it
+  // Check if data is an array before using forEach
   data.forEach((announcement) => {
     const row = document.createElement("tr");
 
@@ -85,4 +90,4 @@ async function getCalendar() {
   });
 }
 
-getCalendar();
+getAnnouncement();

@@ -34,7 +34,8 @@ async function handleSubmit(event) {
 
 document.getElementById("eventForm").addEventListener("submit", handleSubmit);
 
-//TABLE HANDLER
+//LIST FUNCTION
+
 function tableHandler() {
   var input, filter, table, tr, td1, td2, i, txtValue1, txtValue2;
   input = document.getElementById("calendar__table");
