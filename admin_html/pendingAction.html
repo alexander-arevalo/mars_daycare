@@ -76,22 +76,22 @@
 
       <tr>
         <td>Birth Certificate of Child:</td>
-        <td id="birthCert"></td>
+        <td id="birthCert"><button class="btn " onclick="viewImageBC()">View </button> &nbsp; <button class="btn " onclick="downloadBC()">Download</button></td>
       </tr>
 
       <tr>
         <td>Valid ID of Parents/Guardian:</td>
-        <td id="validID"></td>
+        <td id="validID"><button class="btn " onclick="viewImageVI()">View </button> &nbsp; <button class="btn " onclick="downloadVI()">Download</button></td>
       </tr>
 
       <tr>
         <td>Child's Health Record:</td>
-        <td id="certificate"></td>
+        <td id="certificate"><button class="btn " onclick="viewImageHR()">View </button> &nbsp; <button class="btn " onclick="downloadHR()">Download</button></td>
       </tr>
 
     </table>
 
-    <button class="btn btn-left" id="decline">Decline</button>
+    <button class="btn btn-left" id="decline" onclick="declinedById()">Decline</button>
     <button class="btn btn-middle" id="back">Go Back</button>
     <button class="btn btn-right" id="accept" onclick="acceptById()">Accept</button>
 

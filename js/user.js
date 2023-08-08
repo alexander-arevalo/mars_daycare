@@ -5,6 +5,10 @@ if (!token) {
 
 function signOut() {
   localStorage.removeItem("token");
+  localStorage.removeItem("email");
+  localStorage.removeItem("firstName");
+  localStorage.removeItem("lastName");
+  localStorage.removeItem("id");
   console.log("Token removed");
 
   window.location.replace("/index.html");

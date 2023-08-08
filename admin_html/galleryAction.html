@@ -35,11 +35,44 @@
     <div class="container form__container">
         <div class="gallery">
             <h2>Gallery </h2>
+            <table id="accountTable">
+                <tr>
+                  <th style="width:60%;"></th>
+                  <th style="width:40%;">Gallery Details</th>
+                </tr>
+          
+                <tr > 
+                  <td>Title:</td>
+                  <td id="title"></td>
+                </tr>
+              
+             
+                <tr>
+                  <td>Description:</td>
+                  <td id="description"></td>
+                </tr>
+              </br>
+                <tr >
+                <td>Image</td>
+                <td>  
+                  <button onclick="viewImage()" class="btn btn-mid" id="gallPic" style="height: auto;">View</button></td>
+              
+            
+                
+
+                </tr>
+          
+                <tr>
+                  <td></td>
+                  <td id="description"></td>
+                </tr>
+          
+              </table>
 
         </div>
 
-        <button class="btn btn-left" id="decline" onclick="editById()">Edit</button>
-        <button class="btn btn-middle" id="back">Go Back</button>
+       
+        <button class="btn btn-left" id="back">Go Back</button>
         <button class="btn btn-right" id="accept" onclick="deleteById()">Delete</button>
     </div>
 

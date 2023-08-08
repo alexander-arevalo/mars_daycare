@@ -7,28 +7,35 @@ async function login() {
   await axios
     .post("http://localhost:3001/api/auth/login", { email, password })
     .then((res) => {
-      try {
-        console.log(res);
-        isAdmin = res.data.isAdmin;
-        successful = res.data.successful;
-        const token = res.data.token;
-        localStorage.setItem("token", token);
+      console.log(res);
+      isAdmin = res.data.isAdmin;
+      successful = res.data.successful;
+      const token = res.data.token;
+      const firstName = res.data.user.firstName;
+      const lastName = res.data.user.lastName;
+      const email = res.data.user.email;
+      const id = res.data.user.id;
+      localStorage.setItem("token", token);
+      localStorage.setItem("firstName", firstName);
+      localStorage.setItem("lastName", lastName);
+      localStorage.setItem("id", id);
+      localStorage.setItem("email", email);
 
-        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-        if (successful) {
-          if (isAdmin) {
-            window.location.replace("/admin_html/admin.html");
-          } else {
-            window.location.replace("user_html/userhome.html");
-          }
+      if (successful) {
+        if (isAdmin) {
+          window.location.replace("/admin_html/admin.html");
+        } else if (!isAdmin) {
+          window.location.replace("user_html/userhome.html");
         } else {
-          alert("Invalid username or password.");
+          alert("Something went wrong");
         }
-      } catch (error) {
-        console.log(error);
-        alert("Invalid username or password.");
       }
+    })
+    .catch((err) => {
+      alert("Incorrect Email or Password");
+      console.log(err);
     });
 }
 

@@ -27,6 +27,7 @@ async function handleSubmit(event) {
     })
     .catch(function (err) {
       console.log(err);
+      alert("Something went wrong")
     });
 
   document.getElementById("eventForm").reset();

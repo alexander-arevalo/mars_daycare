@@ -6,6 +6,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 :root {
@@ -121,9 +122,9 @@ img {
 }
 
 .btn-primary {
-    background: var(--color-start);
+    background:#000;
     color: var(--color-white);
-    border-radius: 1rem;
+    border-radius: 20%;
 }
 
 
@@ -176,8 +177,9 @@ nav {
     width: auto;
     cursor: pointer;
     margin-right: -10rem;
-    background-color: var(--color-success);
+    background-color: black;
     border-radius: 2rem;
+    color: #fff;
   }
 
 

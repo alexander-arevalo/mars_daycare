@@ -62,8 +62,8 @@
                 <label for="proofOfResidency">
                     <h4>Proof Of Residency</h4>
                 </label>
-                <input class="fileupload" id="proofOfResidency" type="file" accept="image/" required />
-                <label for="proofOfResidency" class="customFileUpload">Select Image</label>
+                <input class="fileupload" id="proofOfResidency" type="file" onchange="handleFileUpload()" accept="image/" required />
+                <label for="proofOfResidency" id="proofLabel"class="customFileUpload">Select Image</label>
                 <label for="Password">
                     <h4>Password:</h4>
                 </label>

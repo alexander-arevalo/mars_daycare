@@ -22,7 +22,9 @@ h2{
 /* ========== BUTTON ========== */
 
 .btn {
-  background-color: var(--color-start);
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 .btn-right{

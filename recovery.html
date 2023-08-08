@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="./css/passRecovery.css" />
 </head>
 
 <body>
@@ -44,37 +44,23 @@
   </nav>
   <!--=========== END OF NAVBAR ===========-->
 
-  <div class="container form__container">
-    <div class="admin">
-      <h2 class="title">Login</h2>
-      <form id="loginForm">
-        
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        
+  <div class="container pass__container">
+    <h2 class="password">Password Recovery</h2>
+    <form id="recoveryForm" class="recoveryForm">
 
-        <!-- <input type="checkbox" onclick="passwordHandler()">Show Password -->
+      <label for="password1"><a class="email">New Password:</a></label>
+      <input type="password" id="password" name="password1" placeholder="Eneter your New password" required>
+      <label for="password1"><a class="email">Confirm Password:</a></label>
+      
+      <input type="password" id="password1" name="password1" placeholder="Confirm your password" required>
+      <div id="passwordMismatch" style="color: red; display: none; text-align: center;">Passwords do not match!</div>
 
-        <button type="button" class="btn btn-primary" id="submit" onclick="login()">
-          Log in
-        </button>
-        <ul>
-          <li>
-            <a href="passRecovery.html">
-              <h5>Forgot Password?</h5>
-            </a>
-          </li>
-          <li>
-            <a href="registration.html">
-              <h5>Register</h5>
-            </a>
-          </li>
-        </ul>
-      </form>
-    </div>
+      <button type="submit" id="recover"class="btn btn-primary">Recover Password</button>
+      
+
+    </form>
+
+    <div id="message" class="message"></div>
   </div>
 
   <!--=========== END OF LOG IN FORM ===========-->
@@ -357,9 +343,9 @@
   </footer>
 
   <!--=========== END OF FOOTER ===========-->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="./js/navbar.js"></script>
-  <script src="./js/login.js"></script>
+  <script  src="./js/navbar.js"></script>
+  <script type="module" src="./js/changepass.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>

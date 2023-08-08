@@ -1,11 +1,16 @@
 //  to freeze na navbar
 
 window.addEventListener("scroll", () => {
-    document
-      .querySelector("nav")
-      .classList.toggle("window-scroll", window.scrollY > 0);
-  });
-  
+  document
+    .querySelector("nav")
+    .classList.toggle("window-scroll", window.scrollY > 0);
+});
+
+console.log("last name " + localStorage.getItem("lastName"));
+document.getElementById("firstName").textContent =
+  localStorage.getItem("firstName");
+document.getElementById("lastName").textContent =
+  localStorage.getItem("lastName");
 
 //  show/hide the answer for faqs
 
@@ -38,6 +43,3 @@ function terms() {
   var termspopup = document.getElementById("terms");
   termspopup.classList.toggle("show");
 }
-
-
-

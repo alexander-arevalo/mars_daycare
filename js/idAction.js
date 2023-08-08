@@ -9,6 +9,8 @@ back.addEventListener("click", () => {
 
 let token = localStorage.getItem("token");
 console.log("this is token");
+var imageURL;
+var userImage;
 
 async function getReqId() {
   axios
@@ -22,15 +24,38 @@ async function getReqId() {
         res.data.relationship;
       document.getElementById("contact").textContent = res.data.phoneNumber;
       document.getElementById("address").textContent = res.data.address;
-      document.getElementById("picture").textContent = res.data.studentPicture;
+
+      userImage = res.data.lastName;
+      imageURL = res.data.studentPicture;
+      // document.getElementById("picture").textContent = res.data.studentPicture;
       console.log(res.data);
     });
 }
-
+function viewImage() {
+  window.location.replace(imageURL);
+  console.log(imageURL);
+}
+function downloadImage() {
+  try {
+    console.log("Downloading");
+    fetch(imageURL)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `${userImage}Image.jpg`;
+        a.click();
+        window.URL.revokeObjectURL(url);
+      });
+  } catch (err) {
+    alert("Something went wrong" + err.message);
+  }
+}
 async function acceptById() {
-  axios
+  await axios
     .patch(
-      `http://localhost:3001/api/auth/approve/${userId}`,
+      `http://localhost:3001/api/requestId/approve/${userId}`,
       {},
       {
         headers: {
@@ -41,23 +66,25 @@ async function acceptById() {
     .then((res) => {
       console.log(res.data);
       alert("Accepted");
-      window.location.replace("registeredAccount.html");
+      window.location.replace("requestedId.html");
+    })
+    .catch((err) => {
+      alert("Something went wrong");
     });
 }
 
 async function declineById() {
-  axios
-    .patch(
-      `http://localhost:3001/api/auth/decline/${userId}`,
-      {},
-      {
-        headers: { Authorization: "Bearer " + token },
-      }
-    )
+  await axios
+    .patch(`http://localhost:3001/api/requestId/decline/${userId}`, {
+      headers: { Authorization: "Bearer " + token },
+    })
     .then((res) => {
       console.log(res.data);
       alert("Declined");
-      window.location.replace("registeredAccount.html");
+      window.location.replace("requestedId.html");
+    })
+    .catch((err) => {
+      alert("Something went wrong ");
     });
 }
 

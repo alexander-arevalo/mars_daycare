@@ -6,7 +6,7 @@ const back = document.getElementById("back");
 back.addEventListener("click", () => {
   window.location.replace("registeredAccount.html");
 });
-
+var urlImage;
 let token = localStorage.getItem("token");
 console.log("this is token");
 
@@ -19,12 +19,15 @@ async function getUserId() {
       document.getElementById("firstName").textContent = res.data.firstName;
       document.getElementById("lastName").textContent = res.data.lastName;
       document.getElementById("email").textContent = res.data.email;
-      document.getElementById("proofOfResidency").textContent =
-        res.data.proofOfResidency;
+
+      urlImage = res.data.proofOfResidency;
       console.log(res.data);
     });
 }
 
+function viewImage() {
+  window.open(urlImage);
+}
 async function acceptById() {
   axios
     .patch(

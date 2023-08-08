@@ -41,7 +41,7 @@
             <div class="right__navbar">
                 <div class="profile">
                     <div class="info" id="user__info">
-                        <b id="firstName">Alexander <b id="lastName">Arevalo</b></b><br>
+                        <b id="firstName">Alexander </b> &nbsp;<b id="lastName">Arevalo</b><br>
                         <small class="text-muted" id="user">Admin Account</small>
                     </div>
 
@@ -114,16 +114,18 @@
         <!--=========== END OF ASIDE ===========-->
 
         <main>
-            <form onsubmit="saveProfile(event)">
+            <form id="updateProfile">
 
                 <h2>Edit Profile</h2>
-                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="email" name="Email"placeholder="Email">
+                <input type="text" id="firstname" name="First Name"placeholder="First Name">
 
-                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="text" id="lastname" placeholder="Last Name">
 
                 <input type="password" id="password" placeholder="Password">
 
                 <input type="password" id="confirmPass" placeholder="Confirm Password">
+                <div id="passwordMismatch" style="color: red; display: none; text-align: center;">Passwords do not match!</div>
 
                 <button type="submit" class="btn btn-primary">Update</button>
 
@@ -140,11 +142,11 @@
 
     <!--=========== END OF FOOTER ===========-->
 
-
+    <script type="module" src="/js/settingsAdmin.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/admin.js"></script>
     <script src="/js/navbar.js"></script>
-    <script src="/js/settings.js"></script>
+  
 </body>
 
 </html>

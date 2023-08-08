@@ -1,12 +1,12 @@
 /* ========== CONTAINER ========== */
 
 .registration__container {
-  height: auto; 
+  height: auto;
   width: 50rem;
   background: var(--color-bg3);
   padding: 4rem;
   gap: 2rem;
-  margin: 7rem auto;    
+  margin: 7rem auto;
 }
 
 h2 {
@@ -16,7 +16,7 @@ h2 {
   margin-bottom: 5rem;
 }
 
-.login{
+.login {
   text-align: center;
   font-size: 1rem;
   color: var(--color-success);
@@ -58,12 +58,16 @@ form {
 }
 
 .customFileUpload {
-  background-color: var(--color-white);
-  display: inline-block;
-  text-align: left;
   width: 100%;
-  margin: 0rem 0 1rem;
-  padding: 0.5rem 0rem;
+  padding: 1rem;
+  background: white;
+  color: var(--color-black);
+  display: block;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #ccc;
   cursor: pointer;
 }
 

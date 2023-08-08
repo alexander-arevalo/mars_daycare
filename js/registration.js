@@ -1,14 +1,26 @@
 // DOCUMENT UPLOAD
+var proofOfResidency;
+function handleFileUpload() {
+  const fileInput = document.getElementById("proofOfResidency");
+  const file = fileInput.files[0];
 
-const fileUploadInputs = document.querySelectorAll(".fileupload");
+  if (file) {
+    const formData = new FormData();
+    formData.append("image", file);
 
-fileUploadInputs.forEach(function (input) {
-  input.addEventListener("change", function (event) {
-    const fileName = event.target.files[0].name;
-    const label = event.target.nextElementSibling;
-    label.innerText = "Image selected: " + fileName;
-  });
-});
+    axios
+      .post("http://localhost:3001/api/upload", formData)
+      .then((response) => {
+        document.getElementById("proofLabel").textContent = response.data.url;
+        proofOfResidency = response.data.url;
+        console.log("Upload success:", response.data);
+      })
+      .catch((error) => {
+        // Handle the error if the upload fails.
+        console.error("Upload failed:", error);
+      });
+  }
+}
 
 document
   .getElementById("register")
@@ -20,18 +32,12 @@ document
     let lastName = document.getElementById("lastname").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("pass").value;
-    let proofOfResidency = document.getElementById("proofOfResidency").value;
+   
 
     // Perform any additional validation or data manipulation here
 
     // Create an object with the user's data
-    let user = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-      proofOfResidency: proofOfResidency,
-    };
+  
     await axios
       .post("http://localhost:3001/api/auth/signup", {
         firstName,

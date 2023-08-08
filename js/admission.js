@@ -29,7 +29,9 @@ prevButton.addEventListener("click", () => {
   studentInfo.style.display = "block";
   uploadForm.style.display = "none";
 });
-
+var birthCert;
+var validId;
+var certificate;
 // Define your function
 async function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission behavior
@@ -42,10 +44,6 @@ async function handleSubmit(event) {
   let relationship = document.getElementById("relationship").value;
   let birthDate = birthday.toString();
   let yearLevel = document.getElementById("yearLevel").value;
-  let birthCert = document.getElementById("birthCert").files[0];
-  let validId = document.getElementById("validId").files[0];
-  let certificate = document.getElementById("certificate").files[0];
-  let formData = formData();
 
   // Get the values from the form inputs
   console.log("TESTINGG");
@@ -70,12 +68,11 @@ async function handleSubmit(event) {
       console.log(res.data);
       alert("Successfully Reservered");
       window.location.replace("status.html");
+      document.getElementById("studentForm").reset();
     })
     .catch(function (err) {
       console.log(err);
     });
-
-  document.getElementById("studentForm").reset();
 }
 
 document.getElementById("studentForm").addEventListener("submit", handleSubmit);

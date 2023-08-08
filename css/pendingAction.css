@@ -27,10 +27,11 @@ h2{
   }
 
 /* ========== BUTTON ========== */
-
-  .btn {
-    background-color: var(--color-start);
-  }
+.btn {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
   .btn-right{
     margin-left: 10rem;
     margin-top: 2rem;

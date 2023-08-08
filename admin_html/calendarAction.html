@@ -32,17 +32,43 @@
     <!--=========== END OF NAVBAR ===========-->
 
 
-    <div class="container form__container">
-        <div class="calendar">
-            <h2>Calendar</h2>
-            </P>
-        </div>
+   
+  <div class="container form__container">
+    <h2>Event Information</h2>
+    <table id="accountTable">
+      <tr>
+        <th style="width:60%;"></th>
+        <th style="width:40%;">Event Details</th>
+      </tr>
 
-        <button class="btn btn-left" id="decline" onclick="editById()">Edit</button>
-        <button class="btn btn-middle" id="back">Go Back</button>
-        <button class="btn btn-right" id="accept" onclick="deleteById()">Delete</button>
-    </div>
+      <tr > 
+        <td>Event Title:</td>
+        <td id="title"></td>
+      </tr>
+    
+   
+      <tr>
+        <td>Date:</td>
+        <td id="date"></td>
+      </tr>
+    </br>
+      <tr>
+        <td>Time:</td>
+        <td id="time"></td>
+      </tr>
 
+      <tr>
+        <td>Description:</td>
+        <td id="description"></td>
+      </tr>
+
+    </table>
+
+   
+    <button  class="btn btn-left" style="background-color: black; color: white; cursor: pointer;" id="back">Go Back</button>
+    <button style="background-color: black; color: white; cursor: pointer;" class="btn btn-right" id="delete" onclick="deleteById()">Delete</button>
+
+  </div>
     <!--=========== END OF FORM ===========-->
 
 
