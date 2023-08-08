@@ -2,13 +2,14 @@
 async function addAnnouncement(event) {
   event.preventDefault();
   let token = localStorage.getItem("token");
+  let title = document.getElementById("title").value;
   let description = document.getElementById("description").value;
 
-  console.log(description);
+  console.log("getting request", res.data);
   await axios
     .post(
       "http://localhost:3001/api/announcement",
-      { description },
+      { title, description },
       { headers: { Authorization: "Bearer " + token } }
     )
     .then(function (res) {

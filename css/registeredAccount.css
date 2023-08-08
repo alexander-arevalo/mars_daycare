@@ -14,6 +14,27 @@ h2{
 * {
   box-sizing: border-box;
 }
+/* Add this to your CSS */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 8px 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}
 
 .accounts__table {
   background-image: url('../images/search.png');

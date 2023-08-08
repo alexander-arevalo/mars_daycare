@@ -82,7 +82,7 @@ button {
 }
 
 #currentDay {
-  background-color: var(--color-bg3); /* Add a background color to highlight the current day */
+  background-color: var(--color-bg3);
   color: var(--color-white);
 }
 
@@ -102,4 +102,24 @@ button {
   box-shadow: none !important;
 }
 
-/* The rest of the CSS remains unchanged */
+.popup {
+  position: absolute;
+  margin: 0 -5rem ;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  z-index: 1;
+  text-align:center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  color: var(--color-danger-variant);
+  border: none;
+  cursor: pointer;
+}
