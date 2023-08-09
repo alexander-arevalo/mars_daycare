@@ -13,11 +13,13 @@ const weekdays = [
 
 const events = [
   {
+    month: 8,
     day: 5,
     title: "Meeting",
     description: "Parents and Teacher Me",
   },
   {
+    month: 8,
     day: 10,
     title: "Project deadline",
     description: "Submit final deliverables",
@@ -55,10 +57,16 @@ function load() {
   for (let i = 1; i <= daysInMonth; i++) {
     const daySquare = createDaySquare(i);
 
-    const event = events.find((e) => e.day === i);
-    if (event) {
-      const eventDiv = createEventDiv(event);
-      daySquare.appendChild(eventDiv);
+    const matchingEvents = events.filter(
+      (e) => e.day === i && e.month === month
+    );
+
+    // Add matching events to the day square
+    if (matchingEvents.length > 0) {
+      matchingEvents.forEach((event) => {
+        const eventDiv = createEventDiv(event);
+        daySquare.appendChild(eventDiv);
+      });
     }
 
     if (i === day && nav === 0) {
@@ -130,14 +138,14 @@ function initButtons() {
 initButtons();
 load();
 
-// Attach event listener to the day elements
 calendar.addEventListener("click", (event) => {
   const clickedDay = event.target;
   if (clickedDay.classList.contains("day") && clickedDay.innerText !== "") {
     const eventDiv = clickedDay.querySelector(".event");
     if (eventDiv) {
       const event = events.find(
-        (e) => e.day === parseInt(clickedDay.innerText)
+        (e) =>
+          e.day === parseInt(clickedDay.innerText) && e.month === clickedMonth
       );
       if (event) {
         const popup = createPopup(event);
