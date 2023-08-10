@@ -86,7 +86,7 @@
 
         <a>
           <span class="material-symbols-sharp">logout</span>
-          <h5 class="signOut" id="signOut">Sign Out</h5>
+          <h5 class="signOut" id="signOut" style="cursor: pointer;">Sign Out</h5>
         </a>
 
       </div>
@@ -103,8 +103,8 @@
       <form id="studentInfo" class="contact__form">
         <label for="student name">Student's Name</label>
         <div class="form__name">
-          <input type="text" id="firstName" name="First Name" placeholder="First Name" required />
-          <input type="text" id="lastName" name="Last Name" placeholder="Last Name" required />
+          <input type="text" id="firstNameInput" name="First Name" placeholder="First Name" required />
+          <input type="text" id="lastNameInput" name="Last Name" placeholder="Last Name" required />
         </div>
 
         <label for="relationship">Relationship with the Student</label>
@@ -135,16 +135,17 @@
       <!-- Page 2: Document Upload -->
       <form id="uploadForm" class="contact__form" style="display: none;">
         <label for="birthCert">Birth Certificate of Child</label>
-        <input class="fileupload" id="birthCert" type="file" accept="image/*" required />
-        <label for="birthCert" class="customFileUpload">Select Image</label>
+        <input class="fileupload" id="birthCert" type="file" accept="image/*" onchange="uploadBirthCert()" required />
+        <label for="birthCert" class="customFileUpload" id="bc">Select Image</label>
 
         <label for="validId">Valid ID of Parents/Guardian</label>
-        <input class="fileupload" id="validId" type="file" accept="image/*" required />
-        <label for="validId" class="customFileUpload">Select Image</label>
+        <input class="fileupload" id="validId" type="file" accept="image/*" onchange="uploadValidId()" required />
+        <label for="validId" class="customFileUpload" id="vi">Select Image</label>
 
-        <label for="certificate">Child's Health Record</label>
-        <input class="fileupload" id="certificate" type="file" accept="image/*" required />
-        <label for="certificate" class="customFileUpload">Select Image</label>
+        <label for="healthRecord">Child's Health Record</label>
+        <input class="fileupload" id="healthRecord" type="file" accept="image/*" onchange="uploadHealthRecord()"
+          required />
+        <label for="healthRecord" class="customFileUpload" id="hr">Select Image</label>
 
         <button type="submit" class="btn btn-submit">Submit</button>
         <button type="button" id="prevButton" class="btn btn-prev">Previous</button>

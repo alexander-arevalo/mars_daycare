@@ -13,7 +13,7 @@ function handleFileUpload() {
         const testChange = document.getElementById("labelGallery");
         testChange.textContent = response.data.url;
         galleryPicture = response.data.url;
-        console.log("Upload success:", response.data);
+        alert("Uploaded!");
       })
       .catch((error) => {
         // Handle the error if the upload fails.

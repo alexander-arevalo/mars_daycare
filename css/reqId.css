@@ -48,9 +48,15 @@ form {
 
 input, .pictureUpload{
   width: 100%;
-  padding: 0.8rem;
-  background: var(--color-bg3);
-  color: var(--color-black);
+    padding: 1rem;
+    background: var(--color-bg3);
+    color: var(--color-black);
+    display: block;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #ccc;
 }
 
 .picture{

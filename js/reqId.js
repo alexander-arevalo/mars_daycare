@@ -1,13 +1,31 @@
-const fileUploadInputs = document.querySelectorAll(".picture");
+var studentPicture;
 
-fileUploadInputs.forEach(function (input) {
-  input.addEventListener("change", function (event) {
-    const fileName = event.target.files[0].name;
-    const label = event.target.nextElementSibling;
-    label.innerText = "Image selected: " + fileName;
-  });
-});
+function handleFileUpload() {
+  const fileInput = document.getElementById("studentPicture");
+  console.log("Getting file" + fileInput.files[0]);
+  const file = fileInput.files[0];
+  console.log("Running");
+  if (file) {
+    const formData = new FormData();
+    formData.append("image", file);
 
+    axios
+      .post("http://localhost:3001/api/upload", formData)
+      .then((response) => {
+        const testChange = document.getElementById("labelID");
+        testChange.textContent = response.data.url;
+        studentPicture = response.data.url;
+        console.log("Upload success:", response.data);
+        alert("Uploaded!");
+      })
+      .catch((error) => {
+        // Handle the error if the upload fails.
+        console.error("Upload failed:", error);
+      });
+  } else {
+    console.log("no file");
+  }
+}
 async function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission behavior
   var firstName = document.getElementById("firstname").value;
@@ -16,7 +34,6 @@ async function handleSubmit(event) {
   var phoneNumber1 = document.getElementById("contact").value;
   var phoneNumber = phoneNumber1.toString();
   var address = document.getElementById("address").value;
-  var studentPicture = document.getElementById("studentPicture").value;
 
   // Get the values from the form inputs
   console.log("TESTINGG");

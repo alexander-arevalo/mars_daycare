@@ -22,6 +22,28 @@
 //     }deleteEvent
 //   }
 // }
+function handleFileUpload() {
+  const fileInput = document.getElementById("studentPicture");
+  const file = fileInput.files[0];
+
+  if (file) {
+    const formData = new FormData();
+    formData.append("image", file);
+
+    axios
+      .post("http://localhost:3001/api/upload", formData)
+      .then((response) => {
+        const testChange = document.getElementById("labelID");
+        testChange.textContent = response.data.url;
+        galleryPicture = response.data.url;
+        console.log("Upload success:", response.data);
+      })
+      .catch((error) => {
+        // Handle the error if the upload fails.
+        console.error("Upload failed:", error);
+      });
+  }
+}
 async function getRequestId() {
   let token = localStorage.getItem("token");
   const res = await axios
