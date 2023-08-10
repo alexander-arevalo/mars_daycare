@@ -12,7 +12,7 @@ main .calendar__container {
 main .calendar__container > div {
   background: var(--color-white);
   padding: var(--card-padding);
-  width: 40rem;
+  width: 35rem;
   height: auto;
 }
 

@@ -1,32 +1,19 @@
-/* ========== MAIN CONTAINER ========== */
+/* ========== MAIN ========== */
 main {
-    margin: 8rem 1rem;
-}
-
-main .announcement__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.2rem;
-}
-
-main .announcement__container > div {
+    margin: 8rem 20rem ;
     background: var(--color-white);
     padding: var(--card-padding);
     width: 40rem;
-    height: auto;
-}
-
-main .announcement__container > div .announcement {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-
-h2 {
-    margin-bottom: 2rem;
+  
+  }
+  h2{
     text-align: center;
-}
+    margin-bottom: 2rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
 
 textarea {
     width: 100%;
