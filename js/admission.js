@@ -64,6 +64,7 @@ async function uploadValidId() {
         console.error("Upload failed:", error);
       });
   }
+  console.log(validId);
 }
 async function uploadHealthRecord() {
   const fileInput = document.getElementById("healthRecord");
@@ -100,11 +101,12 @@ async function handleSubmit(event) {
   let relationship = document.getElementById("relationship").value;
   let birthDate = birthday.toString();
   let yearLevel = document.getElementById("yearLevel").value;
+  let userId = localStorage.getItem("id");
 
   // Get the values from the form inputs
   console.log("TESTINGG");
   console.log(
-    `for testing ${firstName} ${lastName}  ${phoneNumber} ${email} ${birthDate} ${relationship}`
+    `for testing ${firstName} ${lastName}  ${phoneNumber} ${email} ${birthDate} ${relationship} ${validId} valid id ${birthCert}`
   );
   await axios
     .post("http://localhost:3001/api/enrollees", {
@@ -118,6 +120,7 @@ async function handleSubmit(event) {
       birthCert,
       validId,
       healthRecord,
+      userId,
     })
     .then(function (res) {
       console.log("enrolled successfully");

@@ -1,59 +1,23 @@
 // ========== SLIDESHOW TRIAL ==========
 
-const images = [
-  {
-    image: "./images/daily activity images/img1.jpg",
-    text: " Morning Gathering ",
-    description: "In Morning We Have Short Gathering",
-  },
-  {
-    image: "./images/daily activity images/img2.jpg",
-    text: " Buwan ng Wika ",
-    description: "Celebration For Buwan Ng Wika",
-  },
-  {
-    image: "./images/daily activity images/img3.jpg",
-    text: " Prayer",
-    description: "We Start The Day In Our Class With Prayer",
-  },
-  {
-    image: "./images/daily activity images/img4.jpg",
-    text: " Rabbies Awareness ",
-    description:
-      "The Puppet Show Teach Them About What To Becareful About Rabies",
-  },
-  {
-    image: "./images/daily activity images/img5.jpg",
-    text: " Puppet Show ",
-    description: "For Awareness Of Rabbies",
-  },
-  {
-    image: "./images/daily activity images/img6.jpg",
-    text: " Exercise ",
-    description: "We Teach Them How To Exercise",
-  },
-  {
-    image: "./images/daily activity images/img7.jpg",
-    text: " Outside Activity ",
-    description: "We Had Quick Exercise Before Doing Activity Outside",
-  },
-  {
-    image: "./images/daily activity images/img8.jpg",
-    text: " Fun Games",
-    description: "They Get To play Fun Games",
-  },
-  {
-    image: "./images/daily activity images/img9.jpg",
-    text: " What To Do In Earthquakse ",
-    description: "We Teach Them What To Do in Earthquakes",
-  },
-  {
-    image: "./images/daily activity images/img10.jpg",
-    text: "Earthquake Drill ",
-    description: "Short Drill On What To Do On Earthquake",
-  },
-];
-
+const images = [];
+async function getDailyAct() {
+  try {
+    const response = await axios.get("http://localhost:3001/api/gallery");
+    const mappedActivity = response.data.resp.map((act) => {
+      return {
+        image: act.galleryPicture,
+        text: act.title,
+        description: act.description,
+      };
+    });
+    images.push(...mappedActivity);
+    console.log(images);
+  } catch (err) {
+    console.log(err);
+  }
+}
+getDailyAct();
 let index = 0; // Starting index
 
 setInterval(() => {

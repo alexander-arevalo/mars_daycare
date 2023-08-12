@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   getName()
     .then((response) => {
       console.log(response);
-      const firstName = response.firstName;
-      const lastName = response.lastName;
+      const firstName = response.data.firstName;
+      const lastName = response.data.lastName;
 
       updateContent(firstName, lastName);
     })

@@ -1,161 +1,231 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mars Daycare Center</title>
+    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mars Daycare Center</title>
-  <link rel="icon" href="/images/logo.png" type="image/x-icon" />
+    <!--  GOOGLE FONTS (MONSERRAT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  GOOGLE MATERIAL ICON -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--  CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/admission.css" />
+  </head>
 
-  <!--  GOOGLE FONTS (MONSERRAT) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <!--  GOOGLE MATERIAL ICON -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <!--  CSS -->
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/style2.css" />
-  <link rel="stylesheet" href="/css/admission.css" />
-</head>
+  <body>
+    <nav>
+      <div class="container nav__container">
+        <div class="navbar">
+          <div class="logo1">
+            <img src="/images/logo.png" class="img1" />
+            <a href="userHome.html">
+              <h4>MARS DAYCARE</h4>
+            </a>
+          </div>
+        </div>
 
-<body>
-  <nav>
-    <div class="container nav__container">
-      <div class="navbar">
-        <div class="logo1">
-          <img src="/images/logo.png" class="img1" />
+        <div class="right__navbar">
+          <div class="profile">
+            <div class="info" id="user__info">
+              <b id="firstName">Alexander </b> &nbsp;<b id="lastName">Arevalo</b
+              ><br />
+              <small class="text-muted" id="user">User Account</small>
+            </div>
+
+            <div class="profile-photo">
+              <img src="/images/profile.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--=========== END OF NAVBAR ===========-->
+
+    <div class="admin__container">
+      <aside>
+        <div class="topDb">
+          <h4>User Dashboard</h4>
+        </div>
+
+        <div class="sidebar">
           <a href="userHome.html">
-            <h4>MARS DAYCARE</h4>
+            <span class="material-symbols-sharp">home</span>
+            <h5>Home</h5>
+          </a>
+
+          <a href="status.html">
+            <span class="material-symbols-sharp">person_search</span>
+            <h5>Status</h5>
+          </a>
+
+          <a href="admission.html" class="active">
+            <span class="material-symbols-sharp">other_admission</span>
+            <h5>Admission</h5>
+          </a>
+
+          <a href="reqId.html">
+            <span class="material-symbols-sharp">calendar_add_on</span>
+            <h5>Request For ID</h5>
+          </a>
+
+          <a href="userSettings.html">
+            <span class="material-symbols-sharp">manage_accounts</span>
+            <h5>Profile Settings</h5>
+          </a>
+
+          <a>
+            <span class="material-symbols-sharp">logout</span>
+            <h5 class="signOut" id="signOut" style="cursor: pointer">
+              Sign Out
+            </h5>
           </a>
         </div>
-      </div>
+      </aside>
 
-      <div class="right__navbar">
-        <div class="profile">
-          <div class="info" id="user__info">
-            <b id="firstName">Alexander <b id="lastName">Arevalo</b></b><br />
-            <small class="text-muted" id="user">User Account</small>
-          </div>
-
-          <div class="profile-photo">
-            <img src="/images/profile.png" />
-          </div>
+      <!--=========== END OF ASIDE ===========-->
+      <main>
+        <h1>Reservation Form</h1>
+        <div class="reser__img">
+          <img src="/images/reservation.png" />
         </div>
-      </div>
+
+        <!-- Page 1: Personal Information -->
+        <form id="studentInfo" class="contact__form">
+          <label for="student name">Student's Name</label>
+          <div class="form__name">
+            <input
+              type="text"
+              id="firstNameInput"
+              name="First Name"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              id="lastNameInput"
+              name="Last Name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+
+          <label for="relationship">Relationship with the Student</label>
+          <input
+            type="text"
+            id="relationship"
+            name="Relationship"
+            placeholder="Relationship with the student"
+            pattern="Parents|Guardian|Mother|mother|Father|father"
+            required
+          />
+
+          <label for="yearLevel">Pre-School Level:</label>
+          <select id="yearLevel" name="YearLevel" required>
+            <option value="">Select Level</option>
+            <option value="Nursery">Nursery</option>
+            <option value="Kindergarten1">Kindergarten 1</option>
+            <option value="Kindergarten2">Kindergarten 2</option>
+          </select>
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="Email Address"
+            placeholder="sample@gmail.com"
+          />
+
+          <label for="contact">Parents/Guardian Mobile Number</label>
+          <input
+            type="contact"
+            id="contact"
+            name="Mobile Number"
+            pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+            placeholder="Example: 09XX-XXX-XXXX"
+            required
+          />
+
+          <label for="birthday">Birthdate</label>
+          <input
+            type="date"
+            id="birthday"
+            name="birthday"
+            min="2000-01-01"
+            max="2023-05-31"
+            required
+          />
+
+          <button type="button" id="nextButton" class="btn btn-next">
+            Next
+          </button>
+        </form>
+
+        <!-- Page 2: Document Upload -->
+        <form id="uploadForm" class="contact__form" style="display: none">
+          <label for="birthCert">Birth Certificate of Child</label>
+          <input
+            class="fileupload"
+            id="birthCert"
+            type="file"
+            accept="image/*"
+            onchange="uploadBirthCert()"
+            required
+          />
+          <label for="birthCert" class="customFileUpload" id="bc"
+            >Select Image</label
+          >
+
+          <label for="validId">Valid ID of Parents/Guardian</label>
+          <input
+            class="fileupload"
+            id="validId"
+            type="file"
+            accept="image/*"
+            onchange="uploadValidId()"
+            required
+          />
+          <label for="validId" class="customFileUpload" id="vi"
+            >Select Image</label
+          >
+
+          <label for="healthRecord">Child's Health Record</label>
+          <input
+            class="fileupload"
+            id="healthRecord"
+            type="file"
+            accept="image/*"
+            onchange="uploadHealthRecord()"
+            required
+          />
+          <label for="healthRecord" class="customFileUpload" id="hr"
+            >Select Image</label
+          >
+
+          <button type="submit" class="btn btn-submit">Submit</button>
+          <button type="button" id="prevButton" class="btn btn-prev">
+            Previous
+          </button>
+        </form>
+      </main>
     </div>
-  </nav>
 
-  <!--=========== END OF NAVBAR ===========-->
+    <!--=========== END OF MAIN ===========-->
 
-  <div class="admin__container">
-    <aside>
-      <div class="topDb">
-        <h4>User Dashboard</h4>
-      </div>
-
-      <div class="sidebar">
-        <a href="userHome.html">
-          <span class="material-symbols-sharp">home</span>
-          <h5>Home</h5>
-        </a>
-
-        <a href="status.html">
-          <span class="material-symbols-sharp">person_search</span>
-          <h5>Status</h5>
-        </a>
-
-        <a href="admission.html" class="active">
-          <span class="material-symbols-sharp">other_admission</span>
-          <h5>Admission</h5>
-        </a>
-
-        <a href="reqId.html">
-          <span class="material-symbols-sharp">calendar_add_on</span>
-          <h5>Request For ID</h5>
-        </a>
-
-        <a href="userSettings.html">
-          <span class="material-symbols-sharp">manage_accounts</span>
-          <h5>Profile Settings</h5>
-        </a>
-
-        <a>
-          <span class="material-symbols-sharp">logout</span>
-          <h5 class="signOut" id="signOut" style="cursor: pointer;">Sign Out</h5>
-        </a>
-
-      </div>
-    </aside>
-
-    <!--=========== END OF ASIDE ===========-->
-    <main>
-      <h1>Reservation Form</h1>
-      <div class="reser__img">
-        <img src="/images/reservation.png" />
-      </div>
-
-      <!-- Page 1: Personal Information -->
-      <form id="studentInfo" class="contact__form">
-        <label for="student name">Student's Name</label>
-        <div class="form__name">
-          <input type="text" id="firstNameInput" name="First Name" placeholder="First Name" required />
-          <input type="text" id="lastNameInput" name="Last Name" placeholder="Last Name" required />
-        </div>
-
-        <label for="relationship">Relationship with the Student</label>
-        <input type="text" id="relationship" name="Relationship" placeholder="Relationship with the student"
-          pattern="Parents|Guardian|Mother|mother|Father|father" required />
-
-        <label for="yearLevel">Pre-School Level:</label>
-        <select id="yearLevel" name="YearLevel" required>
-          <option value="">Select Level</option>
-          <option value="Nursery">Nursery</option>
-          <option value="Kindergarten1">Kindergarten 1</option>
-          <option value="Kindergarten2">Kindergarten 2</option>
-        </select>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="Email Address" placeholder="sample@gmail.com" />
-
-        <label for="contact">Parents/Guardian Mobile Number</label>
-        <input type="contact" id="contact" name="Mobile Number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
-          placeholder="Example: 09XX-XXX-XXXX" required />
-
-        <label for="birthday">Birthdate</label>
-        <input type="date" id="birthday" name="birthday" min="2000-01-01" max="2023-05-31" required />
-
-        <button type="button" id="nextButton" class="btn btn-next">Next</button>
-      </form>
-
-      <!-- Page 2: Document Upload -->
-      <form id="uploadForm" class="contact__form" style="display: none;">
-        <label for="birthCert">Birth Certificate of Child</label>
-        <input class="fileupload" id="birthCert" type="file" accept="image/*" onchange="uploadBirthCert()" required />
-        <label for="birthCert" class="customFileUpload" id="bc">Select Image</label>
-
-        <label for="validId">Valid ID of Parents/Guardian</label>
-        <input class="fileupload" id="validId" type="file" accept="image/*" onchange="uploadValidId()" required />
-        <label for="validId" class="customFileUpload" id="vi">Select Image</label>
-
-        <label for="healthRecord">Child's Health Record</label>
-        <input class="fileupload" id="healthRecord" type="file" accept="image/*" onchange="uploadHealthRecord()"
-          required />
-        <label for="healthRecord" class="customFileUpload" id="hr">Select Image</label>
-
-        <button type="submit" class="btn btn-submit">Submit</button>
-        <button type="button" id="prevButton" class="btn btn-prev">Previous</button>
-      </form>
-    </main>
-  </div>
-
-  <!--=========== END OF MAIN ===========-->
-
-  <!-- <footer>
+    <!-- <footer>
         <div class="container footer__container">
            <div class="footer__1">
             <a href="index.html" class="footer__logo"><h4>MARS DAYCARE</h4></a>
@@ -355,15 +425,14 @@
 
     </footer> -->
 
-  <div class="footer__copyright">
-    <small>Copyright &copy; Mars Daycare</small>
-  </div>
+    <div class="footer__copyright">
+      <small>Copyright &copy; Mars Daycare</small>
+    </div>
 
-  <!--=========== END OF FOOTER ===========-->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="/js/user.js"></script>
-  <script src="/js/navbar.js"></script>
-  <script src="/js/admission.js"></script>
-</body>
-
+    <!--=========== END OF FOOTER ===========-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/user.js"></script>
+    <script src="/js/navbarAdmin.js"></script>
+    <script src="/js/admission.js"></script>
+  </body>
 </html>

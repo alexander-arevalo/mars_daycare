@@ -28,15 +28,14 @@ console.log(userId);
 
 async function getEnrollees() {
   let token = localStorage.getItem("token");
-  const res = await axios.get(
-    "http://localhost:3001/api/enrollees/?${userId}",
-    {
-      headers: { Authorization: "Bearer " + token },
-    }
-  );
+  const res = await axios.get("http://localhost:3001/api/enrollees", {
+    headers: { Authorization: "Bearer " + token },
+  });
 
   console.log(`Getting enrollees:`, res.data);
-  const data = res.data;
+  const data = res.data.filter(
+    (item) => item.userID === localStorage.getItem("id")
+  );
   const enrolleesTableBody = document.getElementById("statusTableBody");
 
   // Clear the existing content

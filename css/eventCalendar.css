@@ -38,7 +38,7 @@ button {
 }
 
 #header button {
-  background-color: var(--color-bg3);
+  background-color: black;
 }
 
 #container {
@@ -48,7 +48,7 @@ button {
 #weekdays {
   width: 100%;
   display: flex;
-  color: #247BA0;
+  color:black
 }
 
 #weekdays div {
@@ -70,8 +70,9 @@ button {
   height: 100px;
   cursor: pointer;
   box-sizing: border-box;
+  color:black;
   background-color: var(--color-white);
-  box-shadow: 0px 0px 3px #CBD4C2;
+  box-shadow: 0px 0px 3px black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -81,15 +82,16 @@ button {
   background-color: var(--color-white);
 }
 
-#currentDay {
+/* #currentDay {
   background-color: var(--color-bg3);
   color: var(--color-white);
-}
+} */
 
 .event {
   font-size: 10px;
   padding: 3px;
-  background-color: var(--color-bg3);
+  height: fit-content;
+  background-color: black;
   color: var(--color-white);
   border-radius: 5px;
   max-height: 55px;
