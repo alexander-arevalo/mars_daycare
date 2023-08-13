@@ -178,7 +178,7 @@ nav {
 
 /* ========== DROPDOWN MENU ========== */
 
-.dropdown {
+/* .dropdown {
   position: relative;
   width: 10rem;
   cursor: pointer;
@@ -215,7 +215,7 @@ nav {
 
 .dropdown:hover .dropdown-menu {
   display: block;
-}
+} */
 /* ========== HEADER ========== */
 
 header {
