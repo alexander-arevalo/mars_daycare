@@ -1,41 +1,38 @@
 /* ========== TEXT ADJUSTMENTS ========== */
 
 h1 {
-	text-align: center;
+  text-align: center;
 }
 
-p{
-	font-size: 1rem;
+.abt p {
+  font-size: 1rem;
+  text-align: justify;
 }
 
 h3 {
-	text-align: left;
-	color: var(--color-black);
-
+  text-align: left;
+  color: var(--color-black);
 }
 
-section{
-	padding-top: 3rem;
-	padding-bottom: 0;
+section {
+  padding-top: 3rem;
+  padding-bottom: 0;
 }
 
 /* ========== ABOUT ========== */
 
 .about__container {
-    background: var(--color-bg3);
-    padding: 3rem;
-    gap: 4rem;
-	width: 70rem;
-    height: 60rem;
-    margin: 7rem auto;
-    border-radius: 1rem;
+  background: var(--color-bg3);
+  padding: 3rem;
+  gap: 4rem;
+  width: 70rem;
+  height: 60rem;
+  margin: 7rem auto;
+  border-radius: 1rem;
 }
-
-
 
 /* ========== MAIN SECTION ========== */
 
-
 .main__section {
-	padding-top: 4rem;
+  padding-top: 4rem;
 }

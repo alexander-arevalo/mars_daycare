@@ -1,3 +1,14 @@
+const currentDate = new Date().toISOString().split("T")[0];
+
+// Calculate the date one year from now
+const oneYearLater = new Date();
+oneYearLater.setFullYear(oneYearLater.getFullYear() + 1);
+const maxDate = oneYearLater.toISOString().split("T")[0];
+
+// Set the current date as the minimum date and one year from now as the maximum date
+document.getElementById("date").setAttribute("min", currentDate);
+document.getElementById("date").setAttribute("max", maxDate);
+
 async function handleSubmit(event) {
   event.preventDefault();
   let token = localStorage.getItem("token");
@@ -27,7 +38,7 @@ async function handleSubmit(event) {
     })
     .catch(function (err) {
       console.log(err);
-      alert("Something went wrong")
+      alert("Something went wrong");
     });
 
   document.getElementById("eventForm").reset();

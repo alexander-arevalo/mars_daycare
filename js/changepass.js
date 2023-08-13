@@ -1,9 +1,9 @@
 import { baseURL } from "./config/config.js";
 
-const password = document.getElementById("password1");
+const password1 = document.getElementById("password1");
 const confirmPassword = document.getElementById("password");
 
-console.log(`Password is ${password} confirm password is ${confirmPassword}`);
+console.log(`Password is ${password1} confirm password is ${confirmPassword}`);
 const passwordMismatch = document.getElementById("passwordMismatch");
 const recoverPassword = async (e) => {
   e.preventDefault();
@@ -12,20 +12,23 @@ const recoverPassword = async (e) => {
   const token = urlParams.get("token");
   const URL = baseURL.concat("/api/auth/resetPassword");
   console.log(URL);
-  const passwordStore = document.getElementById("password").value;
+  const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("password1").value;
- 
 
   if (password === confirmPassword) {
-    alert("success")
-    await axios.post(URL, { userId, token, passwordStore }).then((res) => {
-    window.location("login.html")
-    }).catch(err=>{
-        alert("Something went wrong")
-    })
+    await axios
+      .post(URL, { userId, token, password })
+      .then((res) => {
+        alert("success");
+        window.location.replace("login.html");
+      })
+      .catch((err) => {
+        alert("Something went wrong");
+        console.log("error " + err);
+      });
     passwordMismatch.style.display = "none";
   } else {
-   
+    console.log("password " + password + " confirmpassword " + confirmPassword);
     passwordMismatch.style.display = "block";
   }
 };

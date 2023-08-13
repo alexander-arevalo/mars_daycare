@@ -1,30 +1,3 @@
-//  to freeze na navbar
-const id = localStorage.getItem("id");
-function updateContent(firstName, lastName) {
-  document.getElementById("firstName").textContent = firstName;
-  document.getElementById("lastName").textContent = lastName;
-}
-
-function getName() {
-  return axios.get(`http://localhost:3001/api/auth/${id}`, {
-    headers: { Authorization: "Bearer " + localStorage.getItem("token") },
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  getName()
-    .then((response) => {
-      console.log(response);
-      const firstName = response.firstName;
-      const lastName = response.lastName;
-
-      updateContent(firstName, lastName);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
-
 window.addEventListener("scroll", () => {
   document
     .querySelector("nav")

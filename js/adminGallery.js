@@ -1,3 +1,5 @@
+// FORM UPLOAD
+
 var galleryPicture;
 function handleFileUpload() {
   const fileInput = document.getElementById("galleryPicture");
@@ -55,6 +57,11 @@ async function addGallery(event) {
 }
 
 document.getElementById("galleryForm").addEventListener("submit", addGallery);
+const itemsPerPage = 5; // Set the number of items to display per page
+let currentPage = 1; // Initialize the current page
+
+const galleryTableBody = document.getElementById("galleryTableBody");
+const paginationContainer = document.getElementById("paginationContainer");
 
 async function getGallery() {
   let token = localStorage.getItem("token");
@@ -62,35 +69,60 @@ async function getGallery() {
     headers: { Authorization: "Bearer " + token },
   });
 
-  console.log(`Getting Request:`, res.data);
   const data = res.data.resp;
 
-  const galleryTableBody = document.getElementById("galleryTableBody");
+  updateDisplayedData(data);
+  updatePaginationButtons(Math.ceil(data.length / itemsPerPage));
+}
 
-  // Clear the existing content
+function renderGalleryRow(gallery) {
+  const row = document.createElement("tr");
+  const galleryCell = document.createElement("td");
+  galleryCell.textContent = gallery.title;
+  const actionCell = document.createElement("td");
+  const button = document.createElement("button");
+  button.textContent = "Details";
+  button.classList.add("btn");
+  button.addEventListener("click", () => {
+    // Redirect the user to another HTML page
+    window.location.href = `galleryAction.html?id=${gallery._id}`;
+  });
+  actionCell.appendChild(button);
+
+  row.appendChild(galleryCell);
+  row.appendChild(actionCell);
+  galleryTableBody.appendChild(row);
+}
+
+function updateDisplayedData(data) {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentPageData = data.slice(startIndex, endIndex);
+
   galleryTableBody.innerHTML = "";
 
-  // Loop through the data and create table rows with table data cells to display it
-  data.forEach((gallery) => {
-    const row = document.createElement("tr");
-
-    // Create table data cells for gallery details
-    const galleryCell = document.createElement("td");
-    galleryCell.textContent = gallery.title;
-    const actionCell = document.createElement("td");
-    const button = document.createElement("button");
-    button.textContent = "Details";
-    button.classList.add("btn");
-    button.addEventListener("click", () => {
-      // Redirect the user to another HTML page
-      window.location.href = `galleryAction.html?id=${gallery._id}`;
-    });
-    actionCell.appendChild(button);
-
-    row.appendChild(galleryCell);
-    row.appendChild(actionCell);
-    galleryTableBody.appendChild(row);
+  currentPageData.forEach((gallery) => {
+    renderGalleryRow(gallery);
   });
+}
+
+function updatePaginationButtons(totalPages) {
+  paginationContainer.innerHTML = "";
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement("button");
+    button.textContent = i;
+    button.addEventListener("click", () => {
+      currentPage = i;
+      getGallery();
+    });
+
+    if (i === currentPage) {
+      button.classList.add("active");
+    }
+
+    paginationContainer.appendChild(button);
+  }
 }
 
 getGallery();

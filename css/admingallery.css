@@ -1,110 +1,124 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-    margin: 8rem 1rem;
+  margin: 8rem 1rem;
 }
 
 main .gallery__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
 }
 
-main .gallery__container>div {
-    background: var(--color-white);
-    padding: var(--card-padding);
-    width: 35rem;
-    height: auto;
+main .gallery__container > div {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  width: 35rem;
+  height: auto;
 }
 
-main .gallery__container>div .gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
+main .gallery__container > div .gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 h2 {
-    margin-bottom: 2rem;
-    text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }
-
 
 /* ========== FORM ========== */
 
-
 label {
-    display: block;
-    margin: 1rem 0 1rem;
-    text-align: left;
+  display: block;
+  margin: 1rem 0 1rem;
+  text-align: left;
 }
 
-
 form {
-    margin: 0 auto;
-    max-width: 40rem;
+  margin: 0 auto;
+  max-width: 40rem;
 }
 
 input,
 .galleryUpload {
-    width: 100%;
-    padding: 1rem;
-    background: var(--color-bg3);
-    color: var(--color-black);
-    display: block;
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-bg3);
+  color: var(--color-black);
+  display: block;
 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: 1px solid #ccc;
-
-
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #ccc;
 }
 
 .galleryPicture {
-    display: none;
+  display: none;
 }
 
 .galleryUpload {
-    text-decoration: none;
-    text-align: left;
-    padding: 0.4rem;
-    font-size: 0, 9rem;
+  text-decoration: none;
+  text-align: left;
+  padding: 0.4rem;
+  font-size: 0, 9rem;
 }
 
-
 .list__table {
-    display: none;
+  display: none;
 }
 
 .table {
-    border-collapse: collapse;
-    width: 100%;
-    border: .1rem solid var(--color-black);
+  border-collapse: collapse;
+  width: 100%;
+  border: 0.1rem solid var(--color-black);
 }
 
 .table th,
 .table td {
-    text-align: center;
-    padding: .8rem;
+  text-align: center;
+  padding: 0.8rem;
 }
 
 .table tr {
-    border-bottom: .1rem solid var(--color-black);
+  border-bottom: 0.1rem solid var(--color-black);
 }
 
 .table tr.header,
 .table tr:hover {
-    background-color: var(--color-bg5);
+  background-color: var(--color-bg5);
 }
 
+/* ========== PAGINATION ========== */
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 8px 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}
 
 /* ========== BUTTON ========== */
 
-
 .btn-primary {
-    margin: 1rem auto;
-    display: block;
-    text-align: center;
+  margin: 1rem auto;
+  display: block;
+  text-align: center;
 }

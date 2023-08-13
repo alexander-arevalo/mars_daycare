@@ -36,10 +36,7 @@ async function handleSubmit(event) {
   var address = document.getElementById("address").value;
 
   // Get the values from the form inputs
-  console.log("TESTINGG");
-  console.log(
-    `for testing ${firstName} ${lastName} ${relationship} ${phoneNumber} ${address} ${studentPicture}`
-  );
+
   await axios
     .post("http://localhost:3001/api/requestId", {
       firstName,

@@ -1,10 +1,13 @@
-var announcement = document.getElementById("description");
+var announcement = document.getElementById("announcement");
 
-const token2 = localStorage.getItem("token");
+announcement.style.display = "flex";
+announcement.style.justifyContent = "center";
+announcement.style.alignItems = "center";
+const token = localStorage.getItem("token");
 const getAnnouncement = async () => {
   const data = await axios.get("http://localhost:3001/api/announcement", {
     headers: {
-      Authorization: "Bearer " + token2,
+      Authorization: "Bearer " + token,
     },
   });
   console.log(data.data.resp[0].announcementDescription + "test");

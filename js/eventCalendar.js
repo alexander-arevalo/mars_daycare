@@ -1,17 +1,4 @@
-var events = [
-  {
-    month: 8,
-    day: 5,
-    title: "Meeting",
-    description: "Parents and Teacher Me",
-  },
-  {
-    month: 8,
-    day: 10,
-    title: "Project deadline",
-    description: "Submit final deliverables",
-  },
-];
+var events = [];
 
 async function getEventData() {
   try {
@@ -24,6 +11,7 @@ async function getEventData() {
         day: eventDate.getDate(),
         title: event.title,
         description: event.description,
+        time: event.time,
       };
     });
 
@@ -116,7 +104,7 @@ async function getEventData() {
   function createEventDiv(event) {
     const eventDiv = document.createElement("div");
     eventDiv.classList.add("event");
-    eventDiv.innerText = event.title + ": " + event.description;
+    eventDiv.innerText = event.title + ": " + event.description + event.time;
     return eventDiv;
   }
 
@@ -142,6 +130,10 @@ async function getEventData() {
     descriptionElement.innerText = event.description;
     content.appendChild(descriptionElement);
 
+    const timeElement = document.createElement("p");
+    timeElement.innerText = event.time;
+    content.appendChild(timeElement);
+
     popup.appendChild(closeButton);
     popup.appendChild(content);
 
@@ -166,16 +158,14 @@ async function getEventData() {
   calendar.addEventListener("click", (event) => {
     const clickedDay = event.target;
     if (clickedDay.classList.contains("day") && clickedDay.innerText !== "") {
-      const eventDiv = clickedDay.querySelector(".event");
-      if (eventDiv) {
-        const event = events.find(
-          (e) =>
-            e.day === parseInt(clickedDay.innerText) && e.month === clickedMonth
-        );
-        if (event) {
-          const popup = createPopup(event);
-          clickedDay.appendChild(popup);
-        }
+      const day = parseInt(clickedDay.innerText);
+      const month = new Date().getMonth() + nav;
+      const matchingEvent = events.find(
+        (e) => e.day === day && e.month === month
+      );
+      if (matchingEvent) {
+        const popup = createPopup(matchingEvent);
+        clickedDay.appendChild(popup);
       }
     }
   });

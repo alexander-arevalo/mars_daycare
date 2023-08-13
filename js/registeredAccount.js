@@ -1,4 +1,4 @@
-const itemsPerPage = 4; // Set the number of items to display per page
+const itemsPerPage = 5; // Set the number of items to display per page
 let currentPage = 1; // Initialize the current page
 const accountTableBody = document.getElementById("accountTableBody");
 const paginationContainer = document.getElementById("paginationContainer");
@@ -12,49 +12,53 @@ async function getUser() {
   console.log(`Registered Account:`, res.data);
   const data = res.data;
 
-  // Clear the existing content
-  accountTableBody.innerHTML = "";
+  updateDisplayedData(data);
+  updatePaginationButtons(Math.ceil(data.length / itemsPerPage));
+}
 
+function renderAccountRow(registered) {
+  const row = document.createElement("tr");
+  const firstNameCell = document.createElement("td");
+  firstNameCell.textContent = registered.firstName;
+  const lastNameCell = document.createElement("td");
+  lastNameCell.textContent = registered.lastName;
+  const status = document.createElement("td");
+  status.textContent =
+    registered.isApproved === true
+      ? "Approved"
+      : registered.isApproved === false
+      ? "Declined"
+      : "Pending";
+  const actionCell = document.createElement("td");
+  const button = document.createElement("button");
+  button.textContent = "Details";
+  button.classList.add("btn");
+  // Add an event listener to the "Details" button
+  button.addEventListener("click", () => {
+    // Redirect the user to another HTML page
+    window.location.href = `registeredAction.html?id=${registered._id}`;
+  });
+  actionCell.appendChild(button);
+  row.appendChild(firstNameCell);
+  row.appendChild(lastNameCell);
+  row.appendChild(status);
+  row.appendChild(actionCell);
+  accountTableBody.appendChild(row);
+}
+
+function updateDisplayedData(data) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentPageData = data.slice(startIndex, endIndex);
 
-  currentPageData.forEach((registered) => {
-    const row = document.createElement("tr");
-    const firstNameCell = document.createElement("td");
-    firstNameCell.textContent = registered.firstName;
-    const lastNameCell = document.createElement("td");
-    lastNameCell.textContent = registered.lastName;
-    const status = document.createElement("td");
-    status.textContent =
-      registered.isApproved === true
-        ? "Approved"
-        : registered.isApproved === false
-        ? "Declined"
-        : "Pending";
-    const actionCell = document.createElement("td");
-    const button = document.createElement("button");
-    button.textContent = "Details";
-    button.classList.add("btn");
-    // Add an event listener to the "Details" button
-    button.addEventListener("click", () => {
-      // Redirect the user to another HTML page
-      window.location.href = `registeredAction.html?id=${registered._id}`;
-    });
-    actionCell.appendChild(button);
-    row.appendChild(firstNameCell);
-    row.appendChild(lastNameCell);
-    row.appendChild(status);
-    row.appendChild(actionCell);
-    accountTableBody.appendChild(row);
-  });
+  accountTableBody.innerHTML = "";
 
-  // Update pagination buttons
-  updatePaginationButtons(Math.ceil(data.length / itemsPerPage));
+  currentPageData.forEach((registered) => {
+    renderAccountRow(registered);
+  });
 }
 
 function updatePaginationButtons(totalPages) {
-  // Clear previous pagination buttons
   paginationContainer.innerHTML = "";
 
   for (let i = 1; i <= totalPages; i++) {
@@ -71,47 +75,6 @@ function updatePaginationButtons(totalPages) {
 
     paginationContainer.appendChild(button);
   }
-}
-
-// Call this function initially to fetch and display data for the first page
-getUser();
-
-function updateDisplayedData(data) {
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentPageData = data.slice(startIndex, endIndex);
-
-  accountTableBody.innerHTML = "";
-
-  currentPageData.forEach((registered) => {
-    const row = document.createElement("tr");
-    const firstNameCell = document.createElement("td");
-    firstNameCell.textContent = registered.firstName;
-    const lastNameCell = document.createElement("td");
-    lastNameCell.textContent = registered.lastName;
-    const status = document.createElement("td");
-    status.textContent =
-      registered.isApproved === true
-        ? "Approved"
-        : registered.isApproved === false
-        ? "Declined"
-        : "Pending";
-    const actionCell = document.createElement("td");
-    const button = document.createElement("button");
-    button.textContent = "Details";
-    button.classList.add("btn");
-    // Add an event listener to the "Details" button
-    button.addEventListener("click", () => {
-      // Redirect the user to another HTML page
-      window.location.href = `registeredAction.html?id=${registered._id}`;
-    });
-    actionCell.appendChild(button);
-    row.appendChild(firstNameCell);
-    row.appendChild(lastNameCell);
-    row.appendChild(status);
-    row.appendChild(actionCell);
-    accountTableBody.appendChild(row);
-  });
 }
 
 function tableHandler() {
@@ -139,5 +102,6 @@ function tableHandler() {
   }
 
   // After filtering, update displayed data based on the search filter
-  updateDisplayedData(data);
+  getUser();
 }
+getUser();

@@ -6,7 +6,7 @@ console.log(id);
 const back = document.getElementById("back");
 
 back.addEventListener("click", () => {
-  window.location.replace("requestedId.html");
+  window.location.replace("adminCalendar.html");
 });
 
 let token = localStorage.getItem("token");
@@ -37,7 +37,7 @@ async function deleteById() {
       })
       .then((res) => {
         alert("Successful!");
-        window.location.replace("adminCalendar.html")
+        window.location.replace("adminCalendar.html");
       })
       .catch((err) => {
         alert("Something went wrong");

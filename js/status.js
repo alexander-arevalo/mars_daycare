@@ -32,7 +32,6 @@ async function getEnrollees() {
     headers: { Authorization: "Bearer " + token },
   });
 
-  console.log(`Getting enrollees:`, res.data);
   const data = res.data.filter(
     (item) => item.userID === localStorage.getItem("id")
   );
