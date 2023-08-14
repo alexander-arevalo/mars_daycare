@@ -5,7 +5,7 @@ announcement.style.justifyContent = "center";
 announcement.style.alignItems = "center";
 const token = localStorage.getItem("token");
 const getAnnouncement = async () => {
-  const data = await axios.get("http://localhost:3001/api/announcement", {
+  const data = await axios.get("https://mars-daycare.onrender.com/api/announcement", {
     headers: {
       Authorization: "Bearer " + token,
     },

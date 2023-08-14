@@ -8,7 +8,7 @@ document.getElementById("recoveryForm").addEventListener("submit",async function
       showMessage("Please enter a valid email address.");
       return;
     }
- await axios.post("http://localhost:3001/api/auth/requestResetPassword",{email}).then(res=>{
+ await axios.post("https://mars-daycare.onrender.com/api/auth/requestResetPassword",{email}).then(res=>{
   var confirmation = confirm("Email has been sent with Password recovery Instruction");
   if (confirmation) {
 

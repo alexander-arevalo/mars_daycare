@@ -9,7 +9,7 @@ function handleFileUpload() {
     formData.append("image", file);
 
     axios
-      .post("http://localhost:3001/api/upload", formData)
+      .post("https://mars-daycare.onrender.com/api/upload", formData)
       .then((response) => {
         document.getElementById("proofLabel").textContent = response.data.url;
         proofOfResidency = response.data.url;
@@ -39,7 +39,7 @@ document
     // Create an object with the user's data
   
     await axios
-      .post("http://localhost:3001/api/auth/signup", {
+      .post("https://mars-daycare.onrender.com/api/auth/signup", {
         firstName,
         lastName,
         email,

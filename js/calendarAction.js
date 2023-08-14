@@ -13,7 +13,7 @@ let token = localStorage.getItem("token");
 
 async function getEventById() {
   axios
-    .get(`http://localhost:3001/api/event/${id}`, {
+    .get(`https://mars-daycare.onrender.com/api/event/${id}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
@@ -32,7 +32,7 @@ async function getEventById() {
 async function deleteById() {
   if (window.confirm("Are you sure to delete this event?")) {
     await axios
-      .delete(`http://localhost:3001/api/event/${id}`, {
+      .delete(`https://mars-daycare.onrender.com/api/event/${id}`, {
         headers: { Authorization: "Bearer " + token },
       })
       .then((res) => {

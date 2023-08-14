@@ -23,7 +23,7 @@ async function handleSubmit(event) {
   console.log(`for testing ${title} ${date} ${time} ${description}`);
   await axios
     .post(
-      "http://localhost:3001/api/event",
+      "https://mars-daycare.onrender.com/api/event",
       {
         title,
         date,
@@ -74,7 +74,7 @@ function tableHandler() {
 
 async function getCalendar() {
   let token = localStorage.getItem("token");
-  const res = await axios.get("http://localhost:3001/api/event", {
+  const res = await axios.get("https://mars-daycare.onrender.com/api/event", {
     headers: { Authorization: "Bearer " + token },
   });
 

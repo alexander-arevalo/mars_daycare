@@ -14,7 +14,7 @@ var userImage;
 
 async function getReqId() {
   axios
-    .get(`http://localhost:3001/api/requestId/${userId}`, {
+    .get(`https://mars-daycare.onrender.com/api/requestId/${userId}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
@@ -55,7 +55,7 @@ function downloadImage() {
 async function acceptById() {
   await axios
     .patch(
-      `http://localhost:3001/api/requestId/approve/${userId}`,
+      `https://mars-daycare.onrender.com/api/requestId/approve/${userId}`,
       {},
       {
         headers: {
@@ -75,7 +75,7 @@ async function acceptById() {
 
 async function declineById() {
   await axios
-    .patch(`http://localhost:3001/api/requestId/decline/${userId}`, {
+    .patch(`https://mars-daycare.onrender.com/api/requestId/decline/${userId}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {

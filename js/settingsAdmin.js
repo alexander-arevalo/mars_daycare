@@ -2,7 +2,7 @@ var id = localStorage.getItem("id");
 
 async function getName() {
   try {
-    const response = await axios.get(`http://localhost:3001/api/auth/${id}`, {
+    const response = await axios.get(`https://mars-daycare.onrender.com/api/auth/${id}`, {
       headers: { Authorization: "Bearer " + localStorage.getItem("token") },
     });
 
@@ -39,7 +39,7 @@ const submit = async (e) => {
 
     await axios
       .patch(
-        `http://localhost:3001/api/auth/${id}`,
+        `https://mars-daycare.onrender.com/api/auth/${id}`,
         {
           firstName,
           email,

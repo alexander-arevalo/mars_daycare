@@ -28,7 +28,7 @@ async function uploadBirthCert() {
     formData.append("image", file);
 
     await axios
-      .post("http://localhost:3001/api/upload", formData)
+      .post("https://mars-daycare.onrender.com/api/upload", formData)
       .then((response) => {
         const testChange = document.getElementById("bc");
         testChange.textContent = response.data.url;
@@ -51,7 +51,7 @@ async function uploadValidId() {
     formData.append("image", file);
 
     await axios
-      .post("http://localhost:3001/api/upload", formData)
+      .post("https://mars-daycare.onrender.com/api/upload", formData)
       .then((response) => {
         const testChange = document.getElementById("vi");
         testChange.textContent = response.data.url;
@@ -75,7 +75,7 @@ async function uploadHealthRecord() {
     formData.append("image", file);
 
     await axios
-      .post("http://localhost:3001/api/upload", formData)
+      .post("https://mars-daycare.onrender.com/api/upload", formData)
       .then((response) => {
         const testChange = document.getElementById("hr");
         testChange.textContent = response.data.url;
@@ -109,7 +109,7 @@ async function handleSubmit(event) {
     `for testing ${firstName} ${lastName}  ${phoneNumber} ${email} ${birthDate} ${relationship} ${validId} valid id ${birthCert}`
   );
   await axios
-    .post("http://localhost:3001/api/enrollees", {
+    .post("https://mars-daycare.onrender.com/api/enrollees", {
       firstName,
       lastName,
       email,

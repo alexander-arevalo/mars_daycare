@@ -10,7 +10,7 @@ function handleFileUpload() {
     formData.append("image", file);
 
     axios
-      .post("http://localhost:3001/api/upload", formData)
+      .post("https://mars-daycare.onrender.com/api/upload", formData)
       .then((response) => {
         const testChange = document.getElementById("labelID");
         testChange.textContent = response.data.url;
@@ -38,7 +38,7 @@ async function handleSubmit(event) {
   // Get the values from the form inputs
 
   await axios
-    .post("http://localhost:3001/api/requestId", {
+    .post("https://mars-daycare.onrender.com/api/requestId", {
       firstName,
       lastName,
       relationship,

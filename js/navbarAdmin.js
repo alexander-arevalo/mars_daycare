@@ -5,7 +5,7 @@ function updateContent(firstName, lastName) {
 }
 
 function getName() {
-  return axios.get(`http://localhost:3001/api/auth/${id}`, {
+  return axios.get(`https://mars-daycare.onrender.com/api/auth/${id}`, {
     headers: { Authorization: "Bearer " + localStorage.getItem("token") },
   });
 }

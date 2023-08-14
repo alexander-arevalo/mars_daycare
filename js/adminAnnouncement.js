@@ -1,7 +1,7 @@
 // SUBMISSION FUNCTION
 async function getAnnouncement() {
   let token = localStorage.getItem("token");
-  const res = await axios.get("http://localhost:3001/api/announcement", {
+  const res = await axios.get("https://mars-daycare.onrender.com/api/announcement", {
     headers: { Authorization: "Bearer " + token },
   });
 

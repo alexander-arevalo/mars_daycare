@@ -12,7 +12,7 @@ console.log("this is token");
 
 async function getUserId() {
   axios
-    .get(`http://localhost:3001/api/auth/${userId}`, {
+    .get(`https://mars-daycare.onrender.com/api/auth/${userId}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
@@ -31,7 +31,7 @@ function viewImage() {
 async function acceptById() {
   axios
     .patch(
-      `http://localhost:3001/api/auth/approve/${userId}`,
+      `https://mars-daycare.onrender.com/api/auth/approve/${userId}`,
       {},
       {
         headers: {
@@ -49,7 +49,7 @@ async function acceptById() {
 async function declineById() {
   axios
     .patch(
-      `http://localhost:3001/api/auth/decline/${userId}`,
+      `https://mars-daycare.onrender.com/api/auth/decline/${userId}`,
       {},
       {
         headers: { Authorization: "Bearer " + token },

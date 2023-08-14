@@ -5,7 +5,7 @@ async function login() {
   let successful;
 
   await axios
-    .post("http://localhost:3001/api/auth/login", { email, password })
+    .post("https://mars-daycare.onrender.com/api/auth/login", { email, password })
     .then((res) => {
       console.log(res);
       isAdmin = res.data.isAdmin;

@@ -6,7 +6,7 @@ function updateContent(firstName, lastName) {
 }
 
 function getName() {
-  return axios.get(`http://localhost:3001/api/auth/${id}`, {
+  return axios.get(`https://mars-daycare.onrender.com/api/auth/${id}`, {
     headers: { Authorization: "Bearer " + localStorage.getItem("token") },
   });
 }
@@ -29,7 +29,7 @@ var ids = localStorage.getItem("id");
 
 async function getName() {
   try {
-    const response = await axios.get(`http://localhost:3001/api/auth/${ids}`, {
+    const response = await axios.get(`https://mars-daycare.onrender.com/api/auth/${ids}`, {
       headers: { Authorization: "Bearer " + localStorage.getItem("token") },
     });
 
@@ -66,7 +66,7 @@ const submit = async (e) => {
 
     await axios
       .patch(
-        `http://localhost:3001/api/auth/${ids}`,
+        `https://mars-daycare.onrender.com/api/auth/${ids}`,
         {
           firstName,
           email,
