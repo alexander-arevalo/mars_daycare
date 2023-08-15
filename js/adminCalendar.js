@@ -42,6 +42,7 @@ async function handleSubmit(event) {
     });
 
   document.getElementById("eventForm").reset();
+  window.location.reload();
 }
 
 document.getElementById("eventForm").addEventListener("submit", handleSubmit);

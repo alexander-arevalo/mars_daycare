@@ -1,6 +1,5 @@
 /* ========== BODY ========== */
 
-
 .calendar__container {
   background: var(--color-white);
   padding: 4rem;
@@ -10,8 +9,7 @@
   margin: 7rem auto;
   display: flex;
   border-radius: 1rem;
-  justify-content: center;  
-
+  justify-content: center;
 }
 
 /* ========== BUTTON ========== */
@@ -24,7 +22,7 @@ button {
   outline: none;
   padding: 5px;
   border-radius: 5px;
-  color: white;
+  color: var(--color-white);
 }
 
 #header {
@@ -38,7 +36,7 @@ button {
 }
 
 #header button {
-  background-color: black;
+  background-color: var(--color-black);
 }
 
 #container {
@@ -48,7 +46,7 @@ button {
 #weekdays {
   width: 100%;
   display: flex;
-  color:black
+  color: var(--color-black);
 }
 
 #weekdays div {
@@ -70,7 +68,7 @@ button {
   height: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  color:black;
+  color: var(--color-black);
   background-color: var(--color-white);
   box-shadow: 0px 0px 3px black;
   display: flex;
@@ -82,16 +80,16 @@ button {
   background-color: var(--color-white);
 }
 
-/* #currentDay {
+#currentDay {
   background-color: var(--color-bg3);
   color: var(--color-white);
-} */
+}
 
 .event {
-  font-size: 10px;
+  font-size: 15px;
   padding: 3px;
   height: fit-content;
-  background-color: black;
+  background-color: var(--color-black);
   color: var(--color-white);
   border-radius: 5px;
   max-height: 55px;
@@ -100,20 +98,20 @@ button {
 
 .padding {
   cursor: default !important;
-  background-color: #FFFCFF !important;
+  background-color: #fffcff !important;
   box-shadow: none !important;
 }
 
 .popup {
   position: absolute;
-  margin: 0 -5rem ;
+  margin: 0 -5rem;
   background-color: var(--color-white);
   color: var(--color-black);
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   z-index: 1;
-  text-align:center;
+  text-align: center;
 }
 
 .closeButton {
