@@ -46,18 +46,18 @@ function downloadBC() {
   download(urlBC, "BirthCertificate");
 }
 function viewImageBC() {
-  viewImage(urlBC);
+  window.open(urlBC);
 }
 function viewImageHR() {
-  viewImage(urlHR);
+  window.open(urlHR);
 }
 function viewImageVI() {
-  viewImage(urlVI);
+  window.open(urlVI);
 }
-function viewImage(url) {
-  window.location.replace(url);
-  console.log(url);
-}
+// function viewImage(url) {
+//   window.location.replace(url);
+//   console.log(url);
+// }
 function download(url, type) {
   try {
     console.log("Downloading");
@@ -77,11 +77,15 @@ function download(url, type) {
 }
 async function acceptById() {
   await axios
-    .patch(`https://mars-daycare.onrender.com/api/enrollees/approve/${userId}`, {
-      headers: { Authorization: "Bearer " + token },
-    })
+    .patch(
+      `https://mars-daycare.onrender.com/api/enrollees/approve/${userId}`,
+      {
+        headers: { Authorization: "Bearer " + token },
+      }
+    )
     .then((res) => {
       alert("Approved");
+      window.location.replace("pendingReserv.html");
       console.log(res.data);
     })
     .catch((err) => {
@@ -90,11 +94,15 @@ async function acceptById() {
 }
 async function declinedById() {
   await axios
-    .patch(`https://mars-daycare.onrender.com/api/enrollees/decline/${userId}`, {
-      headers: { Authorization: "Bearer " + token },
-    })
+    .patch(
+      `https://mars-daycare.onrender.com/api/enrollees/decline/${userId}`,
+      {
+        headers: { Authorization: "Bearer " + token },
+      }
+    )
     .then((res) => {
       alert("Declined");
+      window.location.replace("pendingReserv.html");
       console.log(res.data);
     })
     .catch((err) => {

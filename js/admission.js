@@ -123,9 +123,9 @@ async function handleSubmit(event) {
       userId,
     })
     .then(function (res) {
-      console.log("enrolled successfully");
+      console.log("Enrolled successfully");
       console.log(res.data);
-      alert("Successfully Reservered");
+      alert("Successfully Reserved");
       window.location.replace("status.html");
       document.getElementById("studentForm").reset();
     })

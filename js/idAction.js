@@ -32,9 +32,11 @@ async function getReqId() {
     });
 }
 function viewImage() {
-  window.location.replace(imageURL);
-  console.log(imageURL);
+  window.open(imageURL);
+  // window.location.replace(imageURL);
+  // console.log(imageURL);
 }
+
 function downloadImage() {
   try {
     console.log("Downloading");
@@ -75,9 +77,12 @@ async function acceptById() {
 
 async function declineById() {
   await axios
-    .patch(`https://mars-daycare.onrender.com/api/requestId/decline/${userId}`, {
-      headers: { Authorization: "Bearer " + token },
-    })
+    .patch(
+      `https://mars-daycare.onrender.com/api/requestId/decline/${userId}`,
+      {
+        headers: { Authorization: "Bearer " + token },
+      }
+    )
     .then((res) => {
       console.log(res.data);
       alert("Declined");

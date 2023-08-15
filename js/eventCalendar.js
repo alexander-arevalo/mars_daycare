@@ -2,7 +2,9 @@ var events = [];
 
 async function getEventData() {
   try {
-    const response = await axios.get("https://mars-daycare.onrender.com/api/event");
+    const response = await axios.get(
+      "https://mars-daycare.onrender.com/api/event"
+    );
 
     const mappedEvents = response.data.map((event) => {
       const eventDate = new Date(event.date);
@@ -104,7 +106,7 @@ async function getEventData() {
   function createEventDiv(event) {
     const eventDiv = document.createElement("div");
     eventDiv.classList.add("event");
-    eventDiv.innerText = event.title + ": " + event.description + event.time;
+    eventDiv.innerText = event.title + ": ";
     return eventDiv;
   }
 
