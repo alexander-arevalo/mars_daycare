@@ -59,10 +59,11 @@ form {
 
 .customFileUpload {
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   background: white;
   color: var(--color-black);
   display: block;
+  height: 3rem;
 
   white-space: nowrap;
   overflow: hidden;
