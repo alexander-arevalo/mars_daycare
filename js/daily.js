@@ -3,7 +3,9 @@
 const images = [];
 async function getDailyAct() {
   try {
-    const response = await axios.get("https://mars-daycare.onrender.com/api/gallery");
+    const response = await axios.get(
+      "https://database-zr19.onrender.com/api/gallery"
+    );
     const mappedActivity = response.data.resp.map((act) => {
       return {
         image: act.galleryPicture,
