@@ -13,7 +13,7 @@ var urlHR;
 let token = localStorage.getItem("token");
 async function getUserId() {
   axios
-    .get(`https://mars-daycare.onrender.com/api/enrollees/${userId}`, {
+    .get(`https://database-zr19.onrender.com/api/enrollees/${userId}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
@@ -78,7 +78,7 @@ function download(url, type) {
 async function acceptById() {
   await axios
     .patch(
-      `https://mars-daycare.onrender.com/api/enrollees/approve/${userId}`,
+      `https://database-zr19.onrender.com/api/enrollees/approve/${userId}`,
       {
         headers: { Authorization: "Bearer " + token },
       }
@@ -95,7 +95,7 @@ async function acceptById() {
 async function declinedById() {
   await axios
     .patch(
-      `https://mars-daycare.onrender.com/api/enrollees/decline/${userId}`,
+      `https://database-zr19.onrender.com/api/enrollees/decline/${userId}`,
       {
         headers: { Authorization: "Bearer " + token },
       }

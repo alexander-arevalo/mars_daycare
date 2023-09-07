@@ -1,24 +1,32 @@
-document.getElementById("recoveryForm").addEventListener("submit",async function(event) {
-    event.preventDefault(); 
-  
+document
+  .getElementById("recoveryForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
     var email = document.getElementById("email").value;
-  
+
     var emailRegex = /^\S+@\S+\.\S+$/;
     if (!emailRegex.test(email)) {
       showMessage("Please enter a valid email address.");
       return;
     }
- await axios.post("https://mars-daycare.onrender.com/api/auth/requestResetPassword",{email}).then(res=>{
-  var confirmation = confirm("Email has been sent with Password recovery Instruction");
-  if (confirmation) {
-
-    window.location.href = "login.html"; 
-  }
- }).catch(err=>{
-  alert(err.message)
- })
-  
-});
+    await axios
+      .post(
+        "https://database-zr19.onrender.com/api/auth/requestResetPassword",
+        { email }
+      )
+      .then((res) => {
+        var confirmation = confirm(
+          "Email has been sent with Password recovery Instruction"
+        );
+        if (confirmation) {
+          window.location.href = "login.html";
+        }
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  });
 
 function showMessage(message) {
   var messageDiv = document.getElementById("message");

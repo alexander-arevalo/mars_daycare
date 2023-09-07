@@ -15,9 +15,12 @@ const pendingRequestId = document.getElementById("requestId");
 async function fetchDataAndUpdateCounts() {
   try {
     // Fetch account data
-    const accountResponse = await axios.get("https://mars-daycare.onrender.com/api/auth", {
-      headers: { Authorization: "Bearer " + token },
-    });
+    const accountResponse = await axios.get(
+      "https://database-zr19.onrender.com/api/auth",
+      {
+        headers: { Authorization: "Bearer " + token },
+      }
+    );
     listAccounCount = accountResponse.data.length;
     pendingAccountCount = accountResponse.data.filter(
       (pending) => !pending.isApproved
@@ -25,7 +28,7 @@ async function fetchDataAndUpdateCounts() {
 
     // Fetch enrollment data
     const enrollmentResponse = await axios.get(
-      "https://mars-daycare.onrender.com/api/enrollees",
+      "https://database-zr19.onrender.com/api/enrollees",
       {
         headers: { Authorization: "Bearer " + token },
       }
@@ -37,7 +40,7 @@ async function fetchDataAndUpdateCounts() {
 
     // Fetch pending request id data
     const requestIdResponse = await axios.get(
-      "https://mars-daycare.onrender.com/api/requestId",
+      "https://database-zr19.onrender.com/api/requestId",
       {
         headers: { Authorization: "Bearer " + token },
       }

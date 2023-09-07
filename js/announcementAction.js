@@ -10,7 +10,7 @@ const announcementText = document.getElementById("announcement");
 var token = localStorage.getItem("token");
 async function getAnnouncementById() {
   await axios
-    .get(`https://mars-daycare.onrender.com/api/announcement/${id}`, {
+    .get(`https://database-zr19.onrender.com/api/announcement/${id}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
@@ -26,7 +26,7 @@ async function editById() {
   console.log("tokeen" + token);
   await axios
     .post(
-      `https://mars-daycare.onrender.com/api/announcement/${id}`,
+      `https://database-zr19.onrender.com/api/announcement/${id}`,
       { description: announcementText.value },
       {
         headers: { Authorization: "Bearer " + token },
@@ -44,7 +44,7 @@ async function editById() {
 async function deleteById() {
   if (window.confirm("Are you sure to delete this announcement?")) {
     await axios
-      .delete(`https://mars-daycare.onrender.com/api/announcement/${id}`, {
+      .delete(`https://database-zr19.onrender.com/api/announcement/${id}`, {
         headers: { Authorization: "Bearer " + token },
       })
       .then((res) => {

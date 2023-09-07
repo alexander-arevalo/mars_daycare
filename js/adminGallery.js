@@ -10,7 +10,7 @@ function handleFileUpload() {
     formData.append("image", file);
 
     axios
-      .post("https://mars-daycare.onrender.com/api/upload", formData)
+      .post("https://database-zr19.onrender.com/api/upload", formData)
       .then((response) => {
         const testChange = document.getElementById("labelGallery");
         testChange.textContent = response.data.url;
@@ -36,7 +36,7 @@ async function addGallery(event) {
   console.log(`for testing ${title} ${description} ${galleryPicture}`);
   await axios
     .post(
-      "https://mars-daycare.onrender.com/api/gallery",
+      "https://database-zr19.onrender.com/api/gallery",
       { title, description, galleryPicture },
       {
         headers: {
@@ -65,9 +65,12 @@ const paginationContainer = document.getElementById("paginationContainer");
 
 async function getGallery() {
   let token = localStorage.getItem("token");
-  const res = await axios.get("https://mars-daycare.onrender.com/api/gallery", {
-    headers: { Authorization: "Bearer " + token },
-  });
+  const res = await axios.get(
+    "https://database-zr19.onrender.com/api/gallery",
+    {
+      headers: { Authorization: "Bearer " + token },
+    }
+  );
 
   const data = res.data.resp;
 

@@ -23,7 +23,7 @@ async function handleSubmit(event) {
   console.log(`for testing ${title} ${date} ${time} ${description}`);
   await axios
     .post(
-      "https://mars-daycare.onrender.com/api/event",
+      "https://database-zr19.onrender.com/api/event",
       {
         title,
         date,
@@ -75,7 +75,7 @@ function tableHandler() {
 
 async function getCalendar() {
   let token = localStorage.getItem("token");
-  const res = await axios.get("https://mars-daycare.onrender.com/api/event", {
+  const res = await axios.get("https://database-zr19.onrender.com/api/event", {
     headers: { Authorization: "Bearer " + token },
   });
 

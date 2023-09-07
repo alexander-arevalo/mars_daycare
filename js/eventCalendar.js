@@ -3,7 +3,7 @@ var events = [];
 async function getEventData() {
   try {
     const response = await axios.get(
-      "https://mars-daycare.onrender.com/api/event"
+      "https://database-zr19.onrender.com/api/event"
     );
 
     const mappedEvents = response.data.map((event) => {

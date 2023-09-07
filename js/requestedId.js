@@ -5,9 +5,12 @@ const paginationContainer = document.getElementById("paginationContainer");
 
 async function getRequestId() {
   let token = localStorage.getItem("token");
-  const res = await axios.get("https://mars-daycare.onrender.com/api/requestId", {
-    headers: { Authorization: "Bearer " + token },
-  });
+  const res = await axios.get(
+    "https://database-zr19.onrender.com/api/requestId",
+    {
+      headers: { Authorization: "Bearer " + token },
+    }
+  );
 
   console.log(`Registered Account:`, res.data);
   const data = res.data;

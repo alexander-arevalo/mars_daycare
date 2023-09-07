@@ -12,7 +12,7 @@ let descp = document.getElementById("description");
 var imageURL;
 async function getGalleryId() {
   await axios
-    .get(`https://mars-daycare.onrender.com/api/gallery/${galleryId}`, {
+    .get(`https://database-zr19.onrender.com/api/gallery/${galleryId}`, {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
@@ -33,7 +33,7 @@ function viewImage() {
 async function deleteById() {
   if (window.confirm("Are you sure to delete this gallery?")) {
     await axios
-      .delete(`https://mars-daycare.onrender.com/api/gallery/${galleryId}`, {
+      .delete(`https://database-zr19.onrender.com/api/gallery/${galleryId}`, {
         headers: { Authorization: "Bearer " + token },
       })
       .then((res) => {

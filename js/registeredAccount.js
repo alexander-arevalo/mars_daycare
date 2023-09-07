@@ -5,7 +5,7 @@ const paginationContainer = document.getElementById("paginationContainer");
 
 async function getUser() {
   let token = localStorage.getItem("token");
-  const res = await axios.get("https://mars-daycare.onrender.com/api/auth/", {
+  const res = await axios.get("https://database-zr19.onrender.com/api/auth/", {
     headers: { Authorization: "Bearer " + token },
   });
 
