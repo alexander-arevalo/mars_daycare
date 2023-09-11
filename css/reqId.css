@@ -1,19 +1,17 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-  margin: 5rem 20rem ;
+  margin: 5rem 20rem;
   background: var(--color-white);
   padding: var(--card-padding);
   width: 40rem;
-
 }
 
-
-.reser__img{
+.reser__img {
   width: 5rem;
-  margin: -3rem 0.5rem 0 ;
+  margin: -3rem 0.5rem 0;
 }
 
-h2  {
+h2 {
   text-align: center;
 }
 
@@ -28,7 +26,7 @@ form {
   max-width: 40rem;
 }
 
-.contact__form {  
+.contact__form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -46,33 +44,46 @@ form {
   width: 100%;
 }
 
-input, .pictureUpload{
+input,
+.pictureUpload {
   width: 100%;
-    padding: 1rem;
-    background: var(--color-bg3);
-    color: var(--color-black);
-    display: block;
+  padding: 1rem;
+  background: var(--color-bg3);
+  color: var(--color-black);
+  display: block;
 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: 1px solid #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #ccc;
 }
 
-.picture{
+.picture {
   display: none;
 }
 .pictureUpload {
   text-decoration: none;
   text-align: left;
   padding: 0.4rem;
-  font-size: 0,9rem;
+  font-size: 0, 9rem;
 }
 
 .contact__form .btn {
+  margin-top: 2rem;
   width: 10rem;
-  align-self: center;
-  margin-top: 1rem;
   cursor: pointer;
   background: var(--color-start);
+}
+
+.btn-prev {
+  margin-left: 4rem;
+}
+
+.btn-next {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.btn-submit {
+  margin-left: 12rem;
 }

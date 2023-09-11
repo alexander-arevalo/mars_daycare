@@ -76,25 +76,40 @@
 
       <tr>
         <td>Birth Certificate of Child:</td>
-        <td id="birthCert"><button class="btn " onclick="viewImageBC()">View </button> &nbsp; <button class="btn " onclick="downloadBC()">Download</button></td>
+        <td id="birthCert"><button class="btn " onclick="viewImageBC()">View </button> &nbsp; <button class="btn "
+            onclick="downloadBC()">Download</button></td>
       </tr>
 
       <tr>
         <td>Valid ID of Parents/Guardian:</td>
-        <td id="validID"><button class="btn " onclick="viewImageVI()">View </button> &nbsp; <button class="btn " onclick="downloadVI()">Download</button></td>
+        <td id="validID"><button class="btn " onclick="viewImageVI()">View </button> &nbsp; <button class="btn "
+            onclick="downloadVI()">Download</button></td>
       </tr>
 
       <tr>
         <td>Child's Health Record:</td>
-        <td id="certificate"><button class="btn " onclick="viewImageHR()">View </button> &nbsp; <button class="btn " onclick="downloadHR()">Download</button></td>
+        <td id="certificate"><button class="btn " onclick="viewImageHR()">View </button> &nbsp; <button class="btn "
+            onclick="downloadHR()">Download</button></td>
       </tr>
 
     </table>
 
     <button class="btn btn-left" id="decline" onclick="declinedById()">Decline</button>
+    <button class="btn btn-left" onclick="showPopup()">Remarks</button>
     <button class="btn btn-middle" id="back">Go Back</button>
     <button class="btn btn-right" id="accept" onclick="acceptById()">Accept</button>
 
+  </div>
+
+
+  <div id="popupOverlay" class="overlay">
+    <div class="popup">
+      <h3>Select a Reason for Decline</h3>
+      <button class="btn decline-button" onclick="remark('Invalid Credential')">Invalid Credential</button>
+      <button class="btn decline-button" onclick="remark('Lacking Documents')">Lacking Documents</button>
+      <button class="btn decline-button" onclick="remark('Duplicate Submission')">Duplicate Submission</button>
+      <button class="btn decline-button b" onclick="closePopup()">Cancel</button>
+    </div>
   </div>
 
   <!--=========== END OF FORM ===========-->

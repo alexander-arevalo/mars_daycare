@@ -1,26 +1,44 @@
 /* ========== MAIN CONTAINER ========== */
 main {
-    margin: 5rem 20rem;
-    cursor: default;
-  }
-
-.announcement{
-    background: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    width: 40rem;
-    height: 25rem;
-    text-align: center;
+  margin: 8rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
 }
-  
-.announcement:hover{
-    box-shadow: none;
-}
-
 h2 {
-    margin-bottom: 3rem;
-    text-align: center;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
+p {
+  text-align: left;
+  margin-left: 3rem;
+}
+
+.announcement {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  width: 35rem;
+  height: 25rem;
+  text-align: center;
+}
+.list {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  width: 35rem;
+  height: 25rem;
+  text-align: center;
+}
+
+.announcement:hover {
+  box-shadow: none;
+}
+.list:hover {
+  box-shadow: none;
+}

@@ -124,7 +124,39 @@
         <input type="file" id="studentPicture" class="picture" name="picture" onchange="handleFileUpload()" required />
         <label for="studentPicture" class="pictureUpload" id="labelID">Select 1x1 Picture</label>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" id="nextButton" class="btn btn-next">
+          Next
+        </button>
+      </form>
+
+      <!-- Page 2: Incase Of Emergency Person -->
+      <form id="emergencyPerson" class="contact__form" style="display: none">
+        <label for="student name">Incase Of Emergency Person</label>
+        <input type="text" id="fullName" name="Fullname" placeholder="Full Name" required />
+
+        <label for="relationship">Relationship With the student</label>
+        <input type="text" id="relationship1" name="Relationship" placeholder="Relationship with the student"
+          pattern="|Guardian|Mother|mother|Father|father|Auntie|auntie|Uncle|uncle|Stepmother|stepmother|Stepfather|stepfather"
+          required />
+
+        <label for="contact">Mobile Number</label>
+        <input type="contact" id="contact1" number="Mobile Number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+          placeholder="example: 09XX-XXX-XXXX" required />
+
+        <label for="address">Address</label>
+        <input type="text" id="address1" name="address" minlength="8" maxlength="100" placeholder="Home Address"
+          required />
+
+        <label for="personId">Valid ID</label>
+        <input type="file" id="personId" class="picture" name="picture" onchange="handleId()" required />
+        <label for="personId" class="pictureUpload" id="validId">Valid ID</label>
+
+
+
+        <button type="submit" class="btn btn-submit">Submit</button>
+        <button type="button" id="prevButton" class="btn btn-prev">
+          Previous
+        </button>
       </form>
     </main>
   </div>

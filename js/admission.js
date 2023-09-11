@@ -127,7 +127,7 @@ async function handleSubmit(event) {
       console.log(res.data);
       alert("Successfully Reserved");
       window.location.replace("status.html");
-      document.getElementById("studentForm").reset();
+      document.getElementById("studentInfo").reset();
     })
     .catch(function (err) {
       console.log(err);

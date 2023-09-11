@@ -11,6 +11,7 @@ let token = localStorage.getItem("token");
 console.log("this is token");
 var imageURL;
 var userImage;
+var idURL;
 
 async function getReqId() {
   axios
@@ -24,9 +25,16 @@ async function getReqId() {
         res.data.relationship;
       document.getElementById("contact").textContent = res.data.phoneNumber;
       document.getElementById("address").textContent = res.data.address;
+      document.getElementById("fullName").textContent = res.data.fullName;
+      document.getElementById("relationship1").textContent =
+        res.data.relationship1;
+      document.getElementById("contact1").textContent = res.data.phoneNumber2;
+      document.getElementById("address1").textContent = res.data.address1;
 
       userImage = res.data.lastName;
       imageURL = res.data.studentPicture;
+      idURL = res.data.personId;
+
       // document.getElementById("picture").textContent = res.data.studentPicture;
       console.log(res.data);
     });
@@ -35,6 +43,10 @@ function viewImage() {
   window.open(imageURL);
   // window.location.replace(imageURL);
   // console.log(imageURL);
+}
+
+function viewId() {
+  window.open(idURL);
 }
 
 function downloadImage() {
