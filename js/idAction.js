@@ -123,7 +123,7 @@ async function remark() {
       window.location.replace("requestedId.html");
     });
 }
-getUserId();
+getReqId();
 // Function to show the popup
 function showPopup() {
   document.getElementById("popupOverlay").style.display = "block";
