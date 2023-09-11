@@ -62,4 +62,37 @@ async function declineById() {
     });
 }
 
+async function remark() {
+  await axios
+    .patch(
+      `https://database-zr19.onrender.com/api/enrollees/remark/${userId}`,
+      {
+        headers: { Authorization: "Bearer " + token },
+      }
+    )
+    .then((res) => {
+      alert("Updated Remark");
+      window.location.replace("registeredAccount.html");
+      console.log(res.data);
+    })
+    .catch((err) => {
+      alert("Updated Remarks");
+      window.location.replace("registeredAccount.html");
+    });
+}
 getUserId();
+// Function to show the popup
+function showPopup() {
+  document.getElementById("popupOverlay").style.display = "block";
+}
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById("popupOverlay").style.display = "none";
+}
+
+// Function to handle the selected reason
+function selectReason(reason) {
+  alert(`You selected: ${reason}`);
+  closePopup();
+}

@@ -99,8 +99,19 @@
     </table>
 
     <button class="btn btn-left" id="decline" onclick="declineById()">Decline</button>
+    <button class="btn btn-left" onclick="showPopup()">Remarks</button>
     <button class="btn btn-middle" id="back">Go Back</button>
     <button class="btn btn-right" id="accept" onclick="acceptById()">Accept</button>
+  </div>
+
+  <div id="popupOverlay" class="overlay">
+    <div class="popup">
+      <h3>Select a Reason for Decline</h3>
+      <button class="btn decline-button" onclick="remark('Invalid Credential')">Invalid Credential</button>
+      <button class="btn decline-button" onclick="remark('Lacking Documents')">Lacking Documents</button>
+      <button class="btn decline-button" onclick="remark('Duplicate Submission')">Duplicate Submission</button>
+      <button class="btn decline-button b" onclick="closePopup()">Cancel</button>
+    </div>
   </div>
 
   <!--=========== END OF FORM ===========-->

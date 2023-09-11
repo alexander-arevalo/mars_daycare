@@ -1,16 +1,16 @@
 /* ========== FORM CONTAINER ========== */
 
 .form__container {
-    background: var(--color-white);
-    gap: 1rem;
-    padding: 4rem;
-    width: 50rem;
-    height: auto;
-    margin: 7rem auto;
-    border-radius: 1rem;
+  background: var(--color-white);
+  gap: 1rem;
+  padding: 4rem;
+  width: 50rem;
+  height: auto;
+  margin: 7rem auto;
+  border-radius: 1rem;
 }
 
-h2{
+h2 {
   text-align: center;
   padding: 1rem;
   margin: 0 0 1rem;
@@ -21,7 +21,8 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid var(--color-black);
@@ -34,17 +35,56 @@ th, td {
   color: white;
   cursor: pointer;
 }
-.btn-right{
-  margin-left: 10rem;
+.btn-right {
+  margin-left: 2rem;
   margin-top: 2rem;
 }
 
-.btn-middle{
-  margin-left: 6.5rem;
+.btn-middle {
+  margin-left: 6rem;
   margin-top: 2rem;
 }
 
-.btn-left{
-  margin-right: 3rem;
+.btn-left {
+  margin-right: 2rem;
   margin-top: 2rem;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 25rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 10rem;
+  margin-left: 41rem;
+}
+
+.decline-button {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 4rem 0;
+  justify-content: center;
+  width: 15rem;
+  padding: 10px 20px;
+  background-color: var(--color-black);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.b {
+  background-color: var(--color-danger-variant);
 }

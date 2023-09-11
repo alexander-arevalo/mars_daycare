@@ -124,7 +124,8 @@ async function remark() {
       console.log(res.data);
     })
     .catch((err) => {
-      alert("Something went wrong, Please try again");
+      alert("Updated Remarks");
+      window.location.replace("pendingReserv.html");
     });
 }
 getUserId();
