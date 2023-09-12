@@ -48,7 +48,7 @@ document
       .then((res) => {
         console.log("Registered successfully");
         console.log("DATAAA " + res.data);
-        alert("Successfully Registerd");
+        alert("Successfully Registered");
         window.location.replace("login.html");
       })
       .catch((err) => {
