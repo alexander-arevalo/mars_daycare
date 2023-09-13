@@ -57,9 +57,20 @@ async function getEnrollees() {
         : enrollee.isApproved === false
         ? "Declined"
         : "Pending";
+    const actionCell = document.createElement("td"); // Define actionCell
+    const button = document.createElement("button");
+    button.textContent = "Details";
+    button.classList.add("btn");
+    // Add an event listener to the "Details" button
+    button.addEventListener("click", () => {
+      // Redirect the user to another HTML page
+      window.location.href = `statusDetails.html?id=${enrollee._id}`;
+    });
+    actionCell.appendChild(button);
     row.appendChild(firstNameCell);
     row.appendChild(lastNameCell);
     row.appendChild(status);
+    row.appendChild(actionCell); // Append actionCell to the row
     enrolleesTableBody.appendChild(row);
   });
 }
