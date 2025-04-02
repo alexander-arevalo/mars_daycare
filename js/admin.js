@@ -1,8 +1,8 @@
 // Check if token exists, if not, redirect to login page
 const token = localStorage.getItem("token");
-if (!token) {
-  window.location.href = "/login.html";
-}
+// if (!token) {
+//   window.location.href = "/login.html";
+// }
 
 // Event listener for sign-out button
 function signOut() {
